@@ -1,25 +1,37 @@
 ﻿using Microsoft.Win32;
+using Microsoft.Win32.SafeHandles;
 
 namespace Rothko
 {
     public interface IRegistry
     {
-        RegistryKey ClassesRoot { get; }
+        IRegistryKey ClassesRoot { get; }
 
-        RegistryKey CurrentConfig { get; }
+        IRegistryKey CurrentConfig { get; }
 
-        RegistryKey CurrentUser { get; }
+        IRegistryKey CurrentUser { get; }
 
-        RegistryKey LocalMachine { get; }
+        IRegistryKey LocalMachine { get; }
 
-        RegistryKey PerformanceData { get; }
+        IRegistryKey PerformanceData { get; }
 
-        RegistryKey Users { get; }
+        IRegistryKey Users { get; }
 
         object GetValue(string keyName, string valueName, object defaultValue);
 
         void SetValue(string keyName, string valueName, object value);
 
         void SetValue(string keyName, string valueName, object value, RegistryValueKind valueKind);
+
+        // Formerly static methods of RegistryKey
+        IRegistryKey FromHandle(SafeRegistryHandle handle);
+
+        IRegistryKey FromHandle(SafeRegistryHandle handle, RegistryView view);
+
+        IRegistryKey OpenBaseKey(RegistryHive hKey, RegistryView view);
+
+        IRegistryKey OpenRemoteBaseKey(RegistryHive hKey, string machineName);
+
+        IRegistryKey OpenRemoteBaseKey(RegistryHive hKey, string machineName, RegistryView view);
     }
 }

@@ -43,6 +43,7 @@
     <Compile Include="IEnvironment.cs" />
     <Compile Include="IOperatingSystem.cs" />
     <Compile Include="IRegistry.cs" />
+    <Compile Include="IRegistryKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
