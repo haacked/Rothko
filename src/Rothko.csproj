@@ -40,13 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDirectoryInfo.cs" />
-    <Compile Include="IEnvironment.cs" />
-    <Compile Include="IFileInfo.cs" />
-    <Compile Include="IFileSystemInfo.cs" />
-    <Compile Include="IOperatingSystem.cs" />
-    <Compile Include="IRegistry.cs" />
-    <Compile Include="IRegistryKey.cs" />
+    <Compile Include="FileFacade.cs" />
+    <Compile Include="Infrastructure\IDirectoryInfo.cs" />
+    <Compile Include="Infrastructure\IEnvironment.cs" />
+    <Compile Include="Infrastructure\IFilesFacade.cs" />
+    <Compile Include="Infrastructure\IOperatingSystemFacade.cs" />
+    <Compile Include="Infrastructure\IFileInfo.cs" />
+    <Compile Include="Infrastructure\IFileSystemInfo.cs" />
+    <Compile Include="Infrastructure\IOperatingSystem.cs" />
+    <Compile Include="Infrastructure\IRegistry.cs" />
+    <Compile Include="Infrastructure\IRegistryKey.cs" />
+    <Compile Include="OperatingSystemFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
