@@ -14,7 +14,7 @@ Rothko is this library. It provides abstractions for:
 * Registry
 * Environment.
 
-The starting point for Rothko is the `ISystem` interface. From there 
+The starting point for Rothko is the `OperatingSystemFacade` class. From there 
 you can get to the other abstractions.
 
 * `IFileSystem`
@@ -31,3 +31,9 @@ Framework APIs to port over to Rothko. The interfaces are very close to the
 Framework's, except in a few plases where I wouldn't be able to live with 
 myself if I didn't modernize the library. For example, I updated methods 
 that return arrays to return `IEnumerable` (or derived interface) instead.
+
+# Structure
+
+As stated before, most of the abstractions hew closely to the .NET Framework APIs to make porting code over easy. Let's
+call these the __core abstractions__. The __Facade classes__ provide a nicer more usable interface over the core
+abstractions.
