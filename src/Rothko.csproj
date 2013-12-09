@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileSystemInfo.cs" />
     <Compile Include="Infrastructure\DialogFacade.cs" />
     <Compile Include="Infrastructure\FileFacade.cs" />
     <Compile Include="Infrastructure\IDialogFacade.cs" />
