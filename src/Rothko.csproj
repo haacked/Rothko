@@ -55,6 +55,7 @@
     <Compile Include="Infrastructure\IRegistryKey.cs" />
     <Compile Include="OperatingSystemFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registry.cs" />
     <Compile Include="RegistryKey.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
