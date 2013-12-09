@@ -5,7 +5,7 @@ namespace Rothko
 {
     public interface IFileInfo : IFileSystemInfo
     {
-        DirectoryInfo Directory { get; }
+        IDirectoryInfo Directory { get; }
 
         string DirectoryName { get; }
 
@@ -15,9 +15,9 @@ namespace Rothko
 
         StreamWriter AppendText();
 
-        FileInfo CopyTo(string destFileName);
+        IFileInfo CopyTo(string destFileName);
 
-        FileInfo CopyTo(string destFileName, bool overwrite);
+        IFileInfo CopyTo(string destFileName, bool overwrite);
 
         FileStream Create();
 
@@ -45,9 +45,9 @@ namespace Rothko
 
         FileStream OpenWrite();
 
-        FileInfo Replace(string destinationFileName, string destinationBackupFileName);
+        IFileInfo Replace(string destinationFileName, string destinationBackupFileName);
 
-        FileInfo Replace(string destinationFileName, string destinationBackupFileName, bool ignoreMetadataErrors);
+        IFileInfo Replace(string destinationFileName, string destinationBackupFileName, bool ignoreMetadataErrors);
 
         void SetAccessControl(FileSecurity fileSecurity);
     }
