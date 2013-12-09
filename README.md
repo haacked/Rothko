@@ -23,17 +23,16 @@ you can get to the other abstractions.
 
 # Goals
 
-The goal is to use this in GitHub for Windows as well as any other libraries 
-in which testability is important.
+The goal is to use this in GitHub for Windows as well as any other
+applications where testability is important.
 
 A secondary goal is to make it very easy to port code using the core .NET 
-Framework APIs to port over to Rothko. The interfaces are very close to the 
-Framework's, except in a few plases where I wouldn't be able to live with 
+Framework APIs to port over to Rothko. The interfaces map closely to the 
+.NET Framework's, except in a few plases where I wouldn't be able to live with 
 myself if I didn't modernize the library. For example, I updated methods 
 that return arrays to return `IEnumerable` (or derived interface) instead.
 
-# Structure
-
-As stated before, most of the abstractions hew closely to the .NET Framework APIs to make porting code over easy. Let's
-call these the __core abstractions__. The __Facade classes__ provide a nicer more usable interface over the core
-abstractions.
+Once these low level abstractions are implemented, I plan to add a set of
+_Facade_ classes that provide a more usable API that we all wished had been
+there all along. These _Facade_ classes will simply delegate to the
+lower-level abstractions.
