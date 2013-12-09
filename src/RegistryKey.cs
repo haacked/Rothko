@@ -3,9 +3,9 @@ namespace Rothko
 {
     public class RegistryKey : IRegistryKey
     {
-        Microsoft.Win32.RegistryKey inner;
+        readonly Microsoft.Win32.RegistryKey inner;
 
-        public RegistryKey(Microsoft.Win32.RegistryKey inner)
+        private RegistryKey(Microsoft.Win32.RegistryKey inner)
         {
             this.inner = inner;
         }
