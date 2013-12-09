@@ -11,6 +11,11 @@ namespace Rothko
             this.inner = inner;
         }
 
+        public FileInfo(string fileName)
+            : this(new System.IO.FileInfo(fileName))
+        {
+        }
+
         internal static IFileInfo Wrap(System.IO.FileInfo file)
         {
             return new FileInfo(file);

@@ -13,6 +13,11 @@ namespace Rothko
             this.inner = inner;
         }
 
+        public DirectoryInfo(string path)
+            : this(new System.IO.DirectoryInfo(path))
+        {
+        }
+
         internal static IDirectoryInfo Wrap(System.IO.DirectoryInfo dir)
         {
             return new DirectoryInfo(dir);
