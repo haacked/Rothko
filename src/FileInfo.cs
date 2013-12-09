@@ -3,9 +3,9 @@ namespace Rothko
 {
     public class FileInfo : FileSystemInfo, IFileInfo
     {
-        System.IO.FileInfo inner;
+        readonly System.IO.FileInfo inner;
 
-        public FileInfo(System.IO.FileInfo inner)
+        private FileInfo(System.IO.FileInfo inner)
             : base(inner as System.IO.FileSystemInfo)
         {
             this.inner = inner;

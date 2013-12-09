@@ -6,7 +6,7 @@ namespace Rothko
 {
     public class DirectoryInfo : IDirectoryInfo
     {
-        System.IO.DirectoryInfo inner;
+        readonly System.IO.DirectoryInfo inner;
 
         private DirectoryInfo(System.IO.DirectoryInfo inner)
         {
