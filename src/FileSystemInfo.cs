@@ -2,7 +2,7 @@
 
 namespace Rothko
 {
-    public class FileSystemInfo : IFileSystemInfo
+    public abstract class FileSystemInfo : IFileSystemInfo
     {
         readonly System.IO.FileSystemInfo inner;
 

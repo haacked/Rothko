@@ -4,15 +4,32 @@ using System.Linq;
 
 namespace Rothko
 {
-    public class DirectoryInfo : IDirectoryInfo
+    public class DirectoryInfo : FileSystemInfo, IDirectoryInfo
     {
         readonly System.IO.DirectoryInfo inner;
 
         private DirectoryInfo(System.IO.DirectoryInfo inner)
+            : base(inner)
         {
             this.inner = inner;
         }
 
+        /// <summary>
+        ///   Initializes a new instance of the <see cref="T:Rothko.DirectoryInfo"/> class on the specified path.
+        /// </summary>
+        /// <param name="path">A string specifying the path on which to create the DirectoryInfo.</param>
+        /// <exception cref="T:System.ArgumentNullException"><paramref name="path"/> is null. </exception>
+        /// <exception cref="T:System.Security.SecurityException">
+        ///   The caller does not have the required permission.
+        /// </exception>
+        /// <exception cref="T:System.ArgumentException">
+        ///   <paramref name="path"/> contains invalid characters such as ", &gt;, &lt;, or |.
+        /// </exception>
+        /// <exception cref="T:System.IO.PathTooLongException">
+        ///   The specified path, file name, or both exceed the system-defined maximum length. For example, on
+        ///   Windows-based platforms, paths must be less than 248 characters, and file names must be less than
+        ///   260 characters. The specified path, file name, or both are too long.
+        /// </exception>
         public DirectoryInfo(string path)
             : this(new System.IO.DirectoryInfo(path))
         {

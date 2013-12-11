@@ -6,11 +6,36 @@ namespace Rothko
         readonly System.IO.FileInfo inner;
 
         private FileInfo(System.IO.FileInfo inner)
-            : base(inner as System.IO.FileSystemInfo)
+            : base(inner)
         {
             this.inner = inner;
         }
 
+        /// <summary>
+        ///   Initializes a new instance of the <see cref="T:System.IO.FileInfo"/> class, which acts as a wrapper
+        ///   for a file path.
+        /// </summary>
+        /// <param name="fileName">
+        ///   The fully qualified name of the new file, or the relative file name. Do not end the path with the
+        ///   directory separator character.
+        /// </param>
+        /// <exception cref="T:System.ArgumentNullException"><paramref name="fileName"/> is null.</exception>
+        /// <exception cref="T:System.Security.SecurityException">
+        ///   The caller does not have the required permission.
+        /// </exception>
+        /// <exception cref="T:System.ArgumentException">
+        ///   The file name is empty, contains only white spaces, or contains invalid characters.
+        /// </exception>
+        /// <exception cref="T:System.UnauthorizedAccessException">
+        ///   Access to <paramref name="fileName"/> is denied.
+        /// </exception>
+        /// <exception cref="T:System.IO.PathTooLongException">
+        ///   The specified path, file name, or both exceed the system-defined maximum length. For example, on
+        ///   Windows-based platforms, paths must be less than 248 characters, and file names must be less than
+        ///   260 characters.
+        /// </exception>
+        /// <exception cref="T:System.NotSupportedException">
+        /// <paramref name="fileName"/> contains a colon (:) in the middle of the string.</exception>
         public FileInfo(string fileName)
             : this(new System.IO.FileInfo(fileName))
         {
