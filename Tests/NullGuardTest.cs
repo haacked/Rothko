@@ -1,4 +1,7 @@
-﻿using Rothko;
+﻿#if !DEBUG
+using System;
+#endif
+using Rothko;
 using Xunit;
 using Xunit.Sdk;
 
