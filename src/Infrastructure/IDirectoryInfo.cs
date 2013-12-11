@@ -8,7 +8,7 @@ namespace Rothko
     ///   Exposes instance methods for creating, moving, and enumerating through directories and subdirectories.
     /// </summary>
     /// <filterpriority>1</filterpriority>
-    public interface IDirectoryInfo
+    public interface IDirectoryInfo : IFileSystemInfo
     {
         /// <summary>Gets the parent directory of a specified subdirectory.</summary>
         /// <returns>

@@ -4,11 +4,12 @@ using System.Linq;
 
 namespace Rothko
 {
-    public class DirectoryInfo : IDirectoryInfo
+    public class DirectoryInfo : FileSystemInfo, IDirectoryInfo
     {
         readonly System.IO.DirectoryInfo inner;
 
         private DirectoryInfo(System.IO.DirectoryInfo inner)
+            : base(inner)
         {
             this.inner = inner;
         }
