@@ -6,7 +6,7 @@ namespace Rothko
         readonly System.IO.FileInfo inner;
 
         private FileInfo(System.IO.FileInfo inner)
-            : base(inner as System.IO.FileSystemInfo)
+            : base(inner)
         {
             this.inner = inner;
         }
