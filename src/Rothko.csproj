@@ -64,6 +64,7 @@
     <Compile Include="Infrastructure\IOperatingSystem.cs" />
     <Compile Include="Infrastructure\IRegistry.cs" />
     <Compile Include="Infrastructure\IRegistryKey.cs" />
+    <Compile Include="Infrastructure\RegistryExtensions.cs" />
     <Compile Include="OperatingSystemFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registry.cs" />

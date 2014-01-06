@@ -1,10 +1,11 @@
-﻿using System.Security.AccessControl;
+﻿using System;
+using System.Security.AccessControl;
 using Microsoft.Win32;
 using Microsoft.Win32.SafeHandles;
 
 namespace Rothko
 {
-    public interface IRegistryKey
+    public interface IRegistryKey : IDisposable
     {
         SafeRegistryHandle Handle { get; }
 
