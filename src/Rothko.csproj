@@ -77,6 +77,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registry.cs" />
     <Compile Include="RegistryKey.cs" />
+    <Compile Include="Threading\ISemaphore.cs" />
+    <Compile Include="Threading\ISystemSemaphore.cs" />
+    <Compile Include="Threading\SystemSemaphore.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
