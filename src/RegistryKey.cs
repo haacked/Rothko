@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace Rothko
 {
     public class RegistryKey : IRegistryKey
@@ -120,7 +122,7 @@ namespace Rothko
             return inner.GetAccessControl(includeSections);
         }
 
-        public string[] GetSubKeyNames()
+        public IReadOnlyList<string> GetSubKeyNames()
         {
             return inner.GetSubKeyNames();
         }
@@ -145,7 +147,7 @@ namespace Rothko
             return inner.GetValueKind(name);
         }
 
-        public string[] GetValueNames()
+        public IReadOnlyList<string> GetValueNames()
         {
             return inner.GetValueNames();
         }

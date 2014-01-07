@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Security.AccessControl;
 using Microsoft.Win32;
 using Microsoft.Win32.SafeHandles;
@@ -52,7 +53,7 @@ namespace Rothko
 
         RegistrySecurity GetAccessControl(AccessControlSections includeSections);
 
-        string[] GetSubKeyNames();
+        IReadOnlyList<string> GetSubKeyNames();
 
         object GetValue(string name);
 
@@ -62,7 +63,7 @@ namespace Rothko
 
         RegistryValueKind GetValueKind(string name);
 
-        string[] GetValueNames();
+        IReadOnlyList<string> GetValueNames();
 
         IRegistryKey OpenSubKey(string name);
 

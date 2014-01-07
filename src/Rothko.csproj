@@ -10,9 +10,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Rothko</RootNamespace>
     <AssemblyName>Rothko</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FodyPath>..\packages\Fody.1.19.0.0</FodyPath>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NullGuard">
@@ -51,9 +54,11 @@
     </Compile>
     <Compile Include="AssemblyFacade.cs" />
     <Compile Include="DirectoryInfo.cs" />
+    <Compile Include="Environment.cs" />
     <Compile Include="FileInfo.cs" />
     <Compile Include="FileSystemInfo.cs" />
     <Compile Include="Infrastructure\DialogFacade.cs" />
+    <Compile Include="Infrastructure\EnumerableExtensions.cs" />
     <Compile Include="Infrastructure\FileFacade.cs" />
     <Compile Include="Infrastructure\IAssemblyFacade.cs" />
     <Compile Include="Infrastructure\IDialogFacade.cs" />
@@ -67,6 +72,7 @@
     <Compile Include="Infrastructure\IRegistry.cs" />
     <Compile Include="Infrastructure\IRegistryKey.cs" />
     <Compile Include="Infrastructure\RegistryExtensions.cs" />
+    <Compile Include="OperatingSystem.cs" />
     <Compile Include="OperatingSystemFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registry.cs" />

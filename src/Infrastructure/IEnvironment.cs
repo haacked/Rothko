@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Env = System.Environment;
 
 namespace Rothko
 {
@@ -51,7 +52,7 @@ namespace Rothko
 
         void FailFast(string message, Exception exception);
 
-        string[] GetCommandLineArgs();
+        IReadOnlyList<string> GetCommandLineArgs();
 
         string GetEnvironmentVariable(string variable);
 
@@ -61,11 +62,11 @@ namespace Rothko
 
         IDictionary<string, string> GetEnvironmentVariables(EnvironmentVariableTarget target);
 
-        string GetFolderPath(Environment.SpecialFolder folder);
+        string GetFolderPath(Env.SpecialFolder folder);
 
-        string GetFolderPath(Environment.SpecialFolder folder, Environment.SpecialFolderOption option);
+        string GetFolderPath(Env.SpecialFolder folder, Env.SpecialFolderOption option);
 
-        string[] GetLogicalDrives();
+        IReadOnlyList<string> GetLogicalDrives();
 
         void SetEnvironmentVariable(string variable, string value);
 
