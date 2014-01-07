@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace Rothko.Threading
+namespace Rothko
 {
     public sealed class SystemSemaphore : ISystemSemaphore
     {
