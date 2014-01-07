@@ -1,4 +1,6 @@
 ﻿
+using System.Diagnostics;
+
 namespace Rothko
 {
     public class FileInfo : FileSystemInfo, IFileInfo
@@ -8,6 +10,7 @@ namespace Rothko
         private FileInfo(System.IO.FileInfo inner)
             : base(inner)
         {
+            Debug.Assert(inner != null, "The inner file info should never be null.");
             this.inner = inner;
         }
 

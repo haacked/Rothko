@@ -1,5 +1,7 @@
 ﻿
 using System.Collections.Generic;
+using System.Diagnostics;
+using NullGuard;
 
 namespace Rothko
 {
@@ -9,12 +11,13 @@ namespace Rothko
 
         private RegistryKey(Microsoft.Win32.RegistryKey inner)
         {
+            Debug.Assert(inner != null, "The inner registry key should never be null.");
             this.inner = inner;
         }
 
         internal static IRegistryKey Wrap(Microsoft.Win32.RegistryKey inner)
         {
-            return new RegistryKey(inner);
+            return inner == null ? null : new RegistryKey(inner);
         }
 
         public Microsoft.Win32.SafeHandles.SafeRegistryHandle Handle
@@ -127,17 +130,20 @@ namespace Rothko
             return inner.GetSubKeyNames();
         }
 
+        [return: AllowNull]
         public object GetValue(string name)
         {
             return inner.GetValue(name);
         }
 
-        public object GetValue(string name, object defaultValue)
+        [return: AllowNull]
+        public object GetValue(string name, [AllowNull]object defaultValue)
         {
             return inner.GetValue(name, defaultValue);
         }
 
-        public object GetValue(string name, object defaultValue, Microsoft.Win32.RegistryValueOptions options)
+        [return: AllowNull]
+        public object GetValue(string name, [AllowNull]object defaultValue, Microsoft.Win32.RegistryValueOptions options)
         {
             return inner.GetValue(name, defaultValue, options);
         }
@@ -152,21 +158,25 @@ namespace Rothko
             return inner.GetValueNames();
         }
 
+        [return: AllowNull]
         public IRegistryKey OpenSubKey(string name)
         {
             return Wrap(inner.OpenSubKey(name));
         }
 
+        [return: AllowNull]
         public IRegistryKey OpenSubKey(string name, bool writable)
         {
             return Wrap(inner.OpenSubKey(name, writable));
         }
 
+        [return: AllowNull]
         public IRegistryKey OpenSubKey(string name, Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck)
         {
             return Wrap(inner.OpenSubKey(name, permissionCheck));
         }
 
+        [return: AllowNull]
         public IRegistryKey OpenSubKey(string name, Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck, System.Security.AccessControl.RegistryRights rights)
         {
             return Wrap(inner.OpenSubKey(name, permissionCheck, rights));
