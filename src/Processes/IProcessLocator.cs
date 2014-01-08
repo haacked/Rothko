@@ -19,5 +19,11 @@ namespace Rothko
         /// <param name="processName"></param>
         /// <returns></returns>
         IReadOnlyList<IProcess> GetProcessesByName(string processName);
+
+        /// <summary>
+        /// Returns the process associated with the currently running process.
+        /// </summary>
+        /// <returns></returns>
+        IProcess GetCurrentProcess();
     }
 }

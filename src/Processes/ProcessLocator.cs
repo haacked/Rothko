@@ -42,5 +42,10 @@ namespace Rothko
         {
             return Process.GetProcessesByName(processName).Select(proc => new ProcessWrapper(proc)).ToArray();
         }
+
+        public IProcess GetCurrentProcess()
+        {
+            return new ProcessWrapper(Process.GetCurrentProcess());
+        }
     }
 }
