@@ -66,6 +66,7 @@
     <Compile Include="FileSystemInfo.cs" />
     <Compile Include="Infrastructure\DialogFacade.cs" />
     <Compile Include="Infrastructure\EnumerableExtensions.cs" />
+    <Compile Include="Infrastructure\ExceptionExtensions.cs" />
     <Compile Include="Infrastructure\FileFacade.cs" />
     <Compile Include="Infrastructure\IAssemblyFacade.cs" />
     <Compile Include="Infrastructure\IDialogFacade.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Processes\IProcessLocator.cs" />
     <Compile Include="Processes\IProcessStarter.cs" />
     <Compile Include="Processes\NullProcess.cs" />
+    <Compile Include="Processes\ProcessLocator.cs" />
     <Compile Include="Processes\ProcessStarter.cs" />
     <Compile Include="Processes\ProcessWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

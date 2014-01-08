@@ -1,4 +1,6 @@
-﻿namespace Rothko
+﻿using System.Collections.Generic;
+
+namespace Rothko
 {
     public interface IProcessLocator
     {
@@ -8,5 +10,14 @@
         /// </summary>
         /// <param name="processId">The ID of the process</param>
         IProcess GetProcessById(int processId);
+
+        /// <summary>
+        /// Creates an read only list of new System.Diagnostics.Process components and associates
+        /// them with all the process resources on the local computer that share the
+        /// specified process name.
+        /// </summary>
+        /// <param name="processName"></param>
+        /// <returns></returns>
+        IReadOnlyList<IProcess> GetProcessesByName(string processName);
     }
 }
