@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 
 namespace Rothko
 {
-    public class OperatingSystem : IOperatingSystem
+    public sealed class OperatingSystem : IOperatingSystem
     {
         readonly System.OperatingSystem _operatingSystem;
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Security.AccessControl;
 
@@ -304,6 +305,8 @@ namespace Rothko
         /// <exception cref="T:System.Security.SecurityException">
         ///   The caller does not have the required permission.
         /// </exception>
+        [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Infos",
+            Justification = "Matches original API")]
         IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos();
 
         /// <summary>

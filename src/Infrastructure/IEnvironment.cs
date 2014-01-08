@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Env = System.Environment;
 
 namespace Rothko
@@ -44,6 +45,8 @@ namespace Rothko
 
         long WorkingSet { get; }
 
+        [SuppressMessage("Microsoft.Naming", "CA1716:IdentifiersShouldNotMatchKeywords", MessageId = "Exit",
+            Justification = "Hey, I didn't name this method. That's what the original is named.")]
         void Exit(int exitCode);
 
         string ExpandEnvironmentVariables(string name);
@@ -64,6 +67,8 @@ namespace Rothko
 
         string GetFolderPath(Env.SpecialFolder folder);
 
+        [SuppressMessage("Microsoft.Naming", "CA1716:IdentifiersShouldNotMatchKeywords", MessageId = "Option",
+            Justification = "Hey, I didn't name this method. That's what the original is named.")]
         string GetFolderPath(Env.SpecialFolder folder, Env.SpecialFolderOption option);
 
         IReadOnlyList<string> GetLogicalDrives();

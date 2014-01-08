@@ -1,12 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rothko", "src\Rothko.csproj", "{4A84E568-CA86-4510-8CD0-90D3EF9B65F9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Meta", "Meta", "{1F038D9F-90B8-4FD9-B0F8-869E03A33379}"
 	ProjectSection(SolutionItems) = preProject
+		CodeAnalysisDictionary.xml = CodeAnalysisDictionary.xml
 		LICENSE-MIT.txt = LICENSE-MIT.txt
 		README.md = README.md
+		Rothko.ruleset = Rothko.ruleset
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{0AB92EA0-6F5D-41B7-A40F-EB85E7959AB6}"

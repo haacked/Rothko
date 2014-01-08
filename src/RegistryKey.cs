@@ -5,7 +5,7 @@ using NullGuard;
 
 namespace Rothko
 {
-    public class RegistryKey : IRegistryKey
+    public sealed class RegistryKey : IRegistryKey
     {
         readonly Microsoft.Win32.RegistryKey inner;
 

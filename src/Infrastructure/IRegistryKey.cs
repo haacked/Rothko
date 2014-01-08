@@ -45,8 +45,6 @@ namespace Rothko
 
         void DeleteValue(string name, bool throwOnMissingValue);
 
-        void Dispose();
-
         void Flush();
 
         RegistrySecurity GetAccessControl();

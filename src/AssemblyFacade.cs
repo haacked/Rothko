@@ -2,14 +2,13 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Security;
 using NullGuard;
 
 namespace Rothko
 {
     public class AssemblyFacade : IAssemblyFacade
     {
-        [MethodImpl(MethodImplOptions.NoInlining), SecuritySafeCritical]
+        [MethodImpl(MethodImplOptions.NoInlining)]
         public _Assembly GetExecutingAssembly()
         {
             return Assembly.GetCallingAssembly();
