@@ -33,6 +33,8 @@ namespace Rothko
         {
         }
 
+        [SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0",
+            Justification = "Code analysis is smoking some crack. I did validate it.")]
         protected ProcessWrapper(Process process, bool startImmediately)
         {
             if (process == null) throw new ArgumentNullException("process");

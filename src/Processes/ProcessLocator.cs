@@ -7,7 +7,9 @@ namespace Rothko
 {
     public class ProcessLocator : IProcessLocator
     {
-        public static IProcess NullProcess = new NullProcess();
+        static readonly IProcess _nullProcess = new NullProcess();
+
+        public static IProcess NullProcess { get { return _nullProcess; } }
 
         /// <summary>
         /// Returns the process specified by the processId. If retrieving the process throws an exception or the 

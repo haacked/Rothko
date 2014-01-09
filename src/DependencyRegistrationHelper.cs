@@ -39,12 +39,6 @@ namespace Rothko
             return new ReadOnlyDictionary<Type, DependencyInfo>(dependencies);
         }
 
-        static void Add<TInterface, TImplementation>(this IDictionary<Type, DependencyInfo> dictionary)
-            where TImplementation : new()
-        {
-            dictionary.Add(typeof(TInterface), new DependencyInfo(typeof(TImplementation), () => new TImplementation()));
-        }
-
         static void Add<TInterface>(this IDictionary<Type, DependencyInfo> dictionary, TInterface instance)
         {
             dictionary.Add(typeof(TInterface), new DependencyInfo(instance.GetType(), () => instance));
