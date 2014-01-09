@@ -61,8 +61,9 @@ namespace Rothko
         {
         }
 
-        public void Show()
+        public bool Show()
         {
+            return false;
         }
 
         public void Dispose()

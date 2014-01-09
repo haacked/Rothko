@@ -161,10 +161,10 @@ namespace Rothko
             KillProcessTree(process);
         }
 
-        public void Show()
+        public bool Show()
         {
-            NativeMethods.SetForegroundWindow(MainWindowHandle);
-            NativeMethods.ShowWindow(MainWindowHandle, ShowWindowOption.Restore);
+            return NativeMethods.SetForegroundWindow(MainWindowHandle)
+                && NativeMethods.ShowWindow(MainWindowHandle, ShowWindowOption.Restore);
         }
 
         [SuppressMessage("Microsoft.Usage", "CA2213:DisposableFieldsShouldBeDisposed", MessageId = "processDisposer", Justification = "SafeDispose does call dispose on it.")]

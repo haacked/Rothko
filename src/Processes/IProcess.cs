@@ -32,6 +32,6 @@ namespace Rothko
         /// <summary>
         /// Gives the process focus and restores it if it's minimized.
         /// </summary>
-        void Show();
+        bool Show();
     }
 }
