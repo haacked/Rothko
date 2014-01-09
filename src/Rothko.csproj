@@ -60,6 +60,7 @@
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
     <Compile Include="AssemblyFacade.cs" />
+    <Compile Include="DependencyRegistrationHelper.cs" />
     <Compile Include="DirectoryInfo.cs" />
     <Compile Include="Environment.cs" />
     <Compile Include="FileInfo.cs" />

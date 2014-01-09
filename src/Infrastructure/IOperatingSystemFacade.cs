@@ -2,7 +2,13 @@
 {
     public interface IOperatingSystemFacade
     {
-        IFilesFacade File { get; }
+        IAssemblyFacade Assembly { get; }
         IDialogFacade Dialog { get; }
+        IEnvironment Environment { get; }
+        IFilesFacade File { get; }
+        IMemoryMappedFileFactory MemoryMappedFiles { get; }
+        IProcessLocator ProcessLocator { get; }
+        IProcessStarter ProcessStarter { get; }
+        IRegistry Registry { get; }
     }
 }
