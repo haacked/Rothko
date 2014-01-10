@@ -6,6 +6,6 @@ namespace Rothko
     {
         bool WaitOne();
 
-        void Release();
+        int Release();
     }
 }

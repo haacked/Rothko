@@ -20,9 +20,9 @@ namespace Rothko
             return innerSemaphore.WaitOne();
         }
 
-        public void Release()
+        public int Release()
         {
-            innerSemaphore.Release();
+            return innerSemaphore.Release();
         }
 
         public void Dispose()
