@@ -11,6 +11,16 @@ namespace Rothko
             this.inner = inner;
         }
 
+        internal static IFileSystemInfo Wrap(System.IO.FileSystemInfo fileSystemInfo)
+        {
+            if((fileSystemInfo.Attributes & System.IO.FileAttributes.Directory) == System.IO.FileAttributes.Directory)
+            {
+                return DirectoryInfo.Wrap((System.IO.DirectoryInfo)fileSystemInfo);
+            }
+
+            return FileInfo.Wrap((System.IO.FileInfo)fileSystemInfo);
+        }
+
         public System.IO.FileAttributes Attributes
         {
             get
