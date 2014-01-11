@@ -107,17 +107,17 @@ namespace Rothko
 
         public IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos()
         {
-            throw new NotImplementedException();
+            return inner.EnumerateFileSystemInfos().Select(Wrap);
         }
 
         public IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos(string searchPattern)
         {
-            throw new NotImplementedException();
+            return inner.EnumerateFileSystemInfos(searchPattern).Select(Wrap);
         }
 
         public IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos(string searchPattern, System.IO.SearchOption searchOption)
         {
-            throw new NotImplementedException();
+            return inner.EnumerateFileSystemInfos(searchPattern, searchOption).Select(Wrap);
         }
 
         public System.Security.AccessControl.DirectorySecurity GetAccessControl()
