@@ -28,7 +28,7 @@ applications where testability is important.
 
 A secondary goal is to make it very easy to port code using the core .NET 
 Framework APIs to port over to Rothko. The interfaces map closely to the 
-.NET Framework's, except in a few plases where I wouldn't be able to live with 
+.NET Framework's, except in a few places where I wouldn't be able to live with 
 myself if I didn't modernize the library. For example, I updated methods 
 that return arrays to return `IEnumerable` (or derived interface) instead.
 
