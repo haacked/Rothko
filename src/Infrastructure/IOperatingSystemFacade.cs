@@ -5,7 +5,7 @@
         IAssemblyFacade Assembly { get; }
         IDialogFacade Dialog { get; }
         IEnvironment Environment { get; }
-        IFilesFacade File { get; }
+        IFileFacade File { get; }
         IMemoryMappedFileFactory MemoryMappedFiles { get; }
         IProcessLocator ProcessLocator { get; }
         IProcessStarter ProcessStarter { get; }
