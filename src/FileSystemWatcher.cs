@@ -128,8 +128,8 @@ namespace Rothko
             }
 
             var handler = Disposed;
-                if (handler != null)
-                    handler(this, new EventArgs());
+            if (handler != null)
+                handler(this, new EventArgs());
         }
 
         private void HookEvents()
