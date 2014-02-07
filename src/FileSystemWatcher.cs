@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NullGuard;
+using System;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 
@@ -149,6 +150,7 @@ namespace Rothko
         ///   marshal the event handler calls issued as a result of a directory change. The default is null.
         /// </returns>
         /// <filterpriority>2</filterpriority>
+        [AllowNull]
         public ISynchronizeInvoke SynchronizingObject
         {
             get { return inner.SynchronizingObject; }
@@ -162,6 +164,7 @@ namespace Rothko
         ///   An <see cref="T:System.ComponentModel.ISite"/> for the <see cref="T:Rothko.FileSystemWatcher"/>.
         /// </returns>
         /// <filterpriority>2</filterpriority>
+        [AllowNull]
         public ISite Site
         {
             get { return inner.Site; }
@@ -231,7 +234,7 @@ namespace Rothko
         /// <filterpriority>2</filterpriority>
         [SuppressMessage("Microsoft.Design", "CA1065:DoNotRaiseExceptionsInUnexpectedLocations",
             Justification = "It doesn't!")]
-        public override bool Equals(object obj)
+        public override bool Equals([AllowNull] object obj)
         {
             if (Object.ReferenceEquals(this, obj))
                 return true;
