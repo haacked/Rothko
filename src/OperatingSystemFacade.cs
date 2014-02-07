@@ -17,7 +17,7 @@
         public IAssemblyFacade Assembly { get; private set; }
         public IDialogFacade Dialog { get; private set; }
         public IEnvironment Environment { get; private set; }
-        public IFilesFacade File { get; private set; }
+        public IFileFacade File { get; private set; }
         public IMemoryMappedFileFactory MemoryMappedFiles { get; private set; }
         public IProcessLocator ProcessLocator { get; private set; }
         public IProcessStarter ProcessStarter { get; private set; }

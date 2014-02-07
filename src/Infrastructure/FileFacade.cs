@@ -2,7 +2,7 @@
 
 namespace Rothko
 {
-    public class FileFacade : IFilesFacade
+    public class FileFacade : IFileFacade
     {
         public void WriteAllText(string path, string contents)
         {

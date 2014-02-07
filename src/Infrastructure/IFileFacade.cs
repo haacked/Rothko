@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Rothko
 {
-    public interface IFilesFacade
+    public interface IFileFacade
     {
         void WriteAllText(string path, string contents);
     }
