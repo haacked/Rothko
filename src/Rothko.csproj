@@ -78,7 +78,6 @@
     <Compile Include="Infrastructure\IDialogFacade.cs" />
     <Compile Include="Infrastructure\IDirectoryInfo.cs" />
     <Compile Include="Infrastructure\IEnvironment.cs" />
-    <Compile Include="Infrastructure\IFilesFacade.cs" />
     <Compile Include="Infrastructure\IFileSystemWatcher.cs" />
     <Compile Include="Infrastructure\IFileFacade.cs" />
     <Compile Include="Infrastructure\IFileSystemFacade.cs" />
