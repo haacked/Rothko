@@ -281,11 +281,11 @@ namespace Rothko
                     UnhookEvents();
                     inner.Dispose();
                 }
-            }
 
-            var handler = Disposed;
-            if (handler != null)
-                handler(this, new EventArgs());
+                var handler = Disposed;
+                if (handler != null)
+                    handler(this, new EventArgs());
+            }
         }
 
         private void HookEvents()
