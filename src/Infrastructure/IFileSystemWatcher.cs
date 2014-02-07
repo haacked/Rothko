@@ -9,12 +9,11 @@ namespace Rothko
     ///   directory, changes.
     /// </summary>
     /// <filterpriority>2</filterpriority>
-    public interface IFileSystemWatcher : IDisposable, IComponent, ISupportInitialize
+    public interface IFileSystemWatcher : IDisposable
     {
-        /// <summary>Gets or sets a value indicating whether the component is enabled.</summary>
+        /// <summary>Gets or sets a value indicating whether the watcher is enabled.</summary>
         /// <returns>
-        ///   true if the component is enabled; otherwise, false. The default is false. If you are using the
-        ///   component on a designer in Visual Studio 2005, the default is true.
+        ///   true if the watcher is enabled; otherwise, false. The default is false.
         /// </returns>
         /// <exception cref="T:System.ObjectDisposedException">
         ///   The <see cref="T:Rothko.FileSystemWatcher"/> object has been disposed.

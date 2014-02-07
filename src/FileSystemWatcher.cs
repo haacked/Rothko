@@ -69,10 +69,10 @@ namespace Rothko
             HookEvents();
         }
 
-        /// <summary>Gets or sets a value indicating whether the component is enabled.</summary>
+        /// <summary>Gets or sets a value indicating whether the watcher is enabled.</summary>
         /// <returns>
-        ///   true if the component is enabled; otherwise, false. The default is false. If you are using the
-        ///   component on a designer in Visual Studio 2005, the default is true.
+        ///   true if the watcher is enabled; otherwise, false. The default is false. If you are using the
+        ///   watcher on a designer in Visual Studio 2005, the default is true.
         /// </returns>
         /// <exception cref="T:System.ObjectDisposedException">
         ///   The <see cref="T:Rothko.FileSystemWatcher"/> object has been disposed.
@@ -157,19 +157,6 @@ namespace Rothko
             set { inner.SynchronizingObject = value; }
         }
 
-        /// <summary>
-        ///   Gets or sets an <see cref="T:System.ComponentModel.ISite"/> for the <see cref="T:Rothko.FileSystemWatcher"/>.
-        /// </summary>
-        /// <returns>
-        ///   An <see cref="T:System.ComponentModel.ISite"/> for the <see cref="T:Rothko.FileSystemWatcher"/>.
-        /// </returns>
-        /// <filterpriority>2</filterpriority>
-        [AllowNull]
-        public ISite Site
-        {
-            get { return inner.Site; }
-            set { inner.Site = value; }
-        }
 
         /// <summary>Gets or sets the type of changes to watch for.</summary>
         /// <returns>
@@ -188,26 +175,6 @@ namespace Rothko
         {
             get { return inner.NotifyFilter; }
             set { inner.NotifyFilter = value; }
-        }
-
-        /// <summary>
-        ///   Begins the initialization of a <see cref="T:Rothko.FileSystemWatcher"/> used on a form or used by
-        ///   another component. The initialization occurs at run time.
-        /// </summary>
-        /// <filterpriority>2</filterpriority>
-        public void BeginInit()
-        {
-            inner.BeginInit();
-        }
-
-        /// <summary>
-        ///   Ends the initialization of a <see cref="T:Rothko.FileSystemWatcher"/> used on a form or used by
-        ///   another component. The initialization occurs at run time.
-        /// </summary>
-        /// <filterpriority>2</filterpriority>
-        public void EndInit()
-        {
-            inner.EndInit();
         }
 
         /// <summary>
@@ -257,7 +224,7 @@ namespace Rothko
         }
         
         /// <summary>
-        ///   Releases all resources used by the <see cref="T:System.ComponentModel.Component"/>.
+        ///   Releases all resources used by the <see cref="T:Rothko.FileSystemWatcher"/>.
         /// </summary>
         public void Dispose()
         {
@@ -377,7 +344,7 @@ namespace Rothko
         public event System.IO.ErrorEventHandler Error;
 
         /// <summary>
-        ///   Occurs when the component is disposed by a call to the <see cref="M:System.ComponentModel.Component.Dispose"/>
+        ///   Occurs when the watcher is disposed by a call to the <see cref="M:Rothko.FileSystemWatcher.Dispose"/>
         ///   method.
         /// </summary>
         public event EventHandler Disposed;
