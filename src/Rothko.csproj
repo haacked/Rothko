@@ -68,6 +68,7 @@
     <Compile Include="Environment.cs" />
     <Compile Include="FileInfo.cs" />
     <Compile Include="FileSystemInfo.cs" />
+    <Compile Include="FileSystemWatcher.cs" />
     <Compile Include="Infrastructure\DialogFacade.cs" />
     <Compile Include="Infrastructure\EnumerableExtensions.cs" />
     <Compile Include="Infrastructure\ExceptionExtensions.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Infrastructure\IDialogFacade.cs" />
     <Compile Include="Infrastructure\IDirectoryInfo.cs" />
     <Compile Include="Infrastructure\IEnvironment.cs" />
+    <Compile Include="Infrastructure\IFileSystemWatcher.cs" />
     <Compile Include="Infrastructure\IFileFacade.cs" />
     <Compile Include="Infrastructure\IFileSystemFacade.cs" />
     <Compile Include="Infrastructure\IOperatingSystemFacade.cs" />
