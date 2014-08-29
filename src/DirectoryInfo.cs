@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 
 namespace Rothko
@@ -8,7 +10,7 @@ namespace Rothko
     {
         readonly System.IO.DirectoryInfo inner;
 
-        private DirectoryInfo(System.IO.DirectoryInfo inner)
+        protected internal DirectoryInfo(System.IO.DirectoryInfo inner)
             : base(inner)
         {
             this.inner = inner;
@@ -138,6 +140,16 @@ namespace Rothko
         public void SetAccessControl(System.Security.AccessControl.DirectorySecurity directorySecurity)
         {
             inner.SetAccessControl(directorySecurity);
+        }
+
+        public bool IsEmpty {
+            get
+            {
+                if (!Exists) throw new DirectoryNotFoundException(
+                    String.Format(CultureInfo.InvariantCulture, "The directory '{0}' does not exist", inner.FullName));
+                return !inner.EnumerateDirectories().Any() && !inner.EnumerateFiles().Any();
+
+            }
         }
     }
 }

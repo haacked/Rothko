@@ -474,5 +474,10 @@ namespace Rothko
         /// <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/>
         /// </PermissionSet>
         void SetAccessControl(DirectorySecurity directorySecurity);
+
+        /// <summary>
+        /// Returns true if the directory is empty, otherwise false.
+        /// </summary>
+        bool IsEmpty { get; }
     }
 }
