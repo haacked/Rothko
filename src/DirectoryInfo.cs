@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -142,7 +143,10 @@ namespace Rothko
             inner.SetAccessControl(directorySecurity);
         }
 
-        public bool IsEmpty {
+        [SuppressMessage("Microsoft.Design", "CA1065:DoNotRaiseExceptionsInUnexpectedLocations"
+            , Justification = "Better to throw an exception than give bad info here")]
+        public bool IsEmpty
+        {
             get
             {
                 if (!Exists) throw new DirectoryNotFoundException(
