@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.Composition;
 using System.Globalization;
 using System.IO;
 
 namespace Rothko
 {
+    [Export(typeof(DirectoryFacade))]
     public class DirectoryFacade : IDirectoryFacade
     {
         public IDirectoryInfo GetDirectory(string path)

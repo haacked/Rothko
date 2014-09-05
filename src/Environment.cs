@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using Env = System.Environment;
 
 namespace Rothko
 {
+    [Export(typeof(IEnvironment))]
     public class Environment : IEnvironment
     {
         public Environment()

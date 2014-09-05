@@ -1,45 +1,47 @@
 ﻿using System;
+using System.ComponentModel.Composition;
 using System.Runtime.Serialization;
 
 namespace Rothko
 {
+    [Export(typeof(IOperatingSystem))]
     public sealed class OperatingSystem : IOperatingSystem
     {
-        readonly System.OperatingSystem _operatingSystem;
+        readonly System.OperatingSystem operatingSystem;
 
         public OperatingSystem(System.OperatingSystem operatingSystem)
         {
-            _operatingSystem = operatingSystem;
+            this.operatingSystem = operatingSystem;
         }
 
         public object Clone()
         {
-            return _operatingSystem.Clone();
+            return operatingSystem.Clone();
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
-            _operatingSystem.GetObjectData(info, context);
+            operatingSystem.GetObjectData(info, context);
         }
 
         public PlatformID Platform
         {
-            get { return _operatingSystem.Platform; }
+            get { return operatingSystem.Platform; }
         }
 
         public string ServicePack
         {
-            get { return _operatingSystem.ServicePack; }
+            get { return operatingSystem.ServicePack; }
         }
 
         public Version Version
         {
-            get { return _operatingSystem.Version; }
+            get { return operatingSystem.Version; }
         }
 
         public string VersionString
         {
-            get { return _operatingSystem.VersionString; }
+            get { return operatingSystem.VersionString; }
         }
     }
 }

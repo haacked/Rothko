@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 
 namespace Rothko
 {
+    [Export(typeof(IFileSystemFacade))]
     public class FileSystemFacade : IFileSystemFacade
     {
         public IDirectoryInfo CreateDirectory(string path)

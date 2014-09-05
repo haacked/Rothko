@@ -1,8 +1,10 @@
-﻿using System.IO;
+﻿using System.ComponentModel.Composition;
+using System.IO;
 using System.IO.MemoryMappedFiles;
 
 namespace Rothko
 {
+    [Export(typeof(IMemoryMappedFileFactory))]
     public class MemoryMappedFileFactory : IMemoryMappedFileFactory
     {
         public IMemoryMappedFile OpenExisting(string mapName)

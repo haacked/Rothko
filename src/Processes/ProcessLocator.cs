@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.Linq;
 
 namespace Rothko
 {
+    [Export(typeof(IProcessLocator))]
     public class ProcessLocator : IProcessLocator
     {
-        static readonly IProcess _nullProcess = new NullProcess();
+        static readonly IProcess nullProcess = new NullProcess();
 
-        public static IProcess NullProcess { get { return _nullProcess; } }
+        public static IProcess NullProcess { get { return nullProcess; } }
 
         /// <summary>
         /// Returns the process specified by the processId. If retrieving the process throws an exception or the 

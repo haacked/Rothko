@@ -1,5 +1,8 @@
-﻿namespace Rothko
+﻿using System.ComponentModel.Composition;
+
+namespace Rothko
 {
+    [Export(typeof(IOperatingSystemFacade))]
     public class OperatingSystemFacade : IOperatingSystemFacade
     {
         public OperatingSystemFacade()

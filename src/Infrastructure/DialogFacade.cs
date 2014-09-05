@@ -1,7 +1,9 @@
-﻿using Microsoft.Win32;
+﻿using System.ComponentModel.Composition;
+using Microsoft.Win32;
 
 namespace Rothko
 {
+    [Export(typeof(IDialogFacade))]
     public class DialogFacade : IDialogFacade
     {
         public SaveDialogResult ShowSaveFileDialog(string filterPattern)
