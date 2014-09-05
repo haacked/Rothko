@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+﻿using System.ComponentModel.Composition;
 using System.IO;
 using System.Text;
 
 namespace Rothko
 {
+    [Export(typeof(IFileFacade))]
     public class FileFacade : IFileFacade
     {
         public bool Exists(string path)

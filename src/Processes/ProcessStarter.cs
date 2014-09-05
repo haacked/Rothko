@@ -1,8 +1,10 @@
 ﻿using System;
+using System.ComponentModel.Composition;
 using System.Diagnostics;
 
 namespace Rothko
 {
+    [Export(typeof(IProcessStarter))]
     public class ProcessStarter : IProcessStarter
     {
         public IProcess Start(ProcessStartInfo processStartInfo)
