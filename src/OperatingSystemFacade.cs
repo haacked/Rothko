@@ -1,8 +1,11 @@
-﻿using Rothko.Infrastructure;
+using System.ComponentModel.Composition;
+using Rothko.Infrastructure;
 
 namespace Rothko
 {
+    [Export(typeof(IOperatingSystem))]
     public class OperatingSystemFacade : IOperatingSystem
+    
     {
         public OperatingSystemFacade()
         {

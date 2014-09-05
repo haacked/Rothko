@@ -1,6 +1,9 @@
 ﻿
+using System.ComponentModel.Composition;
+
 namespace Rothko
 {
+    [Export(typeof(IRegistry))]
     public class Registry : IRegistry
     {
         public IRegistryKey ClassesRoot

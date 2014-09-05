@@ -1,11 +1,13 @@
-﻿using NullGuard;
 using System;
+using System.ComponentModel.Composition;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+﻿using NullGuard;
 
 namespace Rothko
 {
+    [Export(typeof(IAssemblyFacade))]
     public class AssemblyFacade : IAssemblyFacade
     {
         [MethodImpl(MethodImplOptions.NoInlining)]
