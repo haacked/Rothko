@@ -25,7 +25,7 @@ namespace Rothko
         /// Returns true if the directory exists at the specified path.
         /// </summary>
         /// <param name="path">Path to the directory</param>
-        /// <returns>True if the directory exists, otherewise false.</returns>
+        /// <returns>True if the directory exists, otherwise false.</returns>
         bool Exists(string path);
         
         /// <summary>

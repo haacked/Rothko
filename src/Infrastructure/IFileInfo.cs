@@ -395,7 +395,7 @@ namespace Rothko
         /// <summary>Creates a read-only <see cref="T:System.IO.FileStream"/>.</summary>
         /// <returns>A new read-only <see cref="T:Rothko.IFileStream"/> object.</returns>
         /// <exception cref="T:System.UnauthorizedAccessException">
-        ///   <paramref name="path"/> is read-only or is a directory.
+        ///   Inner object path is read-only or is a directory.
         /// </exception>
         /// <exception cref="T:System.IO.DirectoryNotFoundException">
         ///   The specified path is invalid, such as being on an unmapped drive.
@@ -417,7 +417,7 @@ namespace Rothko
         /// </exception>
         /// <exception cref="T:System.IO.FileNotFoundException">The file is not found.</exception>
         /// <exception cref="T:System.UnauthorizedAccessException">
-        ///   <paramref name="path"/> is read-only or is a directory.
+        ///  Inner object path is read-only or is a directory.
         /// </exception>
         /// <exception cref="T:System.IO.DirectoryNotFoundException">
         ///   The specified path is invalid, such as being on an unmapped drive.
@@ -458,15 +458,15 @@ namespace Rothko
         ///   The name of a file to replace with the current file.
         /// </param>
         /// <param name="destinationBackupFileName">
-        ///   The name of a file with which to create a backup of the file described by the <paramref name="destFileName"/>
+        ///   The name of a file with which to create a backup of the file described by the <paramref name="destinationFileName"/>
         ///   parameter.
         /// </param>
         /// <exception cref="T:System.ArgumentException">
-        ///   The path described by the <paramref name="destFileName"/> parameter was not of a legal form.-or-
-        ///   The path described by the <paramref name="destBackupFileName"/> parameter was not of a legal form.
+        ///   The path described by the <paramref name="destinationFileName"/> parameter was not of a legal form.-or-
+        ///   The path described by the <paramref name="destinationBackupFileName"/> parameter was not of a legal form.
         /// </exception>
         /// <exception cref="T:System.ArgumentNullException">
-        ///   The <paramref name="destFileName"/> parameter is null.
+        ///   The <paramref name="destinationFileName"/> parameter is null.
         /// </exception>
         /// <exception cref="T:System.IO.FileNotFoundException">
         ///   The file described by the current <see cref="T:Rothko.IFileInfo"/> object could not be found.-or-
@@ -494,7 +494,7 @@ namespace Rothko
         ///   The name of a file to replace with the current file.
         /// </param>
         /// <param name="destinationBackupFileName">
-        ///   The name of a file with which to create a backup of the file described by the <paramref name="destFileName"/>
+        ///   The name of a file with which to create a backup of the file described by the <paramref name="destinationFileName"/>
         ///   parameter.
         /// </param>
         /// <param name="ignoreMetadataErrors">
@@ -502,11 +502,11 @@ namespace Rothko
         ///   file; otherwise false.
         /// </param>
         /// <exception cref="T:System.ArgumentException">
-        ///   The path described by the <paramref name="destFileName"/> parameter was not of a legal form.-or-
-        ///   The path described by the <paramref name="destBackupFileName"/> parameter was not of a legal form.
+        ///   The path described by the <paramref name="destinationFileName"/> parameter was not of a legal form.-or-
+        ///   The path described by the <paramref name="destinationBackupFileName"/> parameter was not of a legal form.
         /// </exception>
         /// <exception cref="T:System.ArgumentNullException">
-        ///   The <paramref name="destFileName"/> parameter is null.
+        ///   The <paramref name="destinationFileName"/> parameter is null.
         /// </exception>
         /// <exception cref="T:System.IO.FileNotFoundException">
         ///   The file described by the current <see cref="T:Rothko.IFileInfo"/> object could not be found.-or-

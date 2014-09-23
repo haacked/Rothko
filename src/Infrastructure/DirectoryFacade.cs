@@ -29,8 +29,8 @@ namespace Rothko
                 throw new DirectoryNotFoundException(
                     String.Format(CultureInfo.InvariantCulture, "The directory '{0}' does not exist", path));
             }
-            return directory.IsEmpty;
 
+            return directory.IsEmpty;
         }
     }
 }

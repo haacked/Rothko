@@ -9,5 +9,7 @@ namespace Rothko
         string ServicePack { get; }
         Version Version { get; }
         string VersionString { get; }
+        string Name { get; }
+        string Edition { get; }
     }
 }

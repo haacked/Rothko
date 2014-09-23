@@ -51,16 +51,16 @@ namespace Rothko
         /// </summary>
         /// <param name="directorySecurity">The access control to apply to the directory.</param>
         /// <exception cref="T:System.IO.IOException">
-        ///   The directory specified by <paramref name="path"/> is read-only or is not empty.
+        ///   The directory specified by <paramref name="directorySecurity"/> is read-only or is not empty.
         /// </exception>
         /// <exception cref="T:System.UnauthorizedAccessException">
         ///   The caller does not have the required permission.
         /// </exception>
         /// <exception cref="T:System.ArgumentException">
-        ///   <paramref name="path"/> is a zero-length string, contains only white space, or contains one or more
-        ///   invalid characters as defined by <see cref="F:System.IO.Path.InvalidPathChars"/>.
+        ///   <paramref name="directorySecurity"/> is a zero-length string, contains only white space, or contains one or more
+        ///   invalid characters as defined by <see cref="F:System.IO.Path.GetInvalidFilenameChars"/>.
         /// </exception>
-        /// <exception cref="T:System.ArgumentNullException"><paramref name="path"/> is null.</exception>
+        /// <exception cref="T:System.ArgumentNullException"><paramref name="directorySecurity"/> is null.</exception>
         /// <exception cref="T:System.IO.PathTooLongException">
         ///   The specified path, file name, or both exceed the system-defined maximum length. For example, on
         ///   Windows-based platforms, paths must be less than 248 characters, and file names must be less than
@@ -73,7 +73,7 @@ namespace Rothko
         ///   Creating a directory with only the colon (:) character was attempted.
         /// </exception>
         /// <exception cref="T:System.IO.IOException">
-        ///   The directory specified by <paramref name="path"/> is read-only or is not empty.
+        ///   The directory specified by <paramref name="directorySecurity"/> is read-only or is not empty.
         /// </exception>
         /// <filterpriority>1</filterpriority>
         /// <PermissionSet>
