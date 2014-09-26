@@ -88,7 +88,7 @@ namespace Rothko
             return inner.EnumerateDirectories(searchPattern).Select(Wrap);
         }
 
-        public IEnumerable<IDirectoryInfo> EnumerateDirectories(string searchPattern, System.IO.SearchOption searchOption)
+        public IEnumerable<IDirectoryInfo> EnumerateDirectories(string searchPattern, SearchOption searchOption)
         {
             return inner.EnumerateDirectories(searchPattern, searchOption).Select(Wrap);
         }
@@ -103,7 +103,7 @@ namespace Rothko
             return inner.EnumerateFiles(searchPattern).Select(FileInfo.Wrap);
         }
 
-        public IEnumerable<IFileInfo> EnumerateFiles(string searchPattern, System.IO.SearchOption searchOption)
+        public IEnumerable<IFileInfo> EnumerateFiles(string searchPattern, SearchOption searchOption)
         {
             return inner.EnumerateFiles(searchPattern, searchOption).Select(FileInfo.Wrap);
         }
@@ -118,7 +118,7 @@ namespace Rothko
             return inner.EnumerateFileSystemInfos(searchPattern).Select(Wrap);
         }
 
-        public IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos(string searchPattern, System.IO.SearchOption searchOption)
+        public IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos(string searchPattern, SearchOption searchOption)
         {
             return inner.EnumerateFileSystemInfos(searchPattern, searchOption).Select(Wrap);
         }

@@ -69,13 +69,16 @@
     <Compile Include="FileInfo.cs" />
     <Compile Include="FileSystemInfo.cs" />
     <Compile Include="FileSystemWatcher.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Infrastructure\DialogFacade.cs" />
+    <Compile Include="Infrastructure\DirectoryFacade.cs" />
     <Compile Include="Infrastructure\EnumerableExtensions.cs" />
     <Compile Include="Infrastructure\ExceptionExtensions.cs" />
     <Compile Include="Infrastructure\FileFacade.cs" />
     <Compile Include="FileSystemFacade.cs" />
     <Compile Include="Infrastructure\IAssemblyFacade.cs" />
     <Compile Include="Infrastructure\IDialogFacade.cs" />
+    <Compile Include="Infrastructure\IDirectoryFacade.cs" />
     <Compile Include="Infrastructure\IDirectoryInfo.cs" />
     <Compile Include="Infrastructure\IEnvironment.cs" />
     <Compile Include="Infrastructure\IFileSystemWatcher.cs" />
@@ -108,9 +111,11 @@
     <Compile Include="Threading\MemoryMappedFileFactory.cs" />
     <Compile Include="Threading\SystemSemaphore.cs" />
     <Compile Include="Win32\NativeMethods.cs" />
+    <Compile Include="Win32\OsVersionInfoEx.cs" />
     <Compile Include="Win32\PROCESS_BASIC_INFORMATION.cs" />
     <Compile Include="Win32\SafeNativeMethods.cs" />
     <Compile Include="Win32\ShowWindowOption.cs" />
+    <Compile Include="Win32\SystemMetric.cs" />
     <Compile Include="Win32\UnsafeNativeMethods.cs" />
   </ItemGroup>
   <ItemGroup>

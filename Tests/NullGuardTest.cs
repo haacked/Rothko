@@ -18,5 +18,15 @@ namespace Tests
             Assert.Throws<ArgumentNullException>(() => new FileInfo(null));
 #endif
         }
+
+        [Fact]
+        public void CheckOSVersionImplementation()
+        {
+            Environment env = new Environment();
+
+            Assert.NotNull(env.OSVersion.Edition);
+            Assert.NotNull(env.OSVersion.Name);
+            Assert.True(env.OSVersion.ToString().Length > 7);
+        }
     }
 }
