@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Rothko
 {
@@ -20,7 +16,7 @@ namespace Rothko
         /// </exception>
         /// <exception cref="T:System.ArgumentException">
         ///   <paramref name="path"/> is a zero-length string, contains only white space, or contains one or
-        ///   more invalid characters as defined by <see cref="F:System.IO.Path.InvalidPathChars"/>.
+        ///   more invalid characters as defined by <see cref="F:System.IO.Path.GetInvalidFileNameChars"/>.
         ///   -or-<paramref name="path"/> is prefixed with, or contains only a colon character (:).
         /// </exception>
         /// <exception cref="T:System.ArgumentNullException"><paramref name="path"/> is null.</exception>
@@ -60,7 +56,7 @@ namespace Rothko
         /// </exception>
         /// <exception cref="T:System.ArgumentException">
         ///   <paramref name="path"/> is a zero-length string, contains only white space, or contains one
-        ///   or more invalid characters as defined by <see cref="F:System.IO.Path.InvalidPathChars"/>.
+        ///   or more invalid characters as defined by <see cref="F:System.IO.Path.GetInvalidFileNameChars"/>.
         /// </exception>
         /// <exception cref="T:System.ArgumentNullException"><paramref name="path"/> is null.</exception>
         /// <exception cref="T:System.IO.PathTooLongException">
@@ -101,7 +97,7 @@ namespace Rothko
         /// </exception>
         /// <exception cref="T:System.ArgumentException">
         ///   <paramref name="path"/> is a zero-length string, contains only white space, or contains one or
-        ///   more invalid characters as defined by <see cref="F:System.IO.Path.InvalidPathChars"/>.
+        ///   more invalid characters as defined by <see cref="F:System.IO.Path.GetInvalidFileNameChars"/>.
         /// </exception>
         /// <exception cref="T:System.ArgumentNullException"><paramref name="path"/> is null.</exception>
         /// <exception cref="T:System.IO.PathTooLongException">
@@ -121,12 +117,12 @@ namespace Rothko
         void DeleteDirectory(string path, bool recursive);
 
         /// <summary>Determines whether the given path refers to an existing directory on disk.</summary>
-		/// <returns>true if <paramref name="path"/> refers to an existing directory; otherwise, false.</returns>
-		/// <param name="path">The path to test.</param>
-		/// <filterpriority>1</filterpriority>
-		/// <PermissionSet>
-		/// <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/>
-		/// </PermissionSet>
+        /// <returns>true if <paramref name="path"/> refers to an existing directory; otherwise, false.</returns>
+        /// <param name="path">The path to test.</param>
+        /// <filterpriority>1</filterpriority>
+        /// <PermissionSet>
+        /// <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/>
+        /// </PermissionSet>
         bool DirectoryExists(string path);
 
         /// <summary>Gets a <see cref="T:Rothko.IDirectoryInfo"/> representing the specified path.</summary>

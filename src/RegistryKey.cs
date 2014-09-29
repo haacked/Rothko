@@ -1,7 +1,7 @@
 ﻿
+using NullGuard;
 using System.Collections.Generic;
 using System.Diagnostics;
-using NullGuard;
 
 namespace Rothko
 {

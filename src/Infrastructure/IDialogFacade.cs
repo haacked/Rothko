@@ -8,7 +8,7 @@ namespace Rothko
     }
 
     [SuppressMessage("Microsoft.Performance", "CA1815:OverrideEqualsAndOperatorEqualsOnValueTypes",
-        Justification = "TODO: Should tchis even be a struct?")]
+        Justification = "TODO: Should this even be a struct?")]
     public struct SaveDialogResult
     {
         readonly bool _success;

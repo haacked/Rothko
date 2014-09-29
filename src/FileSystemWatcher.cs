@@ -203,9 +203,9 @@ namespace Rothko
             Justification = "It doesn't!")]
         public override bool Equals([AllowNull] object obj)
         {
-            if (Object.ReferenceEquals(this, obj))
+            if (ReferenceEquals(this, obj))
                 return true;
-            if (Object.ReferenceEquals(null, obj))
+            if (ReferenceEquals(null, obj))
                 return false;
 
             var other = obj as FileSystemWatcher;
