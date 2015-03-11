@@ -8,7 +8,7 @@ namespace Rothko
     {
         public Environment()
         {
-            OSVersion = new OperatingSystem(Env.OSVersion);
+            OSVersion = new OperatingSystemInfo(Env.OSVersion);
         }
 
         public string CommandLine
@@ -53,7 +53,7 @@ namespace Rothko
             get { return Env.NewLine; }
         }
 
-        public IOperatingSystem OSVersion
+        public IOperatingSystemInfo OSVersion
         {
             get; private set;
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Runtime.Serialization;
 using Rothko.Win32;
@@ -8,7 +9,7 @@ namespace Rothko
     /// <summary>
     /// Represents information about an operating system, such as the version and platform identifier. This class cannot be inherited.
     /// </summary>
-    public sealed class OperatingSystem : IOperatingSystem
+    public sealed class OperatingSystemInfo : IOperatingSystemInfo
     {
         #region PRODUCT
         private const int PRODUCT_UNDEFINED = 0x00000000;
@@ -92,21 +93,21 @@ namespace Rothko
         private const int VER_SUITE_BLADE = 1024;
         #endregion VERSIONS
 
-        readonly System.OperatingSystem _operatingSystem;
+        readonly OperatingSystem _operatingSystem;
         private string _edition;
         private string _name;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OperatingSystem"/> class, using the specified platform identifier value and version object.
+        /// Initializes a new instance of the <see cref="OperatingSystemInfo"/> class, using the specified platform identifier value and version object.
         /// </summary>
         /// <param name="operatingSystem">A valid instance of <see cref="System.OperatingSystem"/> class. Usually is given by the <value>Env.OSVersion</value> property.</param>
-        public OperatingSystem(System.OperatingSystem operatingSystem)
+        public OperatingSystemInfo(OperatingSystem operatingSystem)
         {
             _operatingSystem = operatingSystem;
         }
 
         /// <summary>
-        /// Creates an <see cref="OperatingSystem"/> object that is identical to this instance.
+        /// Creates an <see cref="OperatingSystemInfo"/> object that is identical to this instance.
         /// </summary>
         /// <returns></returns>
         public object Clone()
@@ -233,10 +234,10 @@ namespace Rothko
         }
 
         /// <summary>
-        /// Converts the value of this <see cref="OperatingSystem"/> object to its equivalent string representation.
+        /// Converts the value of this <see cref="OperatingSystemInfo"/> object to its equivalent string representation.
         /// </summary>
         /// <returns>The commercial name of the running operating system.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1065:DoNotRaiseExceptionsInUnexpectedLocations", Justification = "The violation is caused by an exception declaration instead of a thrown exception.")]
+        [SuppressMessage("Microsoft.Design", "CA1065:DoNotRaiseExceptionsInUnexpectedLocations", Justification = "The violation is caused by an exception declaration instead of a thrown exception.")]
         public override string ToString()
         {
             return string.Format(CultureInfo.InvariantCulture, "{0} {1} with {2}", Name, Edition, ServicePack);
@@ -427,6 +428,8 @@ namespace Rothko
             return string.Empty;
         }
 
+        [SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity",
+            Justification = "It can't be helped")]
         private static string GetEditionMajorVersionSix(OsVersionInfoEx osVersion)
         {
             int ed;

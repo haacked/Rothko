@@ -1,6 +1,6 @@
 ﻿namespace Rothko
 {
-    public class OperatingSystemFacade : IOperatingSystemFacade
+    public class OperatingSystemFacade : IOperatingSystem
     {
         public OperatingSystemFacade()
         {
