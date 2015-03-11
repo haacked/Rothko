@@ -53,6 +53,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +73,7 @@
     <Compile Include="FileSystemWatcher.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Guard.cs" />
+    <Compile Include="Infrastructure\BrowseDirectoryResult.cs" />
     <Compile Include="Infrastructure\DialogFacade.cs" />
     <Compile Include="Infrastructure\DirectoryFacade.cs" />
     <Compile Include="Infrastructure\EnumerableExtensions.cs" />
@@ -97,6 +99,7 @@
     <Compile Include="Networking\IHttpClient.cs" />
     <Compile Include="Networking\IWebClient.cs" />
     <Compile Include="Networking\WebClient.cs" />
+    <Compile Include="Infrastructure\SaveDialogResult.cs" />
     <Compile Include="OperatingSystem.cs" />
     <Compile Include="OperatingSystemFacade.cs" />
     <Compile Include="Processes\IProcess.cs" />
