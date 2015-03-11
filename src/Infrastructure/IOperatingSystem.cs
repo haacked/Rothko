@@ -11,5 +11,6 @@
         IProcessLocator ProcessLocator { get; }
         IProcessStarter ProcessStarter { get; }
         IRegistry Registry { get; }
+        IBrowser Browser { get; }
     }
 }

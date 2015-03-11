@@ -72,6 +72,7 @@
     <Compile Include="FileSystemWatcher.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Infrastructure\BrowseDirectoryResult.cs" />
+    <Compile Include="Infrastructure\Browser.cs" />
     <Compile Include="Infrastructure\DialogFacade.cs" />
     <Compile Include="Infrastructure\DirectoryFacade.cs" />
     <Compile Include="Infrastructure\EnumerableExtensions.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Infrastructure\FileFacade.cs" />
     <Compile Include="FileSystemFacade.cs" />
     <Compile Include="Infrastructure\IAssemblyFacade.cs" />
+    <Compile Include="Infrastructure\IBrowser.cs" />
     <Compile Include="Infrastructure\IDialogFacade.cs" />
     <Compile Include="Infrastructure\IDirectoryFacade.cs" />
     <Compile Include="Infrastructure\IDirectoryInfo.cs" />
@@ -86,10 +88,10 @@
     <Compile Include="Infrastructure\IFileSystemWatcher.cs" />
     <Compile Include="Infrastructure\IFileFacade.cs" />
     <Compile Include="Infrastructure\IFileSystemFacade.cs" />
-    <Compile Include="Infrastructure\IOperatingSystemFacade.cs" />
+    <Compile Include="Infrastructure\IOperatingSystem.cs" />
     <Compile Include="Infrastructure\IFileInfo.cs" />
     <Compile Include="Infrastructure\IFileSystemInfo.cs" />
-    <Compile Include="Infrastructure\IOperatingSystem.cs" />
+    <Compile Include="Infrastructure\IOperatingSystemInfo.cs" />
     <Compile Include="Infrastructure\IRegistry.cs" />
     <Compile Include="Infrastructure\IRegistryKey.cs" />
     <Compile Include="Infrastructure\RegistryExtensions.cs" />
