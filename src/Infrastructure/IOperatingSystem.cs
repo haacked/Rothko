@@ -1,15 +1,15 @@
-﻿using System;
-using System.Runtime.Serialization;
-
-namespace Rothko
+﻿namespace Rothko
 {
-    public interface IOperatingSystem : ICloneable, ISerializable
+    public interface IOperatingSystem
     {
-        PlatformID Platform { get; }
-        string ServicePack { get; }
-        Version Version { get; }
-        string VersionString { get; }
-        string Name { get; }
-        string Edition { get; }
+        IAssemblyFacade Assembly { get; }
+        IDialogFacade Dialog { get; }
+        IDirectoryFacade Directory { get; }
+        IEnvironment Environment { get; }
+        IFileFacade File { get; }
+        IMemoryMappedFileFactory MemoryMappedFiles { get; }
+        IProcessLocator ProcessLocator { get; }
+        IProcessStarter ProcessStarter { get; }
+        IRegistry Registry { get; }
     }
 }

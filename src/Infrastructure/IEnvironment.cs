@@ -23,7 +23,7 @@ namespace Rothko
 
         string NewLine { get; }
 
-        IOperatingSystem OSVersion { get; }
+        IOperatingSystemInfo OSVersion { get; }
 
         int ProcessorCount { get; }
 
