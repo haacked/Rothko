@@ -1,9 +1,9 @@
 ﻿#if !DEBUG
 using System;
-#endif
 using Rothko;
+#endif
 using Xunit;
-using Xunit.Sdk;
+using Environment = Rothko.Environment;
 
 namespace Tests
 {
@@ -12,9 +12,7 @@ namespace Tests
         [Fact]
         public void MakeSureNullGuardIsWorking()
         {
-#if DEBUG
-            Assert.Throws<TraceAssertException>(() => new FileInfo(null));
-#else
+#if !DEBUG
             Assert.Throws<ArgumentNullException>(() => new FileInfo(null));
 #endif
         }
@@ -22,11 +20,11 @@ namespace Tests
         [Fact]
         public void CheckOSVersionImplementation()
         {
-            Environment env = new Environment();
+            var environment = new Environment();
 
-            Assert.NotNull(env.OSVersion.Edition);
-            Assert.NotNull(env.OSVersion.Name);
-            Assert.True(env.OSVersion.ToString().Length > 7);
+            Assert.NotNull(environment.OSVersion.Edition);
+            Assert.NotNull(environment.OSVersion.Name);
+            Assert.True(environment.OSVersion.ToString().Length > 7);
         }
     }
 }
