@@ -26,7 +26,7 @@ namespace Rothko
             var operatingSystemFacade = new OperatingSystemFacade();
 
             var dependencies = new Dictionary<Type, DependencyInfo>();
-            dependencies.Add<IOperatingSystemFacade>(operatingSystemFacade); 
+            dependencies.Add<IOperatingSystem>(operatingSystemFacade); 
             dependencies.Add(operatingSystemFacade.Assembly);
             dependencies.Add(operatingSystemFacade.Environment);
             dependencies.Add(operatingSystemFacade.Dialog); 

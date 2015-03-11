@@ -1,6 +1,8 @@
-﻿namespace Rothko
+﻿using Rothko.Infrastructure;
+
+namespace Rothko
 {
-    public class OperatingSystemFacade : IOperatingSystemFacade
+    public class OperatingSystemFacade : IOperatingSystem
     {
         public OperatingSystemFacade()
         {
@@ -13,6 +15,7 @@
             ProcessLocator = new ProcessLocator();
             ProcessStarter = new ProcessStarter();
             Registry = new Registry();
+            Browser = new Browser(ProcessStarter, Environment);
         }
 
         public IAssemblyFacade Assembly { get; private set; }
@@ -24,5 +27,7 @@
         public IProcessLocator ProcessLocator { get; private set; }
         public IProcessStarter ProcessStarter { get; private set; }
         public IRegistry Registry { get; private set; }
+
+        public IBrowser Browser { get; private set; }
     }
 }
