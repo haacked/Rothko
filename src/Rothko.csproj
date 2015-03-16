@@ -83,7 +83,6 @@
     <Compile Include="Infrastructure\EnumerableExtensions.cs" />
     <Compile Include="Infrastructure\ExceptionExtensions.cs" />
     <Compile Include="Infrastructure\FileFacade.cs" />
-    <Compile Include="FileSystemFacade.cs" />
     <Compile Include="Infrastructure\IAssemblyFacade.cs" />
     <Compile Include="Infrastructure\IBrowser.cs" />
     <Compile Include="Infrastructure\IDialogFacade.cs" />
@@ -92,7 +91,6 @@
     <Compile Include="Infrastructure\IEnvironment.cs" />
     <Compile Include="Infrastructure\IFileSystemWatcher.cs" />
     <Compile Include="Infrastructure\IFileFacade.cs" />
-    <Compile Include="Infrastructure\IFileSystemFacade.cs" />
     <Compile Include="Infrastructure\IOperatingSystem.cs" />
     <Compile Include="Infrastructure\IFileInfo.cs" />
     <Compile Include="Infrastructure\IFileSystemInfo.cs" />
