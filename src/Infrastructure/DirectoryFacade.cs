@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 
@@ -6,14 +7,48 @@ namespace Rothko
 {
     public class DirectoryFacade : IDirectoryFacade
     {
+        public IDirectoryInfo CreateDirectory(string path)
+        {
+            return DirectoryInfo.Wrap(Directory.CreateDirectory(path));
+        }
+
+        public void DeleteDirectory(string path)
+        {
+            Directory.Delete(path);
+        }
+
+        public void DeleteDirectory(string path, bool recursive)
+        {
+            Directory.Delete(path, recursive);
+        }
+
+        public bool DirectoryExists(string path)
+        {
+            return Directory.Exists(path);
+        }
+        
+        public string GetCurrentDirectory()
+        {
+            return Directory.GetCurrentDirectory();
+        }
+
+        public IEnumerable<string> EnumerateFiles(string path)
+        {
+            return EnumerateFiles(path, "*.*");
+        }
+
+        public IEnumerable<string> EnumerateFiles(string path, string searchPattern)
+        {
+            return EnumerateFiles(path, searchPattern, SearchOption.TopDirectoryOnly);
+        }
+
+        public IEnumerable<string> EnumerateFiles(string path, string searchPattern, SearchOption searchOption)
+        {
+            return Directory.EnumerateFiles(path, searchPattern, searchOption);
+        }
         public IDirectoryInfo GetDirectory(string path)
         {
             return new DirectoryInfo(path);
-        }
-
-        public IDirectoryInfo CreateDirectory(string path)
-        {
-            return new DirectoryInfo(Directory.CreateDirectory(path));
         }
 
         public bool Exists(string path)
