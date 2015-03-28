@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rothko.Extensions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Diagnostics;
