@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace Rothko
+namespace Rothko.Extensions
 {
     public static class ExceptionExtensions
     {
