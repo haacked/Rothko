@@ -227,5 +227,44 @@ namespace Rothko
         ///   The caller does not have the required permission.
         /// </exception>
         string ReadAllText(string path, Encoding encoding);
+
+        /// <summary>
+        /// Deletes the specified file.
+        /// </summary>
+        /// <param name="path">The file to check.</param>
+        /// <exception cref="T:System.ArgumentException">
+        ///   <paramref name="path"/> is a zero-length string, contains only white space, or contains one
+        ///     or more invalid characters as defined by the System.IO.Path.GetInvalidPathChars()
+        ///     method.
+        /// </exception>
+        /// <exception cref="T:System.ArgumentNullException"><paramref name="path"/> is null. </exception>
+        /// <exception cref="T:System.DirectoryNotFoundException">
+        ///   The specified <paramref name="path"/> is invalid (for example, it is on an unmapped drive).
+        /// </exception>
+        /// <exception cref="T:System.IO.FileNotFoundException">
+        ///   <paramref name="path" /> was not found.
+        /// </exception>
+        /// <exception cref="T:System.IO.PathTooLongException">
+        ///   The specified <paramref name="path"/>, file name, or both exceed the system-defined maximum length. For example, on
+        ///   Windows-based platforms, paths must be less than 248 characters, and file names must be less than
+        ///   260 characters. The specified path, file name, or both are too long.
+        /// </exception>
+        /// <exception cref="T:System.IO.IOException">
+        /// The specified file is in use. -or-There is an open handle on the file, and
+        /// the operating system is Windows XP or earlier. This open handle can result
+        /// from enumerating directories and files. For more information, see How to:
+        /// Enumerate Directories and Files.
+        /// </exception>
+        /// <exception cref="T:System.UnauthorizedAccessException">
+        //  The caller does not have the required permission.-or- <paramref name="path"/> is a directory.-or-
+        //  path specified a read-only file.
+        /// </exception>
+        /// <exception cref="T:System.NotSupportedException">
+        /// <paramref name="path"/> is in an invalid format.
+        /// </exception>
+        /// <exception cref="T:System.Security.SecurityException">
+        ///   The caller does not have the required permission.
+        /// </exception>
+        void Delete(string path);
     }
 }
