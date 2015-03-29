@@ -40,5 +40,10 @@ namespace Rothko
         {
             return File.ReadAllText(path, encoding);
         }
+
+        public void Delete(string path)
+        {
+            File.Delete(path);
+        }
     }
 }
