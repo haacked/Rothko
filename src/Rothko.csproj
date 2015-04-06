@@ -95,6 +95,7 @@
     <Compile Include="Infrastructure\IOperatingSystemInfo.cs" />
     <Compile Include="Infrastructure\IRegistry.cs" />
     <Compile Include="Infrastructure\IRegistryKey.cs" />
+    <Compile Include="Infrastructure\OpenDialogResult.cs" />
     <Compile Include="Infrastructure\RegistryExtensions.cs" />
     <Compile Include="Infrastructure\SaveDialogResult.cs" />
     <Compile Include="OperatingSystemInfo.cs" />
