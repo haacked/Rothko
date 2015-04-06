@@ -17,6 +17,19 @@ namespace Rothko
                 : SaveDialogResult.Failed;
         }
 
+        public OpenDialogResult ShowOpenFileDialog(string filePattern, bool multiselect)
+        {
+            using (var dialog = new OpenFileDialog())
+            {
+                dialog.Multiselect = multiselect;
+                dialog.Filter = filePattern;
+                var result = dialog.ShowDialog();
+                return result == DialogResult.OK
+                    ? new OpenDialogResult(dialog.FileNames)
+                    : new OpenDialogResult();
+            }
+        }
+
         public BrowseDirectoryResult BrowseForDirectory(string selectedPath, string title)
         {
             using (var folderBrowser = new FolderBrowserDialog())
