@@ -86,6 +86,7 @@
     <Compile Include="Infrastructure\IAssemblyFacade.cs" />
     <Compile Include="Infrastructure\IBrowser.cs" />
     <Compile Include="Infrastructure\IDialogFacade.cs" />
+    <Compile Include="Infrastructure\DialogFacadeExtensions.cs" />
     <Compile Include="Infrastructure\IDirectoryFacade.cs" />
     <Compile Include="Infrastructure\IDirectoryInfo.cs" />
     <Compile Include="Infrastructure\IEnvironment.cs" />
