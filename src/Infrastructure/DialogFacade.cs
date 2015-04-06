@@ -5,6 +5,70 @@ namespace Rothko
 {
     public class DialogFacade : IDialogFacade
     {
+        public DialogResult ShowMessage(
+            string text,
+            string caption,
+            MessageBoxButtons buttons,
+            MessageBoxIcon icon,
+            MessageBoxDefaultButton defaultButton,
+            MessageBoxOptions options,
+            bool displayHelpButton)
+        {
+            return MessageBox.Show(text, caption, buttons, icon, defaultButton, options, displayHelpButton);
+        }
+
+        public DialogResult ShowMessage(
+            string text,
+            string caption,
+            MessageBoxButtons buttons,
+            MessageBoxIcon icon,
+            MessageBoxDefaultButton defaultButton,
+            MessageBoxOptions options,
+            string helpFilePath)
+        {
+            return MessageBox.Show(text, caption, buttons, icon, defaultButton, options, helpFilePath);
+        }
+
+        public DialogResult ShowMessage(
+            string text,
+            string caption,
+            MessageBoxButtons buttons,
+            MessageBoxIcon icon,
+            MessageBoxDefaultButton defaultButton,
+            MessageBoxOptions options,
+            string helpFilePath,
+            HelpNavigator navigator)
+        {
+            return MessageBox.Show(text, caption, buttons, icon, defaultButton, options, helpFilePath, navigator);
+        }
+
+        public DialogResult ShowMessage(
+            string text,
+            string caption,
+            MessageBoxButtons buttons,
+            MessageBoxIcon icon,
+            MessageBoxDefaultButton defaultButton,
+            MessageBoxOptions options,
+            string helpFilePath,
+            HelpNavigator navigator,
+            object param)
+        {
+            return MessageBox.Show(text, caption, buttons, icon, defaultButton, options, helpFilePath, navigator, param);
+        }
+
+        public DialogResult ShowMessage(
+            string text,
+            string caption,
+            MessageBoxButtons buttons,
+            MessageBoxIcon icon,
+            MessageBoxDefaultButton defaultButton,
+            MessageBoxOptions options,
+            string helpFilePath,
+            string keyword)
+        {
+            return MessageBox.Show(text, caption, buttons, icon, defaultButton, options, helpFilePath, keyword);
+        }
+
         public SaveDialogResult ShowSaveFileDialog(string filterPattern)
         {
             var dialog = new SaveFileDialog()
