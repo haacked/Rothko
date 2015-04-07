@@ -11,6 +11,7 @@ let projectSummary = projectDescription // TODO: write a summary
 
 // directories
 let buildDir = "./src/bin"
+let packagingDir = "./packaging/"
 let testResultsDir = "./testresults"
 
 RestorePackages()
@@ -20,13 +21,13 @@ let releaseNotes =
     |> ReleaseNotesHelper.parseReleaseNotes
 
 Target "Clean" (fun _ ->
-    CleanDirs [buildDir; testResultsDir]
+    CleanDirs [buildDir; packagingDir; testResultsDir]
 )
 
 open Fake.AssemblyInfoFile
 
 Target "AssemblyInfo" (fun _ ->
-    CreateCSharpAssemblyInfo ".\SolutionInfo.cs"
+    CreateCSharpAssemblyInfo "./SolutionInfo.cs"
       [ Attribute.Product projectName
         Attribute.Version releaseNotes.AssemblyVersion
         Attribute.FileVersion releaseNotes.AssemblyVersion]
@@ -45,6 +46,28 @@ Target "UnitTests" (fun _ ->
                 OutputDir = testResultsDir })
 )
 
+Target "Package" (fun _ ->
+    let net45Dir = packagingDir @@ "lib/net45/"
+    CleanDirs [net45Dir]
+
+    CopyFile net45Dir (buildDir @@ "Release/rothko.dll")
+    CopyFiles packagingDir ["LICENSE-MIT.txt"; "README.md"; "ReleaseNotes.md"]
+
+    NuGet (fun p -> 
+        {p with
+            Authors = authors
+            Project = projectName
+            Description = projectDescription                               
+            OutputPath = packagingDir
+            Summary = projectSummary
+            WorkingDir = packagingDir
+            Version = releaseNotes.AssemblyVersion
+            ReleaseNotes = toLines releaseNotes.Notes
+            AccessKey = getBuildParamOrDefault "nugetkey" ""
+            Publish = hasBuildParam "nugetkey" }) "Rothko.nuspec"
+)
+
+
 Target "Default" DoNothing
 
 "Clean"
@@ -52,5 +75,6 @@ Target "Default" DoNothing
    ==> "BuildApp"
    ==> "UnitTests"
    ==> "Default"
+   ==> "Package"
 
 RunTargetOrDefault "Default"

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rothko", "src\Rothko.csproj", "{4A84E568-CA86-4510-8CD0-90D3EF9B65F9}"
 EndProject
@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Meta", "Meta", "{1F038D9F-9
 		CodeAnalysisDictionary.xml = CodeAnalysisDictionary.xml
 		LICENSE-MIT.txt = LICENSE-MIT.txt
 		README.md = README.md
+		ReleaseNotes.md = ReleaseNotes.md
 		Rothko.ruleset = Rothko.ruleset
 	EndProjectSection
 EndProject
@@ -19,6 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{2DC1E33B
 	ProjectSection(SolutionItems) = preProject
 		script\build.cmd = script\build.cmd
 		script\build.fsx = script\build.fsx
+		Rothko.nuspec = Rothko.nuspec
 	EndProjectSection
 EndProject
 Global
