@@ -1,6 +1,4 @@
 @echo off
-"tools\nuget\nuget.exe update -self"
-"tools\nuget\nuget.exe" "install" "FAKE.Core" "-OutputDirectory" "tools" "-ExcludeVersion" "-version" "2.2.0"
 
 :Build
 cls

@@ -1,5 +1,6 @@
 #r @"..\tools\FAKE.Core\tools\FakeLib.dll"
 open Fake 
+open Fake.XUnit2Helper
 
 let authors = ["Phil Haack"]
 
@@ -25,7 +26,7 @@ Target "Clean" (fun _ ->
 open Fake.AssemblyInfoFile
 
 Target "AssemblyInfo" (fun _ ->
-    CreateCSharpAssemblyInfo "SolutionInfo.cs"
+    CreateCSharpAssemblyInfo ".\SolutionInfo.cs"
       [ Attribute.Product projectName
         Attribute.Version releaseNotes.AssemblyVersion
         Attribute.FileVersion releaseNotes.AssemblyVersion]
@@ -37,8 +38,8 @@ Target "BuildApp" (fun _ ->
 )
 
 Target "UnitTests" (fun _ ->
-    !! "./Tests/bin/**/Tests.dll"
-    |> xUnit (fun p -> 
+    !! "./Tests/bin/Release/**/Tests.dll"
+    |> xUnit2 (fun p -> 
             {p with 
                 XmlOutput = true
                 OutputDir = testResultsDir })
