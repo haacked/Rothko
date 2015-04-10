@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>@project@</id>
+    <version>@build.number@</version>
+    <authors>@authors@</authors>
+    <owners>@authors@</owners>
+    <summary>@summary@</summary>
+    <licenseUrl>https://github.com/haacked/rothko/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/haacked/rothko</projectUrl>
+    <iconUrl>https://cloud.githubusercontent.com/assets/19977/4635932/4483417a-53de-11e4-8aad-7f06b2d3c46a.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>@description@</description>
+    <releaseNotes>@releaseNotes@</releaseNotes>
+    <copyright>Copyright Phil Haack 2014</copyright>
+    <tags>dotnet abstractions</tags>
+  </metadata>
+</package>
