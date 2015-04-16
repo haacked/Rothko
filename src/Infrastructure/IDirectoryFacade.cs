@@ -286,5 +286,12 @@ namespace Rothko
         ///   The caller does not have the required permission.
         /// </exception>
         IEnumerable<string> EnumerateFiles(string path, string searchPattern, System.IO.SearchOption searchOption);
+
+        /// <summary>
+        /// Move a directory from <paramref name="source"/> to <paramref name="target"/>
+        /// </summary>
+        /// <param name="source">Source directory path</param>
+        /// <param name="target">Target directory path</param>
+        void Move(string source, string target);
     }
 }

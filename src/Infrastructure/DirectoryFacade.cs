@@ -69,5 +69,10 @@ namespace Rothko
 
             return directory.IsEmpty;
         }
+
+        public void Move(string source, string target)
+        {
+            Directory.Move(source, target);
+        }
     }
 }
