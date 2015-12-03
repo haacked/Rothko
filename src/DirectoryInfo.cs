@@ -4,6 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Threading;
 
 namespace Rothko
 {
@@ -75,6 +76,41 @@ namespace Rothko
 
         public void Delete(bool recursive)
         {
+            try
+            {
+                // Let's use the built in approach first.
+                inner.Delete(recursive);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                // If it fails, we'll try our more expansive approach.
+                DeleteReadonly(recursive);
+            }
+        }
+
+        private void DeleteReadonly(bool recursive)
+        {
+            if (recursive)
+            {
+                // Adapted from http://stackoverflow.com/questions/329355/cannot-delete-directory-with-directory-deletepath-true/329502#329502
+                var files = EnumerateFiles();
+                var dirs = EnumerateDirectories();
+
+                foreach (var file in files)
+                {
+                    // Make sure the file is not readonly.
+                    file.Attributes = FileAttributes.Normal;
+                    file.Delete();
+                }
+
+                foreach (var dir in dirs)
+                {
+                    dir.Delete(true);
+                }
+            }
+
+            // Make sure the directory is not readonly
+            inner.Attributes = FileAttributes.ReadOnly;
             inner.Delete(recursive);
         }
 
