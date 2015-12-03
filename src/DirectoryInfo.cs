@@ -110,7 +110,7 @@ namespace Rothko
             }
 
             // Make sure the directory is not readonly
-            inner.Attributes = FileAttributes.ReadOnly;
+            inner.Attributes = FileAttributes.Normal;
             inner.Delete(recursive);
         }
 
