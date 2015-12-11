@@ -61,6 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DirectoryInfoTests.cs" />
+    <Compile Include="Helpers\DisposableDirectory.cs" />
     <Compile Include="NullGuardTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
