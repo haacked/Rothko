@@ -98,12 +98,11 @@ namespace Rothko
         private string _name;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OperatingSystemInfo"/> class, using the specified platform identifier value and version object.
+        /// Initializes a new instance of the <see cref="OperatingSystemInfo"/> class.
         /// </summary>
-        /// <param name="operatingSystem">A valid instance of <see cref="System.OperatingSystem"/> class. Usually is given by the <value>Env.OSVersion</value> property.</param>
-        public OperatingSystemInfo(OperatingSystem operatingSystem)
+        public OperatingSystemInfo()
         {
-            _operatingSystem = operatingSystem;
+            _operatingSystem = System.Environment.OSVersion;
         }
 
         /// <summary>
