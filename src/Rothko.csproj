@@ -126,7 +126,6 @@
     <Compile Include="Threading\MemoryMappedFileFactory.cs" />
     <Compile Include="Threading\SystemSemaphore.cs" />
     <Compile Include="Win32\NativeMethods.cs" />
-    <Compile Include="Win32\OsVersionInfoEx.cs" />
     <Compile Include="Win32\PROCESS_BASIC_INFORMATION.cs" />
     <Compile Include="Win32\SafeNativeMethods.cs" />
     <Compile Include="Win32\ShowWindowOption.cs" />
