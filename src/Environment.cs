@@ -8,7 +8,7 @@ namespace Rothko
     {
         public Environment()
         {
-            OSVersion = new OperatingSystemInfo(Env.OSVersion);
+            OSVersion = new OperatingSystemInfo();
         }
 
         public string CommandLine
