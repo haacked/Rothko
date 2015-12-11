@@ -22,8 +22,6 @@ namespace Tests
         {
             var environment = new Environment();
 
-            Assert.NotNull(environment.OSVersion.Edition);
-            Assert.NotNull(environment.OSVersion.Name);
             Assert.True(environment.OSVersion.ToString().Length > 7);
         }
     }
