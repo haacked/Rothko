@@ -116,47 +116,47 @@ namespace Rothko
 
         public IEnumerable<IDirectoryInfo> EnumerateDirectories()
         {
-            return inner.EnumerateDirectories().Select(Wrap);
+            return inner.EnumerateDirectories().Select(Wrap).WhereNotNull();
         }
 
         public IEnumerable<IDirectoryInfo> EnumerateDirectories(string searchPattern)
         {
-            return inner.EnumerateDirectories(searchPattern).Select(Wrap);
+            return inner.EnumerateDirectories(searchPattern).Select(Wrap).WhereNotNull();
         }
 
         public IEnumerable<IDirectoryInfo> EnumerateDirectories(string searchPattern, SearchOption searchOption)
         {
-            return inner.EnumerateDirectories(searchPattern, searchOption).Select(Wrap);
+            return inner.EnumerateDirectories(searchPattern, searchOption).Select(Wrap).WhereNotNull();
         }
 
         public IEnumerable<IFileInfo> EnumerateFiles()
         {
-            return inner.EnumerateFiles().Select(FileInfo.Wrap);
+            return inner.EnumerateFiles().Select(FileInfo.Wrap).WhereNotNull();
         }
 
         public IEnumerable<IFileInfo> EnumerateFiles(string searchPattern)
         {
-            return inner.EnumerateFiles(searchPattern).Select(FileInfo.Wrap);
+            return inner.EnumerateFiles(searchPattern).Select(FileInfo.Wrap).WhereNotNull();
         }
 
         public IEnumerable<IFileInfo> EnumerateFiles(string searchPattern, SearchOption searchOption)
         {
-            return inner.EnumerateFiles(searchPattern, searchOption).Select(FileInfo.Wrap);
+            return inner.EnumerateFiles(searchPattern, searchOption).Select(FileInfo.Wrap).WhereNotNull();
         }
 
         public IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos()
         {
-            return inner.EnumerateFileSystemInfos().Select(Wrap);
+            return inner.EnumerateFileSystemInfos().Select(Wrap).WhereNotNull();
         }
 
         public IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos(string searchPattern)
         {
-            return inner.EnumerateFileSystemInfos(searchPattern).Select(Wrap);
+            return inner.EnumerateFileSystemInfos(searchPattern).Select(Wrap).WhereNotNull();
         }
 
         public IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos(string searchPattern, SearchOption searchOption)
         {
-            return inner.EnumerateFileSystemInfos(searchPattern, searchOption).Select(Wrap);
+            return inner.EnumerateFileSystemInfos(searchPattern, searchOption).Select(Wrap).WhereNotNull();
         }
 
         public System.Security.AccessControl.DirectorySecurity GetAccessControl()
