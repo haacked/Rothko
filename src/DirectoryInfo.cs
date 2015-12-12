@@ -41,7 +41,7 @@ namespace Rothko
 
         internal static IDirectoryInfo Wrap(System.IO.DirectoryInfo dir)
         {
-            return new DirectoryInfo(dir);
+            return dir != null ? new DirectoryInfo(dir) : null;
         }
 
         public IDirectoryInfo Parent

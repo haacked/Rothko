@@ -46,7 +46,7 @@ namespace Rothko
 
         internal static IFileInfo Wrap(System.IO.FileInfo file)
         {
-            return new FileInfo(file);
+            return file != null ? new FileInfo(file) : null;
         }
 
         public IDirectoryInfo Directory
