@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using NullGuard;
 using Env = System.Environment;
 
 namespace Rothko
@@ -133,11 +134,13 @@ namespace Rothko
             return Env.GetCommandLineArgs();
         }
 
+        [return: AllowNull]
         public string GetEnvironmentVariable(string variable)
         {
             return Env.GetEnvironmentVariable(variable);
         }
 
+        [return: AllowNull]
         public string GetEnvironmentVariable(string variable, EnvironmentVariableTarget target)
         {
             return Env.GetEnvironmentVariable(variable, target);
