@@ -13,7 +13,8 @@ namespace Rothko
 
         internal static IFileSystemInfo Wrap(System.IO.FileSystemInfo fileSystemInfo)
         {
-            if((fileSystemInfo.Attributes & System.IO.FileAttributes.Directory) == System.IO.FileAttributes.Directory)
+            if (fileSystemInfo == null) return null;
+            if ((fileSystemInfo.Attributes & System.IO.FileAttributes.Directory) == System.IO.FileAttributes.Directory)
             {
                 return DirectoryInfo.Wrap((System.IO.DirectoryInfo)fileSystemInfo);
             }
