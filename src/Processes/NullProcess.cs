@@ -25,6 +25,8 @@ namespace Rothko
         public ProcessStartInfo StartInfo { get; set; }
 
         public StreamWriter StandardInput { get { return null; } }
+        public StreamReader StandardOutput { get { return null; } }
+        public StreamReader StandardError { get { return null; } }
 
         public int ExitCode { get { return 0; } }
         public IntPtr MainWindowHandle { get { return IntPtr.Zero; } }

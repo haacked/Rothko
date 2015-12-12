@@ -17,6 +17,9 @@ namespace Rothko
         int Id { get; }
         ProcessStartInfo StartInfo { get; set; }
         StreamWriter StandardInput { get; }
+        StreamReader StandardOutput { get; }
+        StreamReader StandardError { get; }
+
         int ExitCode { get; }
         IntPtr MainWindowHandle { get; }
         string ProcessName { get; }
