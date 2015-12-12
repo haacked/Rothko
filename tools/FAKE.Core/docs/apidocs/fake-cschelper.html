@@ -39,6 +39,8 @@
 <h1>CscHelper</h1>
 <div class="xmldoc">
 <p>Contains tasks to compile C# source files with CSC.EXE (C# Compiler).</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -54,6 +56,8 @@
             <a href="fake-cschelper-cscparams.html">CscParams</a>
           </td>
           <td class="xmldoc"><p>Compiler parameters</p>
+
+
 </td>
         </tr>
         <tr>
@@ -61,6 +65,8 @@
             <a href="fake-cschelper-cscplatform.html">CscPlatform</a>
           </td>
           <td class="xmldoc"><p>Supported platforms</p>
+
+
 </td>
         </tr>
         <tr>
@@ -68,6 +74,8 @@
             <a href="fake-cschelper-csctarget.html">CscTarget</a>
           </td>
           <td class="xmldoc"><p>Supported output types</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -84,10 +92,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '127', 127)" onmouseover="showTip(event, '127', 127)">
+          <code onmouseout="hideTip(event, '134', 134)" onmouseover="showTip(event, '134', 134)">
             csc setParams inputFiles
           </code>
-          <div class="tip" id="127">
+          <div class="tip" id="134">
             <strong>Signature:</strong> setParams:(CscParams -&gt; CscParams) -&gt; inputFiles:string list -&gt; int<br />
                       </div>
         </td>
@@ -111,22 +119,32 @@
 
 <h2>Sample</h2>
 
-<pre><code>["file1.cs"; "file2.cs"]
-|&gt; csc (fun parameters -&gt;
-         { parameters with Output = ...
-                           Target = ...
-                           ... })
-</code></pre>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp">[<span class="s">&quot;file1.cs&quot;</span>; <span class="s">&quot;file2.cs&quot;</span>]
+<span class="o">|&gt;</span> <span class="i">csc</span> (<span class="k">fun</span> <span class="i">parameters</span> <span class="k">-&gt;</span>
+         { <span class="i">parameters</span> <span class="k">with</span> <span class="i">Output</span> <span class="o">=</span> <span class="o">..</span><span class="o">.</span>
+                           <span class="i">Target</span> <span class="o">=</span> <span class="o">..</span><span class="o">.</span>
+                           <span class="o">..</span><span class="o">.</span> })
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '128', 128)" onmouseover="showTip(event, '128', 128)">
+          <code onmouseout="hideTip(event, '135', 135)" onmouseover="showTip(event, '135', 135)">
             Csc setParams inputFiles
           </code>
-          <div class="tip" id="128">
+          <div class="tip" id="135">
             <strong>Signature:</strong> setParams:(CscParams -&gt; CscParams) -&gt; inputFiles:string list -&gt; unit<br />
                       </div>
         </td>
@@ -146,22 +164,32 @@
 
 <h2>Sample</h2>
 
-<pre><code>["file1.cs"; "file2.cs"]
-|&gt; Csc (fun parameters -&gt;
-              { parameters with Output = ...
-                                Target = ...
-                                ... })
-</code></pre>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp">[<span class="s">&quot;file1.cs&quot;</span>; <span class="s">&quot;file2.cs&quot;</span>]
+<span class="o">|&gt;</span> <span class="i">Csc</span> (<span class="k">fun</span> <span class="i">parameters</span> <span class="k">-&gt;</span>
+              { <span class="i">parameters</span> <span class="k">with</span> <span class="i">Output</span> <span class="o">=</span> <span class="o">..</span><span class="o">.</span>
+                                <span class="i">Target</span> <span class="o">=</span> <span class="o">..</span><span class="o">.</span>
+                                <span class="o">..</span><span class="o">.</span> })
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '129', 129)" onmouseover="showTip(event, '129', 129)">
+          <code onmouseout="hideTip(event, '136', 136)" onmouseover="showTip(event, '136', 136)">
             cscExe toolPath srcFiles opts
           </code>
-          <div class="tip" id="129">
+          <div class="tip" id="136">
             <strong>Signature:</strong> toolPath:string -&gt; srcFiles:string list -&gt; opts:string list -&gt; int<br />
                       </div>
         </td>
@@ -199,6 +227,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -209,16 +238,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

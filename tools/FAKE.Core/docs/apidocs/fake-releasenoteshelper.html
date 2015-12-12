@@ -39,41 +39,81 @@
 <h1>ReleaseNotesHelper</h1>
 <div class="xmldoc">
 <p>Contains helpers which allow to parse Release Notes text files. Either "simple" or "complex" format is accepted.</p>
+
+
         <h2>Formats</h2>
 <h3>Simple format</h3>
 
-<pre><code>* 1.1.10 - Support for heterogeneous XML attributes. Make CsvFile re-entrant.
-* 1.1.9 - Infer booleans for ints that only manifest 0 and 1.
-</code></pre>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="o">*</span> <span class="n">1.1</span><span class="o">.</span><span class="n">10</span> <span class="o">-</span> <span class="i">Support</span> <span class="k">for</span> <span class="i">heterogeneous</span> <span class="i">XML</span> <span class="i">attributes</span><span class="o">.</span> <span class="i">Make</span> <span class="i">CsvFile</span> <span class="i">re</span><span class="o">-</span><span class="i">entrant</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">1.1</span><span class="o">.</span><span class="n">9</span> <span class="o">-</span> <span class="i">Infer</span> <span class="i">booleans</span> <span class="k">for</span> <span class="i">ints</span> <span class="i">that</span> <span class="i">only</span> <span class="i">manifest</span> <span class="n">0</span> <span class="k">and</span> <span class="n">1.</span>
+</code></pre></td>
+</tr>
+</table>
 
 <h3>Complex format</h3>
 
-<pre><code>### New in 1.1.10 (Released 2013/09/12)
-* Support for heterogeneous XML attributes.
-* Make CsvFile re-entrant. 
-* Support for compressed HTTP responses. 
-* Fix JSON conversion of 0 and 1 to booleans.
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp">## <span class="i">New</span> <span class="k">in</span> <span class="n">1.1</span><span class="o">.</span><span class="n">10</span> (<span class="i">Released</span> <span class="n">2013</span><span class="o">/</span><span class="n">09</span><span class="o">/</span><span class="n">12</span>)
+<span class="o">*</span> <span class="i">Support</span> <span class="k">for</span> <span class="i">heterogeneous</span> <span class="i">XML</span> <span class="i">attributes</span><span class="o">.</span>
+<span class="o">*</span> <span class="i">Make</span> <span class="i">CsvFile</span> <span class="i">re</span><span class="o">-</span><span class="i">entrant</span><span class="o">.</span> 
+<span class="o">*</span> <span class="i">Support</span> <span class="k">for</span> <span class="i">compressed</span> <span class="i">HTTP</span> <span class="i">responses</span><span class="o">.</span> 
+<span class="o">*</span> <span class="i">Fix</span> <span class="i">JSON</span> <span class="i">conversion</span> <span class="k">of</span> <span class="n">0</span> <span class="k">and</span> <span class="n">1</span> <span class="k">to</span> <span class="i">booleans</span><span class="o">.</span>
 
-### New in 1.1.9 (Released 2013/07/21)
-* Infer booleans for ints that only manifest 0 and 1.    
-* Support for partially overriding the Schema in CsvProvider.
-* PreferOptionals and SafeMode parameters for CsvProvider.
-</code></pre>
+## <span class="i">New</span> <span class="k">in</span> <span class="n">1.1</span><span class="o">.</span><span class="n">9</span> (<span class="i">Released</span> <span class="n">2013</span><span class="o">/</span><span class="n">07</span><span class="o">/</span><span class="n">21</span>)
+<span class="o">*</span> <span class="i">Infer</span> <span class="i">booleans</span> <span class="k">for</span> <span class="i">ints</span> <span class="i">that</span> <span class="i">only</span> <span class="i">manifest</span> <span class="n">0</span> <span class="k">and</span> <span class="n">1.</span>    
+<span class="o">*</span> <span class="i">Support</span> <span class="k">for</span> <span class="i">partially</span> <span class="i">overriding</span> <span class="i">the</span> <span class="i">Schema</span> <span class="k">in</span> <span class="i">CsvProvider</span><span class="o">.</span>
+<span class="o">*</span> <span class="i">PreferOptionals</span> <span class="k">and</span> <span class="i">SafeMode</span> <span class="i">parameters</span> <span class="k">for</span> <span class="i">CsvProvider</span><span class="o">.</span>
+</code></pre></td>
+</tr>
+</table>
+
+
         <h2>Sample</h2>
-<pre><code>let release =
-    ReadFile "RELEASE_NOTES.md"
-    |&gt; ReleaseNotesHelper.parseReleaseNotes
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span class="i">release</span> <span class="o">=</span>
+    <span class="i">ReadFile</span> <span class="s">&quot;RELEASE_NOTES.md&quot;</span>
+    <span class="o">|&gt;</span> <span class="i">ReleaseNotesHelper</span><span class="o">.</span><span class="i">parseReleaseNotes</span>
 
 
-Target "AssemblyInfo" (fun _ -&gt;
-    CreateFSharpAssemblyInfo "src/Common/AssemblyInfo.fs"
-      [ Attribute.Title project
-        Attribute.Product project
-        Attribute.Description summary
-        Attribute.Version release.AssemblyVersion
-        Attribute.FileVersion release.AssemblyVersion]
+<span class="i">Target</span> <span class="s">&quot;AssemblyInfo&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
+    <span class="i">CreateFSharpAssemblyInfo</span> <span class="s">&quot;src/Common/AssemblyInfo.fs&quot;</span>
+      [ <span class="i">Attribute</span><span class="o">.</span><span class="i">Title</span> <span class="i">project</span>
+        <span class="i">Attribute</span><span class="o">.</span><span class="i">Product</span> <span class="i">project</span>
+        <span class="i">Attribute</span><span class="o">.</span><span class="i">Description</span> <span class="i">summary</span>
+        <span class="i">Attribute</span><span class="o">.</span><span class="i">Version</span> <span class="i">release</span><span class="o">.</span><span class="i">AssemblyVersion</span>
+        <span class="i">Attribute</span><span class="o">.</span><span class="i">FileVersion</span> <span class="i">release</span><span class="o">.</span><span class="i">AssemblyVersion</span>]
 )
-</code></pre>
+</code></pre></td>
+</tr>
+</table>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -89,6 +129,8 @@ Target "AssemblyInfo" (fun _ -&gt;
             <a href="fake-releasenoteshelper-releasenotes.html">ReleaseNotes</a>
           </td>
           <td class="xmldoc"><p>Contains the parsed information of the release notes text file.</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -105,15 +147,15 @@ Target "AssemblyInfo" (fun _ -&gt;
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '473', 473)" onmouseover="showTip(event, '473', 473)">
+          <code onmouseout="hideTip(event, '533', 533)" onmouseover="showTip(event, '533', 533)">
             LoadReleaseNotes fileName
           </code>
-          <div class="tip" id="473">
+          <div class="tip" id="533">
             <strong>Signature:</strong> fileName:string -&gt; ReleaseNotes<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ReleaseNotesHelper.fs#L147-147" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ReleaseNotesHelper.fs#L164-164" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -125,20 +167,22 @@ Target "AssemblyInfo" (fun _ -&gt;
 <li><code>fileName</code> - Release notes text file name</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '474', 474)" onmouseover="showTip(event, '474', 474)">
+          <code onmouseout="hideTip(event, '534', 534)" onmouseover="showTip(event, '534', 534)">
             parseAllReleaseNotes data
           </code>
-          <div class="tip" id="474">
+          <div class="tip" id="534">
             <strong>Signature:</strong> data:seq&lt;string&gt; -&gt; ReleaseNotes list<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ReleaseNotesHelper.fs#L116-116" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ReleaseNotesHelper.fs#L133-133" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -150,20 +194,40 @@ Target "AssemblyInfo" (fun _ -&gt;
 <li><code>data</code> - Release notes text</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '475', 475)" onmouseover="showTip(event, '475', 475)">
+          <code onmouseout="hideTip(event, '535', 535)" onmouseover="showTip(event, '535', 535)">
+            parseDate 
+          </code>
+          <div class="tip" id="535">
+            <strong>Signature:</strong> string -&gt; DateTime option<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ReleaseNotesHelper.fs#L79-79" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '536', 536)" onmouseover="showTip(event, '536', 536)">
             parseReleaseNotes data
           </code>
-          <div class="tip" id="475">
+          <div class="tip" id="536">
             <strong>Signature:</strong> data:seq&lt;string&gt; -&gt; ReleaseNotes<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ReleaseNotesHelper.fs#L138-138" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ReleaseNotesHelper.fs#L155-155" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -175,20 +239,22 @@ Target "AssemblyInfo" (fun _ -&gt;
 <li><code>data</code> - Release notes text</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '476', 476)" onmouseover="showTip(event, '476', 476)">
+          <code onmouseout="hideTip(event, '537', 537)" onmouseover="showTip(event, '537', 537)">
             parseVersions 
           </code>
-          <div class="tip" id="476">
+          <div class="tip" id="537">
             <strong>Signature:</strong> string -&gt; Match * Match<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ReleaseNotesHelper.fs#L62-62" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/ReleaseNotesHelper.fs#L67-67" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -221,6 +287,7 @@ Target "AssemblyInfo" (fun _ -&gt;
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -231,16 +298,19 @@ Target "AssemblyInfo" (fun _ -&gt;
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

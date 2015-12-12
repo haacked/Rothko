@@ -39,6 +39,8 @@
 <h1>ConfigurationHelper</h1>
 <div class="xmldoc">
 <p>Contains functions which allow to read and write config files.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -52,10 +54,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '119', 119)" onmouseover="showTip(event, '119', 119)">
+          <code onmouseout="hideTip(event, '126', 126)" onmouseover="showTip(event, '126', 126)">
             applyXslOnConfig xsl fileName
           </code>
-          <div class="tip" id="119">
+          <div class="tip" id="126">
             <strong>Signature:</strong> xsl:string -&gt; fileName:string -&gt; unit<br />
                       </div>
         </td>
@@ -75,18 +77,24 @@
 
 <h2>Sample</h2>
 
-<pre><code>applyXslOnConfig (navServicePath @@ DEV.xsl) (navServicePath @@ "CustomSettings.config")
-</code></pre>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">applyXslOnConfig</span> (<span class="i">navServicePath</span> <span class="o">@@</span> <span class="i">DEV</span><span class="o">.</span><span class="i">xsl</span>) (<span class="i">navServicePath</span> <span class="o">@@</span> <span class="s">&quot;CustomSettings.config&quot;</span>)
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '120', 120)" onmouseover="showTip(event, '120', 120)">
+          <code onmouseout="hideTip(event, '127', 127)" onmouseover="showTip(event, '127', 127)">
             readConfig fileName
           </code>
-          <div class="tip" id="120">
+          <div class="tip" id="127">
             <strong>Signature:</strong> fileName:string -&gt; XmlDocument<br />
                       </div>
         </td>
@@ -103,15 +111,17 @@
 <li><code>fileName</code> - The file name of the config file.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '121', 121)" onmouseover="showTip(event, '121', 121)">
+          <code onmouseout="hideTip(event, '128', 128)" onmouseover="showTip(event, '128', 128)">
             updateApplicationSetting (...)
           </code>
-          <div class="tip" id="121">
+          <div class="tip" id="128">
             <strong>Signature:</strong> fileName:string -&gt; settingName:string -&gt; value:string -&gt; unit<br />
                       </div>
         </td>
@@ -132,18 +142,24 @@
 
 <h2>Sample</h2>
 
-<pre><code>updateApplicationSetting "DatabaseName" targetDatabase (navServicePath @@ "CustomSettings.config")
-</code></pre>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">updateApplicationSetting</span> <span class="s">&quot;DatabaseName&quot;</span> <span class="i">targetDatabase</span> (<span class="i">navServicePath</span> <span class="o">@@</span> <span class="s">&quot;CustomSettings.config&quot;</span>)
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '122', 122)" onmouseover="showTip(event, '122', 122)">
+          <code onmouseout="hideTip(event, '129', 129)" onmouseover="showTip(event, '129', 129)">
             updateAppSetting key value fileName
           </code>
-          <div class="tip" id="122">
+          <div class="tip" id="129">
             <strong>Signature:</strong> key:string -&gt; value:string -&gt; fileName:string -&gt; unit<br />
                       </div>
         </td>
@@ -164,18 +180,24 @@
 
 <h2>Sample</h2>
 
-<pre><code>updateAppSetting "DatabaseName" targetDatabase (navServicePath @@ "CustomSettings.config")
-</code></pre>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">updateAppSetting</span> <span class="s">&quot;DatabaseName&quot;</span> <span class="i">targetDatabase</span> (<span class="i">navServicePath</span> <span class="o">@@</span> <span class="s">&quot;CustomSettings.config&quot;</span>)
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '123', 123)" onmouseover="showTip(event, '123', 123)">
+          <code onmouseout="hideTip(event, '130', 130)" onmouseover="showTip(event, '130', 130)">
             updateConfig (...)
           </code>
-          <div class="tip" id="123">
+          <div class="tip" id="130">
             <strong>Signature:</strong> xpath:string -&gt; attribute:string -&gt; value:string -&gt; config:XmlDocument -&gt; XmlDocument<br />
                       </div>
         </td>
@@ -195,15 +217,17 @@
 <li><code>config</code> - The XElement representing the config.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '124', 124)" onmouseover="showTip(event, '124', 124)">
+          <code onmouseout="hideTip(event, '131', 131)" onmouseover="showTip(event, '131', 131)">
             updateConfigSetting (...)
           </code>
-          <div class="tip" id="124">
+          <div class="tip" id="131">
             <strong>Signature:</strong> fileName:string -&gt; xpath:string -&gt; attribute:string -&gt; value:string -&gt; unit<br />
                       </div>
         </td>
@@ -223,15 +247,17 @@
 <li><code>value</code> - The new attribute value.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '125', 125)" onmouseover="showTip(event, '125', 125)">
+          <code onmouseout="hideTip(event, '132', 132)" onmouseover="showTip(event, '132', 132)">
             updateConnectionString (...)
           </code>
-          <div class="tip" id="125">
+          <div class="tip" id="132">
             <strong>Signature:</strong> connectionStringKey:string -&gt; value:string -&gt; fileName:string -&gt; unit<br />
                       </div>
         </td>
@@ -250,15 +276,17 @@
 <li><code>fileName</code> - The file name of the config file.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '126', 126)" onmouseover="showTip(event, '126', 126)">
+          <code onmouseout="hideTip(event, '133', 133)" onmouseover="showTip(event, '133', 133)">
             writeConfig fileName config
           </code>
-          <div class="tip" id="126">
+          <div class="tip" id="133">
             <strong>Signature:</strong> fileName:string -&gt; config:XmlDocument -&gt; unit<br />
                       </div>
         </td>
@@ -275,6 +303,8 @@
 <li><code>fileName</code> - The file name of the config file.</li>
 <li><code>config</code> - The XmlDocument representing the config.</li>
 </ul>
+
+
 
         </td>
       </tr>
@@ -304,6 +334,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -314,16 +345,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

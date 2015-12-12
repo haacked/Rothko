@@ -42,6 +42,8 @@
 Uses <code>Passive Mode</code> FTP and handles all files as binary (and not ASCII).
 Assumes direct network connectivity to destination FTP server (not via a proxy).
 Does not support FTPS and SFTP.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -72,10 +74,10 @@ Does not support FTPS and SFTP.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '335', 335)" onmouseover="showTip(event, '335', 335)">
+          <code onmouseout="hideTip(event, '381', 381)" onmouseover="showTip(event, '381', 381)">
             createAFolder server user pwd destPath
           </code>
-          <div class="tip" id="335">
+          <div class="tip" id="381">
             <strong>Signature:</strong> server:string -&gt; user:string -&gt; pwd:string -&gt; destPath:string -&gt; unit<br />
                       </div>
         </td>
@@ -95,15 +97,77 @@ Does not support FTPS and SFTP.</p>
 <li><code>pwd</code> - FTP Server login password (ex: "J0Eblogg5")</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '336', 336)" onmouseover="showTip(event, '336', 336)">
+          <code onmouseout="hideTip(event, '382', 382)" onmouseover="showTip(event, '382', 382)">
+            deleteAFile server user pwd destPath
+          </code>
+          <div class="tip" id="382">
+            <strong>Signature:</strong> server:string -&gt; user:string -&gt; pwd:string -&gt; destPath:string -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FtpHelper.fs#L151-151" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Deletes a single file from remote FTP folder.</p>
+
+<h2>Parameters</h2>
+
+<ul>
+<li><code>destPath</code> - The full path to the file which needs to be deleted, including all its parent folders</li>
+<li><code>server</code> - FTP Server name (ex: "ftp://10.100.200.300:21/")</li>
+<li><code>user</code> - FTP Server login name (ex: "joebloggs")</li>
+<li><code>pwd</code> - FTP Server login password (ex: "J0Eblogg5")</li>
+</ul>
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '383', 383)" onmouseover="showTip(event, '383', 383)">
+            deleteAFolder server user pwd destPath
+          </code>
+          <div class="tip" id="383">
+            <strong>Signature:</strong> server:string -&gt; user:string -&gt; pwd:string -&gt; destPath:string -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FtpHelper.fs#L180-180" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Deletes a single folder from remote FTP folder.</p>
+
+<h2>Parameters</h2>
+
+<ul>
+<li><code>destPath</code> - The full path to the folder which needs to be deleted, including all its parent folders</li>
+<li><code>server</code> - FTP Server name (ex: "ftp://10.100.200.300:21/")</li>
+<li><code>user</code> - FTP Server login name (ex: "joebloggs")</li>
+<li><code>pwd</code> - FTP Server login password (ex: "J0Eblogg5")</li>
+</ul>
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '384', 384)" onmouseover="showTip(event, '384', 384)">
             getFtpDirContents (...)
           </code>
-          <div class="tip" id="336">
+          <div class="tip" id="384">
             <strong>Signature:</strong> server:string -&gt; user:string -&gt; pwd:string -&gt; dirPath:string -&gt; string<br />
                       </div>
         </td>
@@ -123,15 +187,17 @@ Does not support FTPS and SFTP.</p>
 <li><code>pwd</code> - FTP Server login password (ex: "J0Eblogg5")</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '337', 337)" onmouseover="showTip(event, '337', 337)">
+          <code onmouseout="hideTip(event, '385', 385)" onmouseover="showTip(event, '385', 385)">
             getServerInfo (...)
           </code>
-          <div class="tip" id="337">
+          <div class="tip" id="385">
             <strong>Signature:</strong> serverNameIp:string -&gt; user:string -&gt; password:string -&gt; ftpMethod:string -&gt; FtpServerInfo<br />
                       </div>
         </td>
@@ -142,15 +208,17 @@ Does not support FTPS and SFTP.</p>
             </a>
           <p>Gets a connection to the FTP server</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '338', 338)" onmouseover="showTip(event, '338', 338)">
+          <code onmouseout="hideTip(event, '386', 386)" onmouseover="showTip(event, '386', 386)">
             isFolderPresent server user pwd destPath
           </code>
-          <div class="tip" id="338">
+          <div class="tip" id="386">
             <strong>Signature:</strong> server:string -&gt; user:string -&gt; pwd:string -&gt; destPath:string -&gt; bool<br />
                       </div>
         </td>
@@ -170,15 +238,17 @@ Does not support FTPS and SFTP.</p>
 <li><code>pwd</code> - FTP Server login password (ex: "J0Eblogg5")</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '339', 339)" onmouseover="showTip(event, '339', 339)">
+          <code onmouseout="hideTip(event, '387', 387)" onmouseover="showTip(event, '387', 387)">
             regexCheck fname ftpContents
           </code>
-          <div class="tip" id="339">
+          <div class="tip" id="387">
             <strong>Signature:</strong> fname:string -&gt; ftpContents:string -&gt; bool<br />
                       </div>
         </td>
@@ -187,17 +257,19 @@ Does not support FTPS and SFTP.</p>
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Checks to see if the <code>ftp content</code> string containts the string <code>&lt;DIR&gt;    Given_Folder_Name</code></p>
+          <p>Checks to see if the <code>ftp content</code> string containts the string <code>Given_Folder_Name</code></p>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '340', 340)" onmouseover="showTip(event, '340', 340)">
+          <code onmouseout="hideTip(event, '388', 388)" onmouseover="showTip(event, '388', 388)">
             uploadAFile (...)
           </code>
-          <div class="tip" id="340">
+          <div class="tip" id="388">
             <strong>Signature:</strong> server:string -&gt; user:string -&gt; pwd:string -&gt; destPath:string -&gt; srcPath:string -&gt; unit<br />
                       </div>
         </td>
@@ -218,15 +290,17 @@ Does not support FTPS and SFTP.</p>
 <li><code>pwd</code> - FTP Server login password (ex: "J0Eblogg5")</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '341', 341)" onmouseover="showTip(event, '341', 341)">
+          <code onmouseout="hideTip(event, '389', 389)" onmouseover="showTip(event, '389', 389)">
             uploadAFolder (...)
           </code>
-          <div class="tip" id="341">
+          <div class="tip" id="389">
             <strong>Signature:</strong> server:string -&gt; user:string -&gt; pwd:string -&gt; srcPath:string -&gt; rootDir:string -&gt; unit<br />
                       </div>
         </td>
@@ -246,6 +320,8 @@ Does not support FTPS and SFTP.</p>
 <li><code>user</code> - FTP Server login name (ex: "joebloggs")</li>
 <li><code>pwd</code> - FTP Server login password (ex: "J0Eblogg5")</li>
 </ul>
+
+
 
         </td>
       </tr>
@@ -275,6 +351,7 @@ Does not support FTPS and SFTP.</p>
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -285,16 +362,19 @@ Does not support FTPS and SFTP.</p>
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

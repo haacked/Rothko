@@ -40,6 +40,8 @@
 <div class="xmldoc">
 <p>Contains helper functions and task which allow to inspect, create and publish <a href="https://www.nuget.org/">NuGet</a> packages.
 There is also a tutorial about <a href="../create-nuget-package.html">nuget package creating</a> available.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -55,6 +57,8 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
             <a href="fake-nugethelper-nugetparams.html">NuGetParams</a>
           </td>
           <td class="xmldoc"><p>Nuget parameter type</p>
+
+
 </td>
         </tr>
         <tr>
@@ -62,6 +66,8 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
             <a href="fake-nugethelper-nuspecpackage.html">NuSpecPackage</a>
           </td>
           <td class="xmldoc"><p>NuSpec metadata type</p>
+
+
 </td>
         </tr>
         <tr>
@@ -114,29 +120,31 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '402', 402)" onmouseover="showTip(event, '402', 402)">
+          <code onmouseout="hideTip(event, '456', 456)" onmouseover="showTip(event, '456', 456)">
             feedUrl 
           </code>
-          <div class="tip" id="402">
+          <div class="tip" id="456">
             <strong>Signature:</strong> string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L490-490" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L486-486" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Default NuGet feed</p>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '403', 403)" onmouseover="showTip(event, '403', 403)">
+          <code onmouseout="hideTip(event, '457', 457)" onmouseover="showTip(event, '457', 457)">
             getDependencies packagesFile
           </code>
-          <div class="tip" id="403">
+          <div class="tip" id="457">
             <strong>Signature:</strong> packagesFile:string -&gt; (string * string) list<br />
                       </div>
         </td>
@@ -145,22 +153,24 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>loads the dependences from specified packages.config file</p>
+          <p>Returns the dependencies from specified packages.config file</p>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '404', 404)" onmouseover="showTip(event, '404', 404)">
+          <code onmouseout="hideTip(event, '458', 458)" onmouseover="showTip(event, '458', 458)">
             GetMetaDataFromPackageFile (...)
           </code>
-          <div class="tip" id="404">
+          <div class="tip" id="458">
             <strong>Signature:</strong> packageFileName:string -&gt; NuSpecPackage<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L484-484" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L480-480" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -172,20 +182,22 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
 <li><code>packageFileName</code> - The .nuspec package file name.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '405', 405)" onmouseover="showTip(event, '405', 405)">
+          <code onmouseout="hideTip(event, '459', 459)" onmouseover="showTip(event, '459', 459)">
             getNuspecProperties nuspec
           </code>
-          <div class="tip" id="405">
+          <div class="tip" id="459">
             <strong>Signature:</strong> nuspec:string -&gt; NuSpecPackage<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L438-438" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L433-433" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -197,15 +209,17 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
 <li><code>nuspec</code> - The .nuspec file content.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '406', 406)" onmouseover="showTip(event, '406', 406)">
+          <code onmouseout="hideTip(event, '460', 460)" onmouseover="showTip(event, '460', 460)">
             GetPackageVersion deploymentsDir package
           </code>
-          <div class="tip" id="406">
+          <div class="tip" id="460">
             <strong>Signature:</strong> deploymentsDir:string -&gt; package:string -&gt; string<br />
                       </div>
         </td>
@@ -216,20 +230,22 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
             </a>
           <p>Gets the version no. for a given package in the deployments folder</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '407', 407)" onmouseover="showTip(event, '407', 407)">
+          <code onmouseout="hideTip(event, '461', 461)" onmouseover="showTip(event, '461', 461)">
             NuGet setParams nuspecOrProjectFile
           </code>
-          <div class="tip" id="407">
+          <div class="tip" id="461">
             <strong>Signature:</strong> setParams:(NuGetParams -&gt; NuGetParams) -&gt; nuspecOrProjectFile:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L391-391" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L385-385" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -242,15 +258,17 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
 <li><code>nuspecFile</code> - The .nuspec file name.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '408', 408)" onmouseover="showTip(event, '408', 408)">
+          <code onmouseout="hideTip(event, '462', 462)" onmouseover="showTip(event, '462', 462)">
             NuGetDefaults ()
           </code>
-          <div class="tip" id="408">
+          <div class="tip" id="462">
             <strong>Signature:</strong> unit -&gt; NuGetParams<br />
                       </div>
         </td>
@@ -261,20 +279,22 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
             </a>
           <p>NuGet default parameters</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '409', 409)" onmouseover="showTip(event, '409', 409)">
+          <code onmouseout="hideTip(event, '463', 463)" onmouseover="showTip(event, '463', 463)">
             NuGetPack setParams nuspecOrProjectFile
           </code>
-          <div class="tip" id="409">
+          <div class="tip" id="463">
             <strong>Signature:</strong> setParams:(NuGetParams -&gt; NuGetParams) -&gt; nuspecOrProjectFile:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L360-360" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L354-354" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -287,20 +307,22 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
 <li><code>nuspecOrProjectFile</code> - The .nuspec or project file name.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '410', 410)" onmouseover="showTip(event, '410', 410)">
+          <code onmouseout="hideTip(event, '464', 464)" onmouseover="showTip(event, '464', 464)">
             NuGetPackDirectly (...)
           </code>
-          <div class="tip" id="410">
+          <div class="tip" id="464">
             <strong>Signature:</strong> setParams:(NuGetParams -&gt; NuGetParams) -&gt; nuspecOrProjectFile:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L343-343" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L337-337" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -313,20 +335,22 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
 <li><code>nuspecOrProjectFile</code> - The .nuspec or project file name.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '411', 411)" onmouseover="showTip(event, '411', 411)">
+          <code onmouseout="hideTip(event, '465', 465)" onmouseover="showTip(event, '465', 465)">
             NuGetPublish setParams
           </code>
-          <div class="tip" id="411">
+          <div class="tip" id="465">
             <strong>Signature:</strong> setParams:(NuGetParams -&gt; NuGetParams) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L380-380" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/NuGet/NugetHelper.fs#L374-374" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -338,15 +362,17 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
 <li><code>setParams</code> - Function used to manipulate the default NuGet parameters.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '412', 412)" onmouseover="showTip(event, '412', 412)">
+          <code onmouseout="hideTip(event, '466', 466)" onmouseover="showTip(event, '466', 466)">
             RequireExactly version
           </code>
-          <div class="tip" id="412">
+          <div class="tip" id="466">
             <strong>Signature:</strong> version:string -&gt; string<br />
                       </div>
         </td>
@@ -356,6 +382,8 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Creates a string which tells NuGet that you require exactly this package version.</p>
+
+
 
         </td>
       </tr>
@@ -385,6 +413,7 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -395,16 +424,19 @@ There is also a tutorial about <a href="../create-nuget-package.html">nuget pack
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

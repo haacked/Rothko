@@ -40,6 +40,8 @@
 <div class="xmldoc">
 <p>Contains tasks to compiles F# source file with the <a href="https://github.com/fsharp/FSharp.Compiler.Service">FSharp.Compiler.Service</a>.
 There is also a tutorial about the <a href="../fsc.html">F# compiler tasks</a> available.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -55,6 +57,8 @@ There is also a tutorial about the <a href="../fsc.html">F# compiler tasks</a> a
             <a href="fake-fschelper-fscparams.html">FscParams</a>
           </td>
           <td class="xmldoc"><p>'fsc.exe' command line parameters</p>
+
+
 </td>
         </tr>
         <tr>
@@ -62,6 +66,8 @@ There is also a tutorial about the <a href="../fsc.html">F# compiler tasks</a> a
             <a href="fake-fschelper-fscplatform.html">FscPlatform</a>
           </td>
           <td class="xmldoc"><p>The 'fsc.exe' output platforms</p>
+
+
 </td>
         </tr>
         <tr>
@@ -69,6 +75,8 @@ There is also a tutorial about the <a href="../fsc.html">F# compiler tasks</a> a
             <a href="fake-fschelper-fsctarget.html">FscTarget</a>
           </td>
           <td class="xmldoc"><p>The 'fsc.exe' output target types</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -85,10 +93,10 @@ There is also a tutorial about the <a href="../fsc.html">F# compiler tasks</a> a
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '332', 332)" onmouseover="showTip(event, '332', 332)">
+          <code onmouseout="hideTip(event, '378', 378)" onmouseover="showTip(event, '378', 378)">
             fsc setParams inputFiles
           </code>
-          <div class="tip" id="332">
+          <div class="tip" id="378">
             <strong>Signature:</strong> setParams:(FscParams -&gt; FscParams) -&gt; inputFiles:string list -&gt; int<br />
                       </div>
         </td>
@@ -112,22 +120,32 @@ There is also a tutorial about the <a href="../fsc.html">F# compiler tasks</a> a
 
 <h2>Sample</h2>
 
-<pre><code>["file1.fs"; "file2.fs"]
-|&gt; fsc (fun parameters -&gt;
-         { parameters with Output = ...
-                           FscTarget = ...
-                           ... })
-</code></pre>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp">[<span class="s">&quot;file1.fs&quot;</span>; <span class="s">&quot;file2.fs&quot;</span>]
+<span class="o">|&gt;</span> <span class="i">fsc</span> (<span class="k">fun</span> <span class="i">parameters</span> <span class="k">-&gt;</span>
+         { <span class="i">parameters</span> <span class="k">with</span> <span class="i">Output</span> <span class="o">=</span> <span class="o">..</span><span class="o">.</span>
+                           <span class="i">FscTarget</span> <span class="o">=</span> <span class="o">..</span><span class="o">.</span>
+                           <span class="o">..</span><span class="o">.</span> })
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '333', 333)" onmouseover="showTip(event, '333', 333)">
+          <code onmouseout="hideTip(event, '379', 379)" onmouseover="showTip(event, '379', 379)">
             Fsc setParams inputFiles
           </code>
-          <div class="tip" id="333">
+          <div class="tip" id="379">
             <strong>Signature:</strong> setParams:(FscParams -&gt; FscParams) -&gt; inputFiles:string list -&gt; unit<br />
                       </div>
         </td>
@@ -147,22 +165,32 @@ There is also a tutorial about the <a href="../fsc.html">F# compiler tasks</a> a
 
 <h2>Sample</h2>
 
-<pre><code>["file1.fs"; "file2.fs"]
-|&gt; Fsc (fun parameters -&gt;
-              { parameters with Output = ...
-                                FscTarget = ...
-                                ... })
-</code></pre>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp">[<span class="s">&quot;file1.fs&quot;</span>; <span class="s">&quot;file2.fs&quot;</span>]
+<span class="o">|&gt;</span> <span class="i">Fsc</span> (<span class="k">fun</span> <span class="i">parameters</span> <span class="k">-&gt;</span>
+              { <span class="i">parameters</span> <span class="k">with</span> <span class="i">Output</span> <span class="o">=</span> <span class="o">..</span><span class="o">.</span>
+                                <span class="i">FscTarget</span> <span class="o">=</span> <span class="o">..</span><span class="o">.</span>
+                                <span class="o">..</span><span class="o">.</span> })
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '334', 334)" onmouseover="showTip(event, '334', 334)">
+          <code onmouseout="hideTip(event, '380', 380)" onmouseover="showTip(event, '380', 380)">
             fscList srcFiles opts
           </code>
-          <div class="tip" id="334">
+          <div class="tip" id="380">
             <strong>Signature:</strong> srcFiles:string list -&gt; opts:string list -&gt; int<br />
                       </div>
         </td>
@@ -174,6 +202,8 @@ There is also a tutorial about the <a href="../fsc.html">F# compiler tasks</a> a
           <p>Compiles the given source file with the given options. If no options
 given (i.e. the second argument is an empty list), by default tries
 to behave the same way as would the command-line 'fsc.exe' tool.</p>
+
+
 
         </td>
       </tr>
@@ -203,6 +233,7 @@ to behave the same way as would the command-line 'fsc.exe' tool.</p>
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -213,16 +244,19 @@ to behave the same way as would the command-line 'fsc.exe' tool.</p>
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

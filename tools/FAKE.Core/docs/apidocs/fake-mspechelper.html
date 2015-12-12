@@ -39,6 +39,8 @@
 <h1>MSpecHelper</h1>
 <div class="xmldoc">
 <p>Contains a task to run <a href="https://github.com/machine/machine.specifications">machine.specifications</a> tests.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -54,6 +56,8 @@
             <a href="fake-mspechelper-mspecparams.html">MSpecParams</a>
           </td>
           <td class="xmldoc"><p>Parameter type to configure the MSpec runner.</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -70,10 +74,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '371', 371)" onmouseover="showTip(event, '371', 371)">
+          <code onmouseout="hideTip(event, '422', 422)" onmouseover="showTip(event, '422', 422)">
             MSpec setParams assemblies
           </code>
-          <div class="tip" id="371">
+          <div class="tip" id="422">
             <strong>Signature:</strong> setParams:(MSpecParams -&gt; MSpecParams) -&gt; assemblies:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -93,23 +97,30 @@
 
 <h2>Sample</h2>
 
-<pre><code>!! (testDir @@ "Test.*.dll") 
-  |&gt; MSpec (fun p -&gt; {p with ExcludeTags = ["HTTP"]; HtmlOutputDir = reportDir})
-</code></pre>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="o">!!</span> (<span class="i">testDir</span> <span class="o">@@</span> <span class="s">&quot;Test.*.dll&quot;</span>) 
+  <span class="o">|&gt;</span> <span class="i">MSpec</span> (<span class="k">fun</span> <span class="i">p</span> <span class="k">-&gt;</span> {<span class="i">p</span> <span class="k">with</span> <span class="i">ExcludeTags</span> <span class="o">=</span> [<span class="s">&quot;HTTP&quot;</span>]; <span class="i">HtmlOutputDir</span> <span class="o">=</span> <span class="i">reportDir</span>})
+</code></pre></td>
+</tr>
+</table>
 
 <h2>Hint</h2>
 
 <p>XmlOutputPath expects a full file path whereas the HtmlOutputDir expects a directory name</p>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '372', 372)" onmouseover="showTip(event, '372', 372)">
+          <code onmouseout="hideTip(event, '423', 423)" onmouseover="showTip(event, '423', 423)">
             MSpecDefaults 
           </code>
-          <div class="tip" id="372">
+          <div class="tip" id="423">
             <strong>Signature:</strong> MSpecParams<br />
                       </div>
         </td>
@@ -119,6 +130,8 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>MSpec default parameters - tries to locate mspec-clr4.exe in any subfolder.</p>
+
+
 
         </td>
       </tr>
@@ -148,6 +161,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -158,16 +172,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

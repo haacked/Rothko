@@ -39,6 +39,8 @@
 <h1>SemVerHelper</h1>
 <div class="xmldoc">
 <p>Contains helpers which allow to deal with <a href="http://semver.org/">Semantic Versioning</a> (SemVer).</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -60,6 +62,8 @@
             <a href="fake-semverhelper-semverinfo.html">SemVerInfo</a>
           </td>
           <td class="xmldoc"><p>Contains the version information.</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -76,15 +80,36 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '490', 490)" onmouseover="showTip(event, '490', 490)">
+          <code onmouseout="hideTip(event, '553', 553)" onmouseover="showTip(event, '553', 553)">
+            isValidSemVer input
+          </code>
+          <div class="tip" id="553">
+            <strong>Signature:</strong> input:string -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/SemVerHelper.fs#L83-83" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Returns true if input appears to be a parsable semver string</p>
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '554', 554)" onmouseover="showTip(event, '554', 554)">
             parse version
           </code>
-          <div class="tip" id="490">
+          <div class="tip" id="554">
             <strong>Signature:</strong> version:string -&gt; SemVerInfo<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/SemVerHelper.fs#L88-88" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/SemVerHelper.fs#L97-97" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -93,12 +118,22 @@ according to the rules described in the <a href="http://semver.org/">SemVer docs
 
 <h2>Sample</h2>
 
-<pre><code>parse "1.0.0-rc.1"     &lt; parse "1.0.0"          // true
-parse "1.2.3-alpha"    &gt; parse "1.2.2"          // true
-parse "1.2.3-alpha2"   &gt; parse "1.2.3-alpha"    // true
-parse "1.2.3-alpha002" &gt; parse "1.2.3-alpha1"   // true
-parse "1.5.0-beta.2"   &gt; parse "1.5.0-rc.1"     // false
-</code></pre>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">parse</span> <span class="s">&quot;1.0.0-rc.1&quot;</span>     <span class="o">&lt;</span> <span class="i">parse</span> <span class="s">&quot;1.0.0&quot;</span>          <span class="c">// true</span>
+<span class="i">parse</span> <span class="s">&quot;1.2.3-alpha&quot;</span>    <span class="o">&gt;</span> <span class="i">parse</span> <span class="s">&quot;1.2.2&quot;</span>          <span class="c">// true</span>
+<span class="i">parse</span> <span class="s">&quot;1.2.3-alpha2&quot;</span>   <span class="o">&gt;</span> <span class="i">parse</span> <span class="s">&quot;1.2.3-alpha&quot;</span>    <span class="c">// true</span>
+<span class="i">parse</span> <span class="s">&quot;1.2.3-alpha002&quot;</span> <span class="o">&gt;</span> <span class="i">parse</span> <span class="s">&quot;1.2.3-alpha1&quot;</span>   <span class="c">// true</span>
+<span class="i">parse</span> <span class="s">&quot;1.5.0-beta.2&quot;</span>   <span class="o">&gt;</span> <span class="i">parse</span> <span class="s">&quot;1.5.0-rc.1&quot;</span>     <span class="c">// false</span>
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
@@ -128,6 +163,7 @@ parse "1.5.0-beta.2"   &gt; parse "1.5.0-rc.1"     // false
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -138,16 +174,19 @@ parse "1.5.0-beta.2"   &gt; parse "1.5.0-rc.1"     // false
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

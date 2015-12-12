@@ -39,6 +39,8 @@
 <h1>GZip</h1>
 <div class="xmldoc">
 <p>Operations and tasks for working with tar archives compressed with GZip.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -52,10 +54,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '70', 70)" onmouseover="showTip(event, '70', 70)">
+          <code onmouseout="hideTip(event, '74', 74)" onmouseover="showTip(event, '74', 74)">
             compress gzipParam
           </code>
-          <div class="tip" id="70">
+          <div class="tip" id="74">
             <strong>Signature:</strong> gzipParam:GZipCompressionParams -&gt; FileInfo -&gt; seq&lt;ArchiveFileSpec&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -66,15 +68,17 @@
             </a>
           <p>Constructs a function that will create a tar.gz archive from a set of files.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '71', 71)" onmouseover="showTip(event, '71', 71)">
+          <code onmouseout="hideTip(event, '75', 75)" onmouseover="showTip(event, '75', 75)">
             Compress (...)
           </code>
-          <div class="tip" id="71">
+          <div class="tip" id="75">
             <strong>Signature:</strong> setParams:(GZipCompressionParams -&gt; GZipCompressionParams) -&gt; flatten:bool -&gt; baseDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; files:seq&lt;FileInfo&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -95,15 +99,17 @@
 <li><code>files</code> - A sequence of files to compress.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '72', 72)" onmouseover="showTip(event, '72', 72)">
+          <code onmouseout="hideTip(event, '76', 76)" onmouseover="showTip(event, '76', 76)">
             CompressDir (...)
           </code>
-          <div class="tip" id="72">
+          <div class="tip" id="76">
             <strong>Signature:</strong> setParams:(GZipCompressionParams -&gt; GZipCompressionParams) -&gt; flatten:bool -&gt; baseDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; unit<br />
                       </div>
         </td>
@@ -123,15 +129,17 @@
 <li><code>archiveFile</code> - The output archive file. If existing, will be overwritten.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '73', 73)" onmouseover="showTip(event, '73', 73)">
+          <code onmouseout="hideTip(event, '77', 77)" onmouseover="showTip(event, '77', 77)">
             CompressDirWithDefaults (...)
           </code>
-          <div class="tip" id="73">
+          <div class="tip" id="77">
             <strong>Signature:</strong> baseDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; unit<br />
                       </div>
         </td>
@@ -149,15 +157,17 @@
 <li><code>archiveFile</code> - The output archive file. If existing, will be overwritten.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '74', 74)" onmouseover="showTip(event, '74', 74)">
+          <code onmouseout="hideTip(event, '78', 78)" onmouseover="showTip(event, '78', 78)">
             CompressSpecs (...)
           </code>
-          <div class="tip" id="74">
+          <div class="tip" id="78">
             <strong>Signature:</strong> setParams:(GZipCompressionParams -&gt; GZipCompressionParams) -&gt; archiveFile:FileInfo -&gt; fileSpecs:seq&lt;ArchiveFileSpec&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -176,16 +186,18 @@
 <li><code>fileSpecs</code> - A sequence of archive file specifications.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '75', 75)" onmouseover="showTip(event, '75', 75)">
+          <code onmouseout="hideTip(event, '79', 79)" onmouseover="showTip(event, '79', 79)">
             compressStream gzipParams
           </code>
-          <div class="tip" id="75">
-            <strong>Signature:</strong> gzipParams:GZipCompressionParams -&gt; Stream -&gt; (type)<br />
+          <div class="tip" id="79">
+            <strong>Signature:</strong> gzipParams:GZipCompressionParams -&gt; Stream -&gt; TarOutputStream<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -195,15 +207,17 @@
             </a>
           <p>Wraps an output stream with a tar.gz compressor.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '76', 76)" onmouseover="showTip(event, '76', 76)">
+          <code onmouseout="hideTip(event, '80', 80)" onmouseover="showTip(event, '80', 80)">
             CompressWithDefaults (...)
           </code>
-          <div class="tip" id="76">
+          <div class="tip" id="80">
             <strong>Signature:</strong> baseDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; files:seq&lt;FileInfo&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -222,16 +236,18 @@
 <li><code>files</code> - A sequence of files to compress.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '77', 77)" onmouseover="showTip(event, '77', 77)">
+          <code onmouseout="hideTip(event, '81', 81)" onmouseover="showTip(event, '81', 81)">
             createFile gzipParams file
           </code>
-          <div class="tip" id="77">
-            <strong>Signature:</strong> gzipParams:GZipCompressionParams -&gt; file:FileInfo -&gt; (type)<br />
+          <div class="tip" id="81">
+            <strong>Signature:</strong> gzipParams:GZipCompressionParams -&gt; file:FileInfo -&gt; TarOutputStream<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -248,15 +264,17 @@
 <li><code>file</code> - The <code>FileInfo</code> describing the location to which the archive should be written. Will be overwritten if it exists.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '78', 78)" onmouseover="showTip(event, '78', 78)">
+          <code onmouseout="hideTip(event, '82', 82)" onmouseover="showTip(event, '82', 82)">
             Extract extractDir archiveFile
           </code>
-          <div class="tip" id="78">
+          <div class="tip" id="82">
             <strong>Signature:</strong> extractDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; unit<br />
                       </div>
         </td>
@@ -274,16 +292,18 @@
 <li><code>archiveFile</code> - The archive to be extracted.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '79', 79)" onmouseover="showTip(event, '79', 79)">
+          <code onmouseout="hideTip(event, '83', 83)" onmouseover="showTip(event, '83', 83)">
             extractStream 
           </code>
-          <div class="tip" id="79">
-            <strong>Signature:</strong> Stream -&gt; (type)<br />
+          <div class="tip" id="83">
+            <strong>Signature:</strong> Stream -&gt; TarInputStream<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -292,6 +312,8 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Wraps an input stream with a tar.gz decompressor.</p>
+
+
 
         </td>
       </tr>
@@ -321,6 +343,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -331,16 +354,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

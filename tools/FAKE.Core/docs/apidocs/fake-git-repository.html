@@ -40,6 +40,8 @@
 <div class="xmldoc">
 <p>Contains functions which allow basic operations on git repositories.
 All operations assume that the CommandHelper can find git.exe.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -53,10 +55,10 @@ All operations assume that the CommandHelper can find git.exe.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '863', 863)" onmouseover="showTip(event, '863', 863)">
+          <code onmouseout="hideTip(event, '967', 967)" onmouseover="showTip(event, '967', 967)">
             clone workingDir repoUrl toPath
           </code>
-          <div class="tip" id="863">
+          <div class="tip" id="967">
             <strong>Signature:</strong> workingDir:string -&gt; repoUrl:string -&gt; toPath:string -&gt; unit<br />
                       </div>
         </td>
@@ -75,15 +77,17 @@ All operations assume that the CommandHelper can find git.exe.</p>
 <li><code>toPath</code> - Specifes the new target subfolder.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '864', 864)" onmouseover="showTip(event, '864', 864)">
+          <code onmouseout="hideTip(event, '968', 968)" onmouseover="showTip(event, '968', 968)">
             cloneSingleBranch (...)
           </code>
-          <div class="tip" id="864">
+          <div class="tip" id="968">
             <strong>Signature:</strong> workingDir:string -&gt; repoUrl:string -&gt; branchName:string -&gt; toPath:string -&gt; unit<br />
                       </div>
         </td>
@@ -103,15 +107,17 @@ All operations assume that the CommandHelper can find git.exe.</p>
 <li><code>toPath</code> - Specifes the new target subfolder.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '865', 865)" onmouseover="showTip(event, '865', 865)">
+          <code onmouseout="hideTip(event, '969', 969)" onmouseover="showTip(event, '969', 969)">
             fullclean repositoryDir
           </code>
-          <div class="tip" id="865">
+          <div class="tip" id="969">
             <strong>Signature:</strong> repositoryDir:string -&gt; unit<br />
                       </div>
         </td>
@@ -128,15 +134,17 @@ All operations assume that the CommandHelper can find git.exe.</p>
 <li><code>repositoryDir</code> - The path of the directory to clean.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '866', 866)" onmouseover="showTip(event, '866', 866)">
+          <code onmouseout="hideTip(event, '970', 970)" onmouseover="showTip(event, '970', 970)">
             init repositoryDir bare shared
           </code>
-          <div class="tip" id="866">
+          <div class="tip" id="970">
             <strong>Signature:</strong> repositoryDir:string -&gt; bare:bool -&gt; shared:bool -&gt; unit<br />
                       </div>
         </td>
@@ -154,6 +162,8 @@ All operations assume that the CommandHelper can find git.exe.</p>
 <li><code>bare</code> - If the new directory is a bare directory.</li>
 <li><code>shared</code> - Specifies that the git repository is to be shared amongst several users. This allows users belonging to the same group to push into that repository.</li>
 </ul>
+
+
 
         </td>
       </tr>
@@ -183,6 +193,7 @@ All operations assume that the CommandHelper can find git.exe.</p>
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -193,16 +204,19 @@ All operations assume that the CommandHelper can find git.exe.</p>
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

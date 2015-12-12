@@ -39,6 +39,8 @@
 <h1>FileHelper</h1>
 <div class="xmldoc">
 <p>Contains helper function which allow to deal with files and directories.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -52,10 +54,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '236', 236)" onmouseover="showTip(event, '236', 236)">
+          <code onmouseout="hideTip(event, '281', 281)" onmouseover="showTip(event, '281', 281)">
             allFiles path
           </code>
-          <div class="tip" id="236">
+          <div class="tip" id="281">
             <strong>Signature:</strong> path:string -&gt; bool<br />
                       </div>
         </td>
@@ -66,15 +68,17 @@
             </a>
           <p>Includes all files</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '237', 237)" onmouseover="showTip(event, '237', 237)">
+          <code onmouseout="hideTip(event, '282', 282)" onmouseover="showTip(event, '282', 282)">
             AppendTextFiles newFileName files
           </code>
-          <div class="tip" id="237">
+          <div class="tip" id="282">
             <strong>Signature:</strong> newFileName:string -&gt; files:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -92,20 +96,22 @@
 <li><code>files</code> - The original FileNames as a sequence.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '238', 238)" onmouseover="showTip(event, '238', 238)">
+          <code onmouseout="hideTip(event, '283', 283)" onmouseover="showTip(event, '283', 283)">
             changeExt extension fileName
           </code>
-          <div class="tip" id="238">
+          <div class="tip" id="283">
             <strong>Signature:</strong> extension:string -&gt; fileName:string -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L467-467" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L479-479" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -118,15 +124,17 @@
 <li>'fileName' - Name of the file from which the extension is retrieved.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '239', 239)" onmouseover="showTip(event, '239', 239)">
+          <code onmouseout="hideTip(event, '284', 284)" onmouseover="showTip(event, '284', 284)">
             CleanDir path
           </code>
-          <div class="tip" id="239">
+          <div class="tip" id="284">
             <strong>Signature:</strong> path:string -&gt; unit<br />
                       </div>
         </td>
@@ -137,15 +145,17 @@
             </a>
           <p>Cleans a directory by removing all files and sub-directories.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '240', 240)" onmouseover="showTip(event, '240', 240)">
+          <code onmouseout="hideTip(event, '285', 285)" onmouseover="showTip(event, '285', 285)">
             CleanDirs dirs
           </code>
-          <div class="tip" id="240">
+          <div class="tip" id="285">
             <strong>Signature:</strong> dirs:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -156,15 +166,17 @@
             </a>
           <p>Cleans multiple directories</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '241', 241)" onmouseover="showTip(event, '241', 241)">
+          <code onmouseout="hideTip(event, '286', 286)" onmouseover="showTip(event, '286', 286)">
             CompareFiles (...)
           </code>
-          <div class="tip" id="241">
+          <div class="tip" id="286">
             <strong>Signature:</strong> delete:bool -&gt; originalFileName:string -&gt; compareFileName:string -&gt; bool<br />
                       </div>
         </td>
@@ -176,15 +188,17 @@
           <p>Compares the given files for changes.
 If delete is set to true then equal files will be removed.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '242', 242)" onmouseover="showTip(event, '242', 242)">
+          <code onmouseout="hideTip(event, '287', 287)" onmouseover="showTip(event, '287', 287)">
             Copy target files
           </code>
-          <div class="tip" id="242">
+          <div class="tip" id="287">
             <strong>Signature:</strong> target:string -&gt; files:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -202,15 +216,17 @@ If delete is set to true then equal files will be removed.</p>
 <li><code>files</code> - The original file names as a sequence.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '243', 243)" onmouseover="showTip(event, '243', 243)">
+          <code onmouseout="hideTip(event, '288', 288)" onmouseover="showTip(event, '288', 288)">
             CopyCached target cacheDir files
           </code>
-          <div class="tip" id="243">
+          <div class="tip" id="288">
             <strong>Signature:</strong> target:string -&gt; cacheDir:string -&gt; files:seq&lt;string&gt; -&gt; string list<br />
                       </div>
         </td>
@@ -230,15 +246,17 @@ If the files are not cached or the original files have a different write time th
 <li><code>files</code> - The orginal files.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '244', 244)" onmouseover="showTip(event, '244', 244)">
+          <code onmouseout="hideTip(event, '289', 289)" onmouseover="showTip(event, '289', 289)">
             CopyDir target source filterFile
           </code>
-          <div class="tip" id="244">
+          <div class="tip" id="289">
             <strong>Signature:</strong> target:string -&gt; source:string -&gt; filterFile:(string -&gt; bool) -&gt; unit<br />
                       </div>
         </td>
@@ -257,15 +275,17 @@ If the files are not cached or the original files have a different write time th
 <li><code>filterFile</code> - A file filter predicate.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '245', 245)" onmouseover="showTip(event, '245', 245)">
+          <code onmouseout="hideTip(event, '290', 290)" onmouseover="showTip(event, '290', 290)">
             CopyFile target fileName
           </code>
-          <div class="tip" id="245">
+          <div class="tip" id="290">
             <strong>Signature:</strong> target:string -&gt; fileName:string -&gt; unit<br />
                       </div>
         </td>
@@ -283,15 +303,17 @@ If the files are not cached or the original files have a different write time th
 <li><code>fileName</code> - The FileName.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '246', 246)" onmouseover="showTip(event, '246', 246)">
+          <code onmouseout="hideTip(event, '291', 291)" onmouseover="showTip(event, '291', 291)">
             CopyFileIntoSubFolder target fileName
           </code>
-          <div class="tip" id="246">
+          <div class="tip" id="291">
             <strong>Signature:</strong> target:string -&gt; fileName:string -&gt; unit<br />
                       </div>
         </td>
@@ -309,15 +331,17 @@ If the files are not cached or the original files have a different write time th
 <li><code>fileName</code> - The fileName</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '247', 247)" onmouseover="showTip(event, '247', 247)">
+          <code onmouseout="hideTip(event, '292', 292)" onmouseover="showTip(event, '292', 292)">
             CopyFiles target files
           </code>
-          <div class="tip" id="247">
+          <div class="tip" id="292">
             <strong>Signature:</strong> target:string -&gt; files:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -335,15 +359,17 @@ If the files are not cached or the original files have a different write time th
 <li><code>files</code> - The orginal file names.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '248', 248)" onmouseover="showTip(event, '248', 248)">
+          <code onmouseout="hideTip(event, '293', 293)" onmouseover="showTip(event, '293', 293)">
             CopyFileWithSubfolder (...)
           </code>
-          <div class="tip" id="248">
+          <div class="tip" id="293">
             <strong>Signature:</strong> baseDir:string -&gt; target:string -&gt; fileName:string -&gt; unit<br />
                       </div>
         </td>
@@ -363,53 +389,59 @@ starting from the specified base folder.</p>
 <li><code>fileName</code> - The file name.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '249', 249)" onmouseover="showTip(event, '249', 249)">
+          <code onmouseout="hideTip(event, '294', 294)" onmouseover="showTip(event, '294', 294)">
             copyRecursive dir outputDir overwrite
           </code>
-          <div class="tip" id="249">
+          <div class="tip" id="294">
             <strong>Signature:</strong> dir:DirectoryInfo -&gt; outputDir:DirectoryInfo -&gt; overwrite:bool -&gt; string list<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L372-372" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L384-384" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Copies the file structure recursively.</p>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '250', 250)" onmouseover="showTip(event, '250', 250)">
+          <code onmouseout="hideTip(event, '295', 295)" onmouseover="showTip(event, '295', 295)">
             CopyRecursive dir outputDir
           </code>
-          <div class="tip" id="250">
+          <div class="tip" id="295">
             <strong>Signature:</strong> dir:string -&gt; outputDir:string -&gt; bool -&gt; string list<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L390-390" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L402-402" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Copies the file structure recursively.</p>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '251', 251)" onmouseover="showTip(event, '251', 251)">
+          <code onmouseout="hideTip(event, '296', 296)" onmouseover="showTip(event, '296', 296)">
             CopyTo target files
           </code>
-          <div class="tip" id="251">
+          <div class="tip" id="296">
             <strong>Signature:</strong> target:string -&gt; files:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -427,15 +459,17 @@ starting from the specified base folder.</p>
 <li><code>files</code> - The original file names as a sequence.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '252', 252)" onmouseover="showTip(event, '252', 252)">
+          <code onmouseout="hideTip(event, '297', 297)" onmouseover="showTip(event, '297', 297)">
             CopyWithSubfoldersTo target files
           </code>
-          <div class="tip" id="252">
+          <div class="tip" id="297">
             <strong>Signature:</strong> target:string -&gt; files:seq&lt;FileIncludes&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -455,15 +489,17 @@ starting from the BaseDirectory of each FileIncludes.</p>
 <li><code>files</code> - A sequence of file groups.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '253', 253)" onmouseover="showTip(event, '253', 253)">
+          <code onmouseout="hideTip(event, '298', 298)" onmouseover="showTip(event, '298', 298)">
             CreateDir path
           </code>
-          <div class="tip" id="253">
+          <div class="tip" id="298">
             <strong>Signature:</strong> path:string -&gt; unit<br />
                       </div>
         </td>
@@ -474,15 +510,17 @@ starting from the BaseDirectory of each FileIncludes.</p>
             </a>
           <p>Creates a directory if it does not exist.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '254', 254)" onmouseover="showTip(event, '254', 254)">
+          <code onmouseout="hideTip(event, '299', 299)" onmouseover="showTip(event, '299', 299)">
             CreateFile fileName
           </code>
-          <div class="tip" id="254">
+          <div class="tip" id="299">
             <strong>Signature:</strong> fileName:string -&gt; unit<br />
                       </div>
         </td>
@@ -493,15 +531,17 @@ starting from the BaseDirectory of each FileIncludes.</p>
             </a>
           <p>Creates a file if it does not exist.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '255', 255)" onmouseover="showTip(event, '255', 255)">
+          <code onmouseout="hideTip(event, '300', 300)" onmouseover="showTip(event, '300', 300)">
             DeleteDir path
           </code>
-          <div class="tip" id="255">
+          <div class="tip" id="300">
             <strong>Signature:</strong> path:string -&gt; unit<br />
                       </div>
         </td>
@@ -512,15 +552,17 @@ starting from the BaseDirectory of each FileIncludes.</p>
             </a>
           <p>Deletes a directory if it exists.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '256', 256)" onmouseover="showTip(event, '256', 256)">
+          <code onmouseout="hideTip(event, '301', 301)" onmouseover="showTip(event, '301', 301)">
             DeleteDirs dirs
           </code>
-          <div class="tip" id="256">
+          <div class="tip" id="301">
             <strong>Signature:</strong> dirs:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -531,15 +573,17 @@ starting from the BaseDirectory of each FileIncludes.</p>
             </a>
           <p>Deletes multiple directories</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '257', 257)" onmouseover="showTip(event, '257', 257)">
+          <code onmouseout="hideTip(event, '302', 302)" onmouseover="showTip(event, '302', 302)">
             DeleteFile fileName
           </code>
-          <div class="tip" id="257">
+          <div class="tip" id="302">
             <strong>Signature:</strong> fileName:string -&gt; unit<br />
                       </div>
         </td>
@@ -550,15 +594,17 @@ starting from the BaseDirectory of each FileIncludes.</p>
             </a>
           <p>Deletes a file if it exists.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '258', 258)" onmouseover="showTip(event, '258', 258)">
+          <code onmouseout="hideTip(event, '303', 303)" onmouseover="showTip(event, '303', 303)">
             DeleteFiles files
           </code>
-          <div class="tip" id="258">
+          <div class="tip" id="303">
             <strong>Signature:</strong> files:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -569,20 +615,22 @@ starting from the BaseDirectory of each FileIncludes.</p>
             </a>
           <p>Deletes the given files.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '259', 259)" onmouseover="showTip(event, '259', 259)">
+          <code onmouseout="hideTip(event, '304', 304)" onmouseover="showTip(event, '304', 304)">
             directory path
           </code>
-          <div class="tip" id="259">
+          <div class="tip" id="304">
             <strong>Signature:</strong> path:string -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L495-495" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L507-507" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -594,15 +642,17 @@ starting from the BaseDirectory of each FileIncludes.</p>
 <li>'path' - The path from which the directory is retrieved.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '260', 260)" onmouseover="showTip(event, '260', 260)">
+          <code onmouseout="hideTip(event, '305', 305)" onmouseover="showTip(event, '305', 305)">
             excludeSVNFiles path
           </code>
-          <div class="tip" id="260">
+          <div class="tip" id="305">
             <strong>Signature:</strong> path:string -&gt; bool<br />
                       </div>
         </td>
@@ -613,20 +663,22 @@ starting from the BaseDirectory of each FileIncludes.</p>
             </a>
           <p>Exclude SVN files (path with .svn)</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '261', 261)" onmouseover="showTip(event, '261', 261)">
+          <code onmouseout="hideTip(event, '306', 306)" onmouseover="showTip(event, '306', 306)">
             ext fileName
           </code>
-          <div class="tip" id="261">
+          <div class="tip" id="306">
             <strong>Signature:</strong> fileName:string -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L460-460" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L472-472" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -638,20 +690,22 @@ starting from the BaseDirectory of each FileIncludes.</p>
 <li>'fileName' - Name of the file from which the extension is retrieved.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '262', 262)" onmouseover="showTip(event, '262', 262)">
+          <code onmouseout="hideTip(event, '307', 307)" onmouseover="showTip(event, '307', 307)">
             filename path
           </code>
-          <div class="tip" id="262">
+          <div class="tip" id="307">
             <strong>Signature:</strong> path:string -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L480-480" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L492-492" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -663,20 +717,22 @@ starting from the BaseDirectory of each FileIncludes.</p>
 <li>'path' - The path from which the filename is retrieved.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '263', 263)" onmouseover="showTip(event, '263', 263)">
+          <code onmouseout="hideTip(event, '308', 308)" onmouseover="showTip(event, '308', 308)">
             filenameWithouExt path
           </code>
-          <div class="tip" id="263">
+          <div class="tip" id="308">
             <strong>Signature:</strong> path:string -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L489-489" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L501-501" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -686,15 +742,15 @@ starting from the BaseDirectory of each FileIncludes.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '264', 264)" onmouseover="showTip(event, '264', 264)">
+          <code onmouseout="hideTip(event, '309', 309)" onmouseover="showTip(event, '309', 309)">
             fileNameWithoutExt path
           </code>
-          <div class="tip" id="264">
+          <div class="tip" id="309">
             <strong>Signature:</strong> path:string -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L486-486" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L498-498" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -706,15 +762,17 @@ starting from the BaseDirectory of each FileIncludes.</p>
 <li>'path' - The path from which the filename is retrieved.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '265', 265)" onmouseover="showTip(event, '265', 265)">
+          <code onmouseout="hideTip(event, '310', 310)" onmouseover="showTip(event, '310', 310)">
             FilesAreEqual first second
           </code>
-          <div class="tip" id="265">
+          <div class="tip" id="310">
             <strong>Signature:</strong> first:FileInfo -&gt; second:FileInfo -&gt; bool<br />
                       </div>
         </td>
@@ -725,20 +783,22 @@ starting from the BaseDirectory of each FileIncludes.</p>
             </a>
           <p>Checks if the two files are byte-to-byte equal.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '266', 266)" onmouseover="showTip(event, '266', 266)">
+          <code onmouseout="hideTip(event, '311', 311)" onmouseover="showTip(event, '311', 311)">
             FileVersion fileName
           </code>
-          <div class="tip" id="266">
+          <div class="tip" id="311">
             <strong>Signature:</strong> fileName:string -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L451-451" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L463-463" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -750,20 +810,22 @@ starting from the BaseDirectory of each FileIncludes.</p>
 <li>'fileName' - Name of file from which the version is retrieved. The path can be relative.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '267', 267)" onmouseover="showTip(event, '267', 267)">
+          <code onmouseout="hideTip(event, '312', 312)" onmouseover="showTip(event, '312', 312)">
             GeneratePatch (...)
           </code>
-          <div class="tip" id="267">
+          <div class="tip" id="312">
             <strong>Signature:</strong> lastReleaseDir:string -&gt; patchDir:string -&gt; srcFiles:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L368-368" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L380-380" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -777,20 +839,22 @@ starting from the BaseDirectory of each FileIncludes.</p>
 <li><code>srcFiles</code> - The source files.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '268', 268)" onmouseover="showTip(event, '268', 268)">
+          <code onmouseout="hideTip(event, '313', 313)" onmouseover="showTip(event, '313', 313)">
             GeneratePatchWithFindOldFileFunction (...)
           </code>
-          <div class="tip" id="268">
+          <div class="tip" id="313">
             <strong>Signature:</strong> lastReleaseDir:string -&gt; patchDir:string -&gt; srcFiles:seq&lt;string&gt; -&gt; findOldFileF:(string -&gt; string -&gt; string) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L354-354" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L362-362" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -805,20 +869,22 @@ starting from the BaseDirectory of each FileIncludes.</p>
 <li><code>findOldFileF</code> - A function which finds the old file</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '269', 269)" onmouseover="showTip(event, '269', 269)">
+          <code onmouseout="hideTip(event, '314', 314)" onmouseover="showTip(event, '314', 314)">
             hasExt extension fileName
           </code>
-          <div class="tip" id="269">
+          <div class="tip" id="314">
             <strong>Signature:</strong> extension:string -&gt; fileName:string -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L474-474" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L486-486" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -831,20 +897,22 @@ starting from the BaseDirectory of each FileIncludes.</p>
 <li>'fileName' - Name of the file from which the extension is retrieved.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '270', 270)" onmouseover="showTip(event, '270', 270)">
+          <code onmouseout="hideTip(event, '315', 315)" onmouseover="showTip(event, '315', 315)">
             MoveFile target fileName
           </code>
-          <div class="tip" id="270">
+          <div class="tip" id="315">
             <strong>Signature:</strong> target:string -&gt; fileName:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L397-397" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L409-409" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -857,15 +925,17 @@ starting from the BaseDirectory of each FileIncludes.</p>
 <li><code>fileName</code> - The FileName.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '271', 271)" onmouseover="showTip(event, '271', 271)">
+          <code onmouseout="hideTip(event, '316', 316)" onmouseover="showTip(event, '316', 316)">
             ReadCSVFile file
           </code>
-          <div class="tip" id="271">
+          <div class="tip" id="316">
             <strong>Signature:</strong> file:string -&gt; seq&lt;string []&gt;<br />
                       </div>
         </td>
@@ -877,15 +947,17 @@ starting from the BaseDirectory of each FileIncludes.</p>
           <p>Reads a csv file line by line
 delimiter is a ,</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '272', 272)" onmouseover="showTip(event, '272', 272)">
+          <code onmouseout="hideTip(event, '317', 317)" onmouseover="showTip(event, '317', 317)">
             recursively dirF fileF dir
           </code>
-          <div class="tip" id="272">
+          <div class="tip" id="317">
             <strong>Signature:</strong> dirF:(DirectoryInfo -&gt; unit) -&gt; fileF:(FileInfo -&gt; unit) -&gt; dir:DirectoryInfo -&gt; unit<br />
                       </div>
         </td>
@@ -896,20 +968,22 @@ delimiter is a ,</p>
             </a>
           <p>Performs the given actions on all files and subdirectories</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '273', 273)" onmouseover="showTip(event, '273', 273)">
+          <code onmouseout="hideTip(event, '318', 318)" onmouseover="showTip(event, '318', 318)">
             RegexReplaceInFilesWithEncoding (...)
           </code>
-          <div class="tip" id="273">
+          <div class="tip" id="318">
             <strong>Signature:</strong> pattern:string -&gt; replacement:string -&gt; encoding:Encoding -&gt; files:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L444-444" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L456-456" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -924,20 +998,22 @@ delimiter is a ,</p>
 <li><code>files</code> - The paths of the files to process</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '274', 274)" onmouseover="showTip(event, '274', 274)">
+          <code onmouseout="hideTip(event, '319', 319)" onmouseover="showTip(event, '319', 319)">
             RegexReplaceInFileWithEncoding (...)
           </code>
-          <div class="tip" id="274">
+          <div class="tip" id="319">
             <strong>Signature:</strong> pattern:string -&gt; replacement:string -&gt; encoding:Encoding -&gt; file:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L432-432" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L444-444" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -952,15 +1028,17 @@ delimiter is a ,</p>
 <li><code>file</code> - The path of the file to process</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '275', 275)" onmouseover="showTip(event, '275', 275)">
+          <code onmouseout="hideTip(event, '320', 320)" onmouseover="showTip(event, '320', 320)">
             Rename target fileName
           </code>
-          <div class="tip" id="275">
+          <div class="tip" id="320">
             <strong>Signature:</strong> target:string -&gt; fileName:string -&gt; unit<br />
                       </div>
         </td>
@@ -978,20 +1056,22 @@ delimiter is a ,</p>
 <li><code>file</code> - The orginal file name.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '276', 276)" onmouseover="showTip(event, '276', 276)">
+          <code onmouseout="hideTip(event, '321', 321)" onmouseover="showTip(event, '321', 321)">
             ReplaceInFiles replacements files
           </code>
-          <div class="tip" id="276">
+          <div class="tip" id="321">
             <strong>Signature:</strong> replacements:seq&lt;string * string&gt; -&gt; files:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L423-423" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L435-435" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -1004,15 +1084,17 @@ delimiter is a ,</p>
 <li><code>files</code> - The files to process.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '277', 277)" onmouseover="showTip(event, '277', 277)">
+          <code onmouseout="hideTip(event, '322', 322)" onmouseover="showTip(event, '322', 322)">
             setDirectoryReadOnly readOnly dir
           </code>
-          <div class="tip" id="277">
+          <div class="tip" id="322">
             <strong>Signature:</strong> readOnly:bool -&gt; dir:DirectoryInfo -&gt; unit<br />
                       </div>
         </td>
@@ -1023,15 +1105,17 @@ delimiter is a ,</p>
             </a>
           <p>Sets the directory readonly</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '278', 278)" onmouseover="showTip(event, '278', 278)">
+          <code onmouseout="hideTip(event, '323', 323)" onmouseover="showTip(event, '323', 323)">
             SetDirReadOnly readOnly dir
           </code>
-          <div class="tip" id="278">
+          <div class="tip" id="323">
             <strong>Signature:</strong> readOnly:bool -&gt; dir:DirectoryInfo -&gt; unit<br />
                       </div>
         </td>
@@ -1042,15 +1126,17 @@ delimiter is a ,</p>
             </a>
           <p>Sets all files in the directory readonly.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '279', 279)" onmouseover="showTip(event, '279', 279)">
+          <code onmouseout="hideTip(event, '324', 324)" onmouseover="showTip(event, '324', 324)">
             SetReadOnly readOnly files
           </code>
-          <div class="tip" id="279">
+          <div class="tip" id="324">
             <strong>Signature:</strong> readOnly:bool -&gt; files:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -1061,15 +1147,17 @@ delimiter is a ,</p>
             </a>
           <p>Sets all given files readonly.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '280', 280)" onmouseover="showTip(event, '280', 280)">
+          <code onmouseout="hideTip(event, '325', 325)" onmouseover="showTip(event, '325', 325)">
             SilentCopy target files
           </code>
-          <div class="tip" id="280">
+          <div class="tip" id="325">
             <strong>Signature:</strong> target:string -&gt; files:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -1087,15 +1175,17 @@ delimiter is a ,</p>
 <li><code>files</code> - List of files to copy.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '281', 281)" onmouseover="showTip(event, '281', 281)">
+          <code onmouseout="hideTip(event, '326', 326)" onmouseover="showTip(event, '326', 326)">
             TestDir path
           </code>
-          <div class="tip" id="281">
+          <div class="tip" id="326">
             <strong>Signature:</strong> path:string -&gt; bool<br />
                       </div>
         </td>
@@ -1106,24 +1196,49 @@ delimiter is a ,</p>
             </a>
           <p>Checks if the directory exists</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '282', 282)" onmouseover="showTip(event, '282', 282)">
-            WriteConfigFile (...)
+          <code onmouseout="hideTip(event, '327', 327)" onmouseover="showTip(event, '327', 327)">
+            TestFile path
           </code>
-          <div class="tip" id="282">
-            <strong>Signature:</strong> configFileName:string -&gt; parameters:seq&lt;&#39;?8436 * &#39;?8437&gt; -&gt; unit<br />
-                          <strong>Type parameters:</strong> '?8436, '?8437          </div>
+          <div class="tip" id="327">
+            <strong>Signature:</strong> path:string -&gt; bool<br />
+                      </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L409-409" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L348-348" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Checks if the file exists</p>
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '328', 328)" onmouseover="showTip(event, '328', 328)">
+            WriteConfigFile (...)
+          </code>
+          <div class="tip" id="328">
+            <strong>Signature:</strong> configFileName:string -&gt; parameters:seq&lt;&#39;?9990 * &#39;?9991&gt; -&gt; unit<br />
+                          <strong>Type parameters:</strong> '?9990, '?9991          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/FileHelper.fs#L421-421" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Creates a config file with the parameters as "key;value" lines</p>
+
+
 
         </td>
       </tr>
@@ -1138,10 +1253,10 @@ delimiter is a ,</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '283', 283)" onmouseover="showTip(event, '283', 283)">
+          <code onmouseout="hideTip(event, '329', 329)" onmouseover="showTip(event, '329', 329)">
             ( |EndsWith|_| ) extension file
           </code>
-          <div class="tip" id="283">
+          <div class="tip" id="329">
             <strong>Signature:</strong> extension:string -&gt; file:string -&gt; unit option<br />
                       </div>
         </td>
@@ -1152,15 +1267,17 @@ delimiter is a ,</p>
             </a>
           <p>Active Pattern for determining file extension.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '284', 284)" onmouseover="showTip(event, '284', 284)">
+          <code onmouseout="hideTip(event, '330', 330)" onmouseover="showTip(event, '330', 330)">
             ( |File|Directory| ) fileSysInfo
           </code>
-          <div class="tip" id="284">
+          <div class="tip" id="330">
             <strong>Signature:</strong> fileSysInfo:FileSystemInfo -&gt; Choice&lt;FileInfo,(DirectoryInfo * IEnumerable&lt;FileSystemInfo&gt;)&gt;<br />
                       </div>
         </td>
@@ -1171,15 +1288,17 @@ delimiter is a ,</p>
             </a>
           <p>Active pattern which discriminates between files and directories.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '285', 285)" onmouseover="showTip(event, '285', 285)">
+          <code onmouseout="hideTip(event, '331', 331)" onmouseover="showTip(event, '331', 331)">
             ( |FileInfoFullName| ) f
           </code>
-          <div class="tip" id="285">
+          <div class="tip" id="331">
             <strong>Signature:</strong> f:FileInfo -&gt; string<br />
                       </div>
         </td>
@@ -1190,15 +1309,17 @@ delimiter is a ,</p>
             </a>
           <p>Active Pattern for determining file name.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '286', 286)" onmouseover="showTip(event, '286', 286)">
+          <code onmouseout="hideTip(event, '332', 332)" onmouseover="showTip(event, '332', 332)">
             ( |FileInfoNameSections| ) f
           </code>
-          <div class="tip" id="286">
+          <div class="tip" id="332">
             <strong>Signature:</strong> f:FileInfo -&gt; string * string * string<br />
                       </div>
         </td>
@@ -1208,6 +1329,8 @@ delimiter is a ,</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Active Pattern for determining FileInfoNameSections.</p>
+
+
 
         </td>
       </tr>
@@ -1237,6 +1360,7 @@ delimiter is a ,</p>
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -1247,16 +1371,19 @@ delimiter is a ,</p>
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>
