@@ -1,11 +1,163 @@
 ﻿using System.Collections.Generic;
-using System.Security;
+using System.IO;
+using System.Security.AccessControl;
 using System.Text;
 
 namespace Rothko
 {
     public interface IFileFacade
     {
+        /// <summary>
+        /// Creates or overwrites the specified file with the specified buffer size,
+        /// file options, and file security.
+        /// </summary>
+        /// <param name="path">The name of the file.</param>
+        /// <returns>
+        /// A new file with the specified buffer size, file options, and file security.
+        /// </returns>
+        /// <exception cref="System.UnauthorizedAccessException">
+        /// The caller does not have the required permission.-or- <paramref name="path"/> specified a file
+        /// that is read-only.-or-System.IO.FileOptions.Encrypted is specified for options
+        /// and file encryption is not supported on the current platform.
+        /// </exception>
+        /// <exception cref="System.ArgumentException">
+        /// <paramref name="path"/> is a zero-length string, contains only white space, or contains one
+        /// or more invalid characters as defined by System.IO.Path.InvalidPathChars.
+        /// </exception>
+        /// <exception cref="System.ArgumentNullException"><paramref name="path"/> is null.</exception>
+        /// <exception cref="System.IO.PathTooLongException">
+        /// The specified <paramref name="path"/>, file name, or both exceed the system-defined maximum
+        /// length. For example, on Windows-based platforms, paths must be less than
+        /// 248 characters, and file names must be less than 260 characters.
+        /// </exception>
+        /// <exception cref="System.IO.DirectoryNotFoundException">
+        /// The specified <paramref name="path"/> is invalid (for example, it is on an unmapped drive).
+        /// </exception>
+        /// <exception cref="System.IO.IOException">An I/O error occurred while creating the file.</exception>
+        /// <exception cref="System.NotSupportedException"><paramref name="path"/> is in an invalid format.</exception>
+        /// <exception cref="System.UnauthorizedAccessException">
+        /// The caller does not have the required permission.-or- <paramref name="path"/> specified a file
+        /// that is read-only.
+        /// </exception>
+        FileStream Create(string path);
+
+        /// <summary>
+        /// Creates or overwrites the specified file with the specified buffer size,
+        /// file options, and file security.
+        /// </summary>
+        /// <param name="path">The name of the file.</param>
+        /// <param name="bufferSize">The number of bytes buffered for reads and writes to the file.</param>
+        /// <returns>
+        /// A new file with the specified buffer size, file options, and file security.
+        /// </returns>
+        /// <exception cref="System.UnauthorizedAccessException">
+        /// The caller does not have the required permission.-or- <paramref name="path"/> specified a file
+        /// that is read-only.-or-System.IO.FileOptions.Encrypted is specified for options
+        /// and file encryption is not supported on the current platform.
+        /// </exception>
+        /// <exception cref="System.ArgumentException">
+        /// <paramref name="path"/> is a zero-length string, contains only white space, or contains one
+        /// or more invalid characters as defined by System.IO.Path.InvalidPathChars.
+        /// </exception>
+        /// <exception cref="System.ArgumentNullException"><paramref name="path"/> is null.</exception>
+        /// <exception cref="System.IO.PathTooLongException">
+        /// The specified <paramref name="path"/>, file name, or both exceed the system-defined maximum
+        /// length. For example, on Windows-based platforms, paths must be less than
+        /// 248 characters, and file names must be less than 260 characters.
+        /// </exception>
+        /// <exception cref="System.IO.DirectoryNotFoundException">
+        /// The specified <paramref name="path"/> is invalid (for example, it is on an unmapped drive).
+        /// </exception>
+        /// <exception cref="System.IO.IOException">An I/O error occurred while creating the file.</exception>
+        /// <exception cref="System.NotSupportedException"><paramref name="path"/> is in an invalid format.</exception>
+        /// <exception cref="System.UnauthorizedAccessException">
+        /// The caller does not have the required permission.-or- <paramref name="path"/> specified a file
+        /// that is read-only.
+        /// </exception>
+        FileStream Create(string path, int bufferSize);
+
+        /// <summary>
+        /// Creates or overwrites the specified file with the specified buffer size,
+        /// file options, and file security.
+        /// </summary>
+        /// <param name="path">The name of the file.</param>
+        /// <param name="bufferSize">The number of bytes buffered for reads and writes to the file.</param>
+        /// <param name="options">
+        /// One of the <see cref="System.IO.FileOptions"/> values that describes how to create or overwrite
+        /// the file
+        /// </param>
+        /// <returns>
+        /// A new file with the specified buffer size, file options, and file security.
+        /// </returns>
+        /// <exception cref="System.UnauthorizedAccessException">
+        /// The caller does not have the required permission.-or- <paramref name="path"/> specified a file
+        /// that is read-only.-or-System.IO.FileOptions.Encrypted is specified for options
+        /// and file encryption is not supported on the current platform.
+        /// </exception>
+        /// <exception cref="System.ArgumentException">
+        /// <paramref name="path"/> is a zero-length string, contains only white space, or contains one
+        /// or more invalid characters as defined by System.IO.Path.InvalidPathChars.
+        /// </exception>
+        /// <exception cref="System.ArgumentNullException"><paramref name="path"/> is null.</exception>
+        /// <exception cref="System.IO.PathTooLongException">
+        /// The specified <paramref name="path"/>, file name, or both exceed the system-defined maximum
+        /// length. For example, on Windows-based platforms, paths must be less than
+        /// 248 characters, and file names must be less than 260 characters.
+        /// </exception>
+        /// <exception cref="System.IO.DirectoryNotFoundException">
+        /// The specified <paramref name="path"/> is invalid (for example, it is on an unmapped drive).
+        /// </exception>
+        /// <exception cref="System.IO.IOException">An I/O error occurred while creating the file.</exception>
+        /// <exception cref="System.NotSupportedException"><paramref name="path"/> is in an invalid format.</exception>
+        /// <exception cref="System.UnauthorizedAccessException">
+        /// The caller does not have the required permission.-or- <paramref name="path"/> specified a file
+        /// that is read-only.
+        /// </exception>
+        FileStream Create(string path, int bufferSize, FileOptions options);
+
+        /// <summary>
+        /// Creates or overwrites the specified file with the specified buffer size,
+        /// file options, and file security.
+        /// </summary>
+        /// <param name="path">The name of the file.</param>
+        /// <param name="bufferSize">The number of bytes buffered for reads and writes to the file.</param>
+        /// <param name="options">
+        /// One of the <see cref="System.IO.FileOptions"/> values that describes how to create or overwrite
+        /// the file
+        /// </param>
+        /// <param name="fileSecurity">
+        /// One of the <see cref="System.Security.AccessControl.FileSecurity"/> values that determines
+        /// the access control and audit security for the file.
+        /// </param>
+        /// <returns>
+        /// A new file with the specified buffer size, file options, and file security.
+        /// </returns>
+        /// <exception cref="System.UnauthorizedAccessException">
+        /// The caller does not have the required permission.-or- <paramref name="path"/> specified a file
+        /// that is read-only.-or-System.IO.FileOptions.Encrypted is specified for options
+        /// and file encryption is not supported on the current platform.
+        /// </exception>
+        /// <exception cref="System.ArgumentException">
+        /// <paramref name="path"/> is a zero-length string, contains only white space, or contains one
+        /// or more invalid characters as defined by System.IO.Path.InvalidPathChars.
+        /// </exception>
+        /// <exception cref="System.ArgumentNullException"><paramref name="path"/> is null.</exception>
+        /// <exception cref="System.IO.PathTooLongException">
+        /// The specified <paramref name="path"/>, file name, or both exceed the system-defined maximum
+        /// length. For example, on Windows-based platforms, paths must be less than
+        /// 248 characters, and file names must be less than 260 characters.
+        /// </exception>
+        /// <exception cref="System.IO.DirectoryNotFoundException">
+        /// The specified <paramref name="path"/> is invalid (for example, it is on an unmapped drive).
+        /// </exception>
+        /// <exception cref="System.IO.IOException">An I/O error occurred while creating the file.</exception>
+        /// <exception cref="System.NotSupportedException"><paramref name="path"/> is in an invalid format.</exception>
+        /// <exception cref="System.UnauthorizedAccessException">
+        /// The caller does not have the required permission.-or- <paramref name="path"/> specified a file
+        /// that is read-only.
+        /// </exception>
+        FileStream Create(string path, int bufferSize, FileOptions options, FileSecurity fileSecurity);
+        
         /// <summary>Determines whether the specified file exists.</summary>
         /// <param name="path">The file to check.</param>
         /// <return>
