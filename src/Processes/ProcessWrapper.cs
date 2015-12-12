@@ -106,6 +106,9 @@ namespace Rothko
             get { return process.StandardInput; }
         }
 
+        public StreamReader StandardOutput { get { return process.StandardOutput; } }
+        public StreamReader StandardError { get { return process.StandardOutput; } }
+
         public int ExitCode
         {
             get { return process.ExitCode; }
