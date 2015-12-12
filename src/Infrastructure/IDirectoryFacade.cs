@@ -176,6 +176,132 @@ namespace Rothko
         /// </PermissionSet>
         string GetCurrentDirectory();
 
+        /// <summary>
+        /// Returns an enumerable collection of directory names in a specified path.
+        /// </summary>
+        /// <param name="path">
+        /// The relative or absolute <paramref name="path"/> to the directory to search. This string is not
+        /// case-sensitive.
+        /// </param>
+        /// <returns>
+        /// An enumerable collection of the full names (including paths) for the directories in the directory
+        /// specified by <paramref name="path"/>.
+        /// </returns>
+        /// <exception cref="T:System.ArgumentException">
+        /// <paramref name="path "/> is a zero-length string, contains only white space, or contains invalid
+        /// characters. You can query for invalid characters by using the <see name="Path.GetInvalidPathChars"/>
+        /// method.
+        /// </exception>
+        /// <exception cref="T:System.ArgumentNullException"><paramref name="path"/> is null.</exception>
+        /// <exception cref="T:System.IO.DirectoryNotFoundException">
+        ///   <paramref name="path"/> is invalid, such as referring to an unmapped drive.
+        /// </exception>
+        /// <exception cref="T:System.IO.IOException"><paramref name="path"/> is a file name.</exception>
+        /// <exception cref="T:System.IO.PathTooLongException">
+        /// The specified path, file name, or combined exceed the system-defined maximum length. For example,
+        /// on Windows-based platforms, paths must be less than 248 characters and file names must be less
+        /// than 260 characters.
+        /// </exception>
+        /// <exception cref="T:System.Security.SecurityException">
+        ///   The caller does not have the required permission.
+        /// </exception>
+        /// <exception cref="T:System.UnauthorizedAccessException">
+        ///   The caller does not have the required permission.
+        /// </exception>
+        IEnumerable<string> EnumerateDirectories(string path);
+
+        /// <summary>
+        /// Returns an enumerable collection of directory names that match a search pattern in a specified path.
+        /// </summary>
+        /// <param name="path">
+        /// The relative or absolute <paramref name="path"/> to the directory to search. This string is not
+        /// case-sensitive.
+        /// </param>
+        /// <param name="searchPattern">
+        /// The search string to match against the names of directories in <paramref name="path"/>. This parameter can 
+        /// contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't
+        /// support regular expressions.
+        /// </param>
+        /// <returns>
+        /// An enumerable collection of the full names (including paths) for the directories in the directory
+        /// specified by <paramref name="path"/>.
+        /// </returns>
+        /// <exception cref="T:System.ArgumentException">
+        ///   <paramref name="path "/> is a zero-length string, contains only white space, or contains invalid
+        ///   characters as defined by <see cref="M:System.IO.Path.GetInvalidPathChars"/>.
+        ///   -or-<paramref name="searchPattern"/> does not contain a valid pattern.
+        /// </exception>
+        /// <exception cref="T:System.ArgumentNullException">
+        ///   <paramref name="path"/> is null.
+        ///   -or-<paramref name="searchPattern"/> is null.
+        /// </exception>
+        /// <exception cref="T:System.IO.DirectoryNotFoundException">
+        ///   <paramref name="path"/> is invalid, such as referring to an unmapped drive.
+        /// </exception>
+        /// <exception cref="T:System.IO.IOException"><paramref name="path"/> is a file name.</exception>
+        /// <exception cref="T:System.IO.PathTooLongException">
+        /// The specified path, file name, or combined exceed the system-defined maximum length. For example,
+        /// on Windows-based platforms, paths must be less than 248 characters and file names must be less
+        /// than 260 characters.
+        /// </exception>
+        /// <exception cref="T:System.Security.SecurityException">
+        ///   The caller does not have the required permission.
+        /// </exception>
+        /// <exception cref="T:System.UnauthorizedAccessException">
+        ///   The caller does not have the required permission.
+        /// </exception>
+        IEnumerable<string> EnumerateDirectories(string path, string searchPattern);
+
+        /// <summary>
+        /// Returns an enumerable collection of directory names that match a search pattern in a specified path, and
+        /// optionally searches subdirectories.
+        /// </summary>
+        /// <param name="path">
+        /// The relative or absolute <paramref name="path"/> to the directory to search. This string is not
+        /// case-sensitive.
+        /// </param>
+        /// <param name="searchPattern">
+        /// The search string to match against the names of directories in <paramref name="path"/>. This parameter can 
+        /// contain a combination of valid literal path and wildcard (* and ?) characters (see Remarks), but doesn't
+        /// support regular expressions.
+        /// </param>
+        /// <param name="searchOption">
+        /// One of the enumeration values that specifies whether the search operation should include only the current
+        /// directory or should include all subdirectories.
+        /// </param>
+        /// <returns>
+        /// An enumerable collection of the full names (including paths) for the directories in the directory
+        /// specified by <paramref name="path"/>.
+        /// </returns>
+        /// <exception cref="T:System.ArgumentException">
+        ///   <paramref name="path "/> is a zero-length string, contains only white space, or contains invalid
+        ///   characters as defined by <see cref="M:System.IO.Path.GetInvalidPathChars"/>.
+        ///   -or-<paramref name="searchPattern"/> does not contain a valid pattern.
+        /// </exception>
+        /// <exception cref="T:System.ArgumentNullException">
+        ///   <paramref name="path"/> is null.
+        ///   -or-<paramref name="searchPattern"/> is null.
+        /// </exception>
+        /// <exception cref="T:System.ArgumentOutOfRangeException">
+        /// <paramref name="searchOption"/> is not a valid <see cref="SearchOption"/> value.
+        /// </exception>
+        /// <exception cref="T:System.IO.DirectoryNotFoundException">
+        ///   <paramref name="path"/> is invalid, such as referring to an unmapped drive.
+        /// </exception>
+        /// <exception cref="T:System.IO.IOException"><paramref name="path"/> is a file name.</exception>
+        /// <exception cref="T:System.IO.PathTooLongException">
+        /// The specified path, file name, or combined exceed the system-defined maximum length. For example,
+        /// on Windows-based platforms, paths must be less than 248 characters and file names must be less
+        /// than 260 characters.
+        /// </exception>
+        /// <exception cref="T:System.Security.SecurityException">
+        ///   The caller does not have the required permission.
+        /// </exception>
+        /// <exception cref="T:System.UnauthorizedAccessException">
+        ///   The caller does not have the required permission.
+        /// </exception>
+        IEnumerable<string> EnumerateDirectories(string path, string searchPattern, SearchOption searchOption);
+
         /// <summary>Returns an enumerable collection of file names in a specified path.</summary>
         /// <param name="path">The directory to search.</param>
         /// <returns>
@@ -216,7 +342,7 @@ namespace Rothko
         ///   specified by <paramref name="path"/> and that match the specified search pattern.
         /// </returns>
         /// <exception cref="T:System.ArgumentException">
-        ///   <paramref name="path "/>is a zero-length string, contains only white space, or contains invalid
+        ///   <paramref name="path "/> is a zero-length string, contains only white space, or contains invalid
         ///   characters as defined by <see cref="M:System.IO.Path.GetInvalidPathChars"/>.
         ///   -or-<paramref name="searchPattern"/> does not contain a valid pattern.
         /// </exception>
@@ -259,7 +385,7 @@ namespace Rothko
         ///   specified by <paramref name="path"/> and that match the specified search pattern and option.
         /// </returns>
         /// <exception cref="T:System.ArgumentException">
-        ///   <paramref name="path "/>is a zero-length string, contains only white space, or contains invalid
+        ///   <paramref name="path "/> is a zero-length string, contains only white space, or contains invalid
         ///   characters as defined by <see cref="M:System.IO.Path.GetInvalidPathChars"/>.
         ///   -or-<paramref name="searchPattern"/> does not contain a valid pattern.
         /// </exception>
@@ -285,7 +411,7 @@ namespace Rothko
         /// <exception cref="T:System.UnauthorizedAccessException">
         ///   The caller does not have the required permission.
         /// </exception>
-        IEnumerable<string> EnumerateFiles(string path, string searchPattern, System.IO.SearchOption searchOption);
+        IEnumerable<string> EnumerateFiles(string path, string searchPattern, SearchOption searchOption);
 
         /// <summary>
         /// Retrieves the parent directory of the specified path, including both absolute and relative paths.
