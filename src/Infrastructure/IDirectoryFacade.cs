@@ -286,5 +286,57 @@ namespace Rothko
         ///   The caller does not have the required permission.
         /// </exception>
         IEnumerable<string> EnumerateFiles(string path, string searchPattern, System.IO.SearchOption searchOption);
+
+        /// <summary>
+        /// Retrieves the parent directory of the specified path, including both absolute and relative paths.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The <paramref name="path"/> parameter is permitted to specify relative or absolute path information. Relative path 
+        /// information is interpreted as relative to the current working directory. To obtain the current working
+        /// directory, see <see cref="GetCurrentDirectory" />.
+        /// </para>
+        /// <para>
+        /// Trailing spaces are removed from the end of the <paramref name="path"/> parameter before getting the directory.
+        /// </para>
+        /// <para>
+        /// The string returned by this method consists of all characters in the path up to, but not including, the
+        /// last <see cref="Path.DirectorySeparatorChar"/> or <see cref="Path.AltDirectorySeparatorChar"/>. For
+        /// example, passing the path "C:\Directory\SubDirectory\test.txt" to GetParent returns
+        /// "C:\Directory\SubDirectory". Passing "C:\Directory\SubDirectory" returns "C:\Directory". However,
+        /// passing "C:\Directory\SubDirectory\" returns "C:\Directory\SubDirectory", because the ending directory
+        /// separator is after "SubDirectory".
+        /// </para>
+        /// <para>
+        /// The path parameter is not case-sensitive. 
+        /// </para>
+        /// <para>For a list of common I/O tasks, see Common I/O Tasks.</para>
+        /// </remarks>
+        /// <param name="path">The path for which to retrieve the parent directory.</param>
+        /// <returns>
+        /// The parent directory, or null if path is the root directory, including the root of a UNC server or 
+        /// share name.
+        /// </returns>
+        /// <exception cref="T:System.IO.IOException">
+        /// The directory specified by <paramref name="path"/> is read-only.
+        /// </exception>
+        /// <exception cref="T:System.UnauthorizedAccessException">
+        /// The caller does not have the required permission.
+        /// </exception>
+        /// <exception cref="T:System.ArgumentNullException">
+        /// <paramref name="path"/>
+        /// is a zero-length string, contains only white space, or contains one or more invalid characters. You can
+        /// query for invalid characters with the <see cref="Path.GetInvalidPathChars" /> method.
+        /// </exception>
+        /// <exception cref="T:System.ArgumentNullException"><paramref name="path"/> is null.</exception>
+        /// <exception cref="T:System.IO.PathTooLongException">
+        ///   The specified path, file name, or both exceed the system-defined maximum length. For example, on
+        ///   Windows-based platforms, paths must be less than 248 characters and file names must be less than
+        ///   260 characters.
+        /// </exception>
+        /// <exception cref="T:System.IO.DirectoryNotFoundException">
+        /// The specified <paramref name="path"/> was not found. 
+        /// </exception>
+        IDirectoryInfo GetParent(string path);
     }
 }

@@ -46,6 +46,12 @@ namespace Rothko
         {
             return Directory.EnumerateFiles(path, searchPattern, searchOption);
         }
+
+        public IDirectoryInfo GetParent(string path)
+        {
+            return DirectoryInfo.Wrap(Directory.GetParent(path));
+        }
+
         public IDirectoryInfo GetDirectory(string path)
         {
             return new DirectoryInfo(path);
