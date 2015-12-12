@@ -32,6 +32,21 @@ namespace Rothko
             return Directory.GetCurrentDirectory();
         }
 
+        public IEnumerable<string> EnumerateDirectories(string path)
+        {
+            return Directory.EnumerateDirectories(path);
+        }
+
+        public IEnumerable<string> EnumerateDirectories(string path, string searchPattern)
+        {
+            return Directory.EnumerateDirectories(path, searchPattern);
+        }
+
+        public IEnumerable<string> EnumerateDirectories(string path, string searchPattern, SearchOption searchOption)
+        {
+            return Directory.EnumerateDirectories(path, searchPattern, searchOption);
+        }
+
         public IEnumerable<string> EnumerateFiles(string path)
         {
             return EnumerateFiles(path, "*.*");
