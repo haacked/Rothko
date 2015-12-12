@@ -10,5 +10,10 @@ namespace Rothko
         {
             return dictionary.Keys.Cast<TKey>().ToDictionary(key => key, key => (TValue) dictionary[key]);
         }
+
+        public static IEnumerable<T> WhereNotNull<T>(this IEnumerable<T> source) where T : class
+        {
+            return source.Where(item => item != null);
+        }
     }
 }

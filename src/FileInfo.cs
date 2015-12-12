@@ -1,5 +1,6 @@
 ﻿
 using System.Diagnostics;
+using NullGuard;
 
 namespace Rothko
 {
@@ -51,6 +52,7 @@ namespace Rothko
 
         public IDirectoryInfo Directory
         {
+            [return: AllowNull]
             get { return DirectoryInfo.Wrap(inner.Directory); }
         }
 
