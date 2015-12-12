@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using NullGuard;
 
 namespace Rothko
 {
@@ -62,6 +63,7 @@ namespace Rothko
             return Directory.EnumerateFiles(path, searchPattern, searchOption);
         }
 
+        [return: AllowNull]
         public IDirectoryInfo GetParent(string path)
         {
             return DirectoryInfo.Wrap(Directory.GetParent(path));
