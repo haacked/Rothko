@@ -6,6 +6,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace Rothko
 {
@@ -16,6 +17,7 @@ namespace Rothko
     public class ProcessWrapper : IProcess
     {
         readonly Process process;
+        readonly SafeDisposable processDisposer;
 
         public ProcessWrapper(ProcessStartInfo startInfo)
             : this(startInfo, false)
@@ -42,6 +44,7 @@ namespace Rothko
             this.process = process;
             process.OutputDataReceived += OnOutputDataReceived;
             process.ErrorDataReceived += OnErrorDataReceived;
+            processDisposer = new SafeDisposable(process);
 
             if (startImmediately)
             {
@@ -183,9 +186,7 @@ namespace Rothko
         {
             if (disposing)
             {
-                var proc = process;
-                if (proc != null)
-                    proc.Dispose();
+                processDisposer.Dispose();
             }
         }
 
@@ -258,5 +259,29 @@ namespace Rothko
                 return null;
             }
         }
+
+        // Use this when the reference must only be disposed once
+        sealed class SafeDisposable : IDisposable
+        {
+            int disposed;
+            readonly IDisposable disposable;
+
+            public SafeDisposable(IDisposable disposable)
+            {
+                this.disposable = disposable;
+            }
+
+            public void Dispose()
+            {
+                // Ensures this can only be called once.
+                if (Interlocked.CompareExchange(ref disposed, 1, 0) == 0)
+                {
+                    // We also know disposable cannot be null here, 
+                    // even if the original reference is null.
+                    disposable.Dispose();
+                }
+            }
+        }
+
     }
 }
