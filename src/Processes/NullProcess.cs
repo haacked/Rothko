@@ -23,7 +23,11 @@ namespace Rothko
 
         public int Id { get { return 4; } }
 
-        public ProcessStartInfo StartInfo { get; set; }
+        public ProcessStartInfo StartInfo
+        {
+            [return: AllowNull]
+            get; set;
+        }
 
         public StreamWriter StandardInput
         {
