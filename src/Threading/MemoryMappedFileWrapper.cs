@@ -19,12 +19,12 @@ namespace Rothko
 
         public Stream CreateViewStream(long offset, long size)
         {
-            throw new System.NotImplementedException();
+            return innerFile.CreateViewStream(offset, size);
         }
 
         public Stream CreateViewStream(long offset, long size, MemoryMappedFileAccess access)
         {
-            throw new System.NotImplementedException();
+            return innerFile.CreateViewStream(offset, size, access);
         }
 
         public void Dispose()
