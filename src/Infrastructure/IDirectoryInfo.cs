@@ -394,7 +394,7 @@ namespace Rothko
         /// </summary>
         /// <returns>
         ///   A <see cref="T:System.Security.AccessControl.DirectorySecurity"/> object that encapsulates the
-        ///   access control rules for the file described by the <paramref name="path"/> parameter.
+        ///   access control rules for the file.
         /// </returns>
         /// <param name="includeSections">
         ///   One of the <see cref="T:System.Security.AccessControl.AccessControlSections"/> values that
@@ -456,8 +456,7 @@ namespace Rothko
         ///   object to the directory described by the current <see cref="T:Rothko.IDirectoryInfo"/> object.
         /// </summary>
         /// <param name="directorySecurity">
-        ///   An object that describes an ACL entry to apply to the directory described by the <paramref name="path"/>
-        ///   parameter.
+        ///   An object that describes an ACL entry to apply to the directory.
         /// </param>
         /// <exception cref="T:System.ArgumentNullException">
         ///   The <paramref name="directorySecurity"/> parameter is null.
