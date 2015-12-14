@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Rothko.Win32
+﻿namespace Rothko.Win32
 {
     /// <summary>
     /// The system metric or configuration setting index.
