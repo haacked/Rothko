@@ -39,6 +39,8 @@
 <h1>TemplateHelper</h1>
 <div class="xmldoc">
 <p>Contains basic templating functions. Used in other helpers.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -52,10 +54,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '660', 660)" onmouseover="showTip(event, '660', 660)">
+          <code onmouseout="hideTip(event, '728', 728)" onmouseover="showTip(event, '728', 728)">
             loadTemplates seq
           </code>
-          <div class="tip" id="660">
+          <div class="tip" id="728">
             <strong>Signature:</strong> seq:seq&lt;string&gt; -&gt; seq&lt;string * seq&lt;string&gt;&gt;<br />
                       </div>
         </td>
@@ -66,15 +68,17 @@
             </a>
           <p>Loads all templates (lazy - line by line!)</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '661', 661)" onmouseover="showTip(event, '661', 661)">
+          <code onmouseout="hideTip(event, '729', 729)" onmouseover="showTip(event, '729', 729)">
             processTemplates replacements files
           </code>
-          <div class="tip" id="661">
+          <div class="tip" id="729">
             <strong>Signature:</strong> replacements:seq&lt;string * string&gt; -&gt; files:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -85,17 +89,19 @@
             </a>
           <p>Replaces the templates with the given replacements</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '662', 662)" onmouseover="showTip(event, '662', 662)">
+          <code onmouseout="hideTip(event, '730', 730)" onmouseover="showTip(event, '730', 730)">
             replaceKeywords replacements
           </code>
-          <div class="tip" id="662">
-            <strong>Signature:</strong> replacements:seq&lt;string * string&gt; -&gt; seq&lt;&#39;?6623 * &#39;?6624&gt; -&gt; seq&lt;&#39;?6623 * seq&lt;string&gt;&gt;<br />
-                          <strong>Type parameters:</strong> '?6623, '?6624          </div>
+          <div class="tip" id="730">
+            <strong>Signature:</strong> replacements:seq&lt;string * string&gt; -&gt; seq&lt;&#39;?8037 * &#39;?8038&gt; -&gt; seq&lt;&#39;?8037 * seq&lt;string&gt;&gt;<br />
+                          <strong>Type parameters:</strong> '?8037, '?8038          </div>
         </td>
         <td class="xmldoc">
             <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/TemplateHelper.fs#L9-9" class="github-link">
@@ -104,15 +110,17 @@
             </a>
           <p>Replaces a bunch of the keywords in all files (lazy - line by line!)</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '663', 663)" onmouseover="showTip(event, '663', 663)">
+          <code onmouseout="hideTip(event, '731', 731)" onmouseover="showTip(event, '731', 731)">
             saveFiles 
           </code>
-          <div class="tip" id="663">
+          <div class="tip" id="731">
             <strong>Signature:</strong> seq&lt;string * seq&lt;string&gt;&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -122,6 +130,8 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Saves all files (lazy - file by file!)</p>
+
+
 
         </td>
       </tr>
@@ -151,6 +161,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -161,16 +172,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

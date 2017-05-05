@@ -39,6 +39,8 @@
 <h1>FileIncludes</h1>
 <div class="xmldoc">
 <p>Internal representation of a file set.</p>
+
+
 </div>
   <h3>Record Fields</h3>
   <table class="table table-bordered member-list">
@@ -49,10 +51,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1168', 1168)" onmouseover="showTip(event, '1168', 1168)">
+          <code onmouseout="hideTip(event, '1279', 1279)" onmouseover="showTip(event, '1279', 1279)">
             BaseDirectory
           </code>
-          <div class="tip" id="1168">
+          <div class="tip" id="1279">
             <strong>Signature:</strong> string<br />
                       </div>
         </td>
@@ -67,10 +69,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1169', 1169)" onmouseover="showTip(event, '1169', 1169)">
+          <code onmouseout="hideTip(event, '1280', 1280)" onmouseover="showTip(event, '1280', 1280)">
             Excludes
           </code>
-          <div class="tip" id="1169">
+          <div class="tip" id="1280">
             <strong>Signature:</strong> string list<br />
                       </div>
         </td>
@@ -85,10 +87,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1170', 1170)" onmouseover="showTip(event, '1170', 1170)">
+          <code onmouseout="hideTip(event, '1281', 1281)" onmouseover="showTip(event, '1281', 1281)">
             Includes
           </code>
-          <div class="tip" id="1170">
+          <div class="tip" id="1281">
             <strong>Signature:</strong> string list<br />
                       </div>
         </td>
@@ -111,10 +113,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1171', 1171)" onmouseover="showTip(event, '1171', 1171)">
+          <code onmouseout="hideTip(event, '1282', 1282)" onmouseover="showTip(event, '1282', 1282)">
             And(pattern)
           </code>
-          <div class="tip" id="1171">
+          <div class="tip" id="1282">
             <strong>Signature:</strong> pattern:string -&gt; FileIncludes<br />
                       </div>
         </td>
@@ -125,15 +127,17 @@
             </a>
           <p>Adds the given pattern to the file includes</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1172', 1172)" onmouseover="showTip(event, '1172', 1172)">
+          <code onmouseout="hideTip(event, '1283', 1283)" onmouseover="showTip(event, '1283', 1283)">
             ButNot(pattern)
           </code>
-          <div class="tip" id="1172">
+          <div class="tip" id="1283">
             <strong>Signature:</strong> pattern:string -&gt; FileIncludes<br />
                       </div>
         </td>
@@ -144,15 +148,38 @@
             </a>
           <p>Ignores files with the given pattern</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '1173', 1173)" onmouseover="showTip(event, '1173', 1173)">
+          <code onmouseout="hideTip(event, '1284', 1284)" onmouseover="showTip(event, '1284', 1284)">
+            IsMatch(path)
+          </code>
+          <div class="tip" id="1284">
+            <strong>Signature:</strong> path:string -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/Globbing/FileSystem.fs#L26-26" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Checks if a particular file is matched</p>
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '1285', 1285)" onmouseover="showTip(event, '1285', 1285)">
             SetBaseDirectory(dir)
           </code>
-          <div class="tip" id="1173">
+          <div class="tip" id="1285">
             <strong>Signature:</strong> dir:string -&gt; FileIncludes<br />
                       </div>
         </td>
@@ -162,6 +189,8 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Sets a directory as BaseDirectory.</p>
+
+
 
         </td>
       </tr>
@@ -191,6 +220,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -201,16 +231,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

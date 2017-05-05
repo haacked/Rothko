@@ -39,6 +39,8 @@
 <h1>SCPHelper</h1>
 <div class="xmldoc">
 <p>Conatins a task which allows to perform file copies using <a href="http://en.wikipedia.org/wiki/Secure_copy">SCP</a>, which is based on the Secure Shell (SSH) protocol.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -54,6 +56,8 @@
             <a href="fake-scphelper-scpparams.html">SCPParams</a>
           </td>
           <td class="xmldoc"><p>The SCP parameter type.</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -70,10 +74,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '488', 488)" onmouseover="showTip(event, '488', 488)">
+          <code onmouseout="hideTip(event, '551', 551)" onmouseover="showTip(event, '551', 551)">
             SCP setParams source target
           </code>
-          <div class="tip" id="488">
+          <div class="tip" id="551">
             <strong>Signature:</strong> setParams:(SCPParams -&gt; SCPParams) -&gt; source:string -&gt; target:string -&gt; unit<br />
                       </div>
         </td>
@@ -94,18 +98,24 @@
 
 <h2>Sample</h2>
 
-<pre><code>SCP (fun p -&gt; { p with ToolPath = "tools/scp.exe" }) source target
-</code></pre>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">SCP</span> (<span class="k">fun</span> <span class="i">p</span> <span class="k">-&gt;</span> { <span class="i">p</span> <span class="k">with</span> <span class="i">ToolPath</span> <span class="o">=</span> <span class="s">&quot;tools/scp.exe&quot;</span> }) <span class="i">source</span> <span class="i">target</span>
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '489', 489)" onmouseover="showTip(event, '489', 489)">
+          <code onmouseout="hideTip(event, '552', 552)" onmouseover="showTip(event, '552', 552)">
             SCPDefaults 
           </code>
-          <div class="tip" id="489">
+          <div class="tip" id="552">
             <strong>Signature:</strong> SCPParams<br />
                       </div>
         </td>
@@ -115,6 +125,8 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>The SCP default parameters</p>
+
+
 
         </td>
       </tr>
@@ -144,6 +156,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -154,16 +167,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

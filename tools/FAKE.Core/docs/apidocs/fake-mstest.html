@@ -39,6 +39,8 @@
 <h1>MSTest</h1>
 <div class="xmldoc">
 <p>Contains tasks to run <a href="http://en.wikipedia.org/wiki/Visual_Studio_Unit_Testing_Framework/">MSTest</a> unit tests.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -54,6 +56,8 @@
             <a href="fake-mstest-errorlevel.html">ErrorLevel</a>
           </td>
           <td class="xmldoc"><p>Option which allow to specify if a MSTest error should break the build.</p>
+
+
 </td>
         </tr>
         <tr>
@@ -61,6 +65,8 @@
             <a href="fake-mstest-mstestparams.html">MSTestParams</a>
           </td>
           <td class="xmldoc"><p>Parameter type to configure the MSTest.exe.</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -77,15 +83,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '369', 369)" onmouseover="showTip(event, '369', 369)">
+          <code onmouseout="hideTip(event, '420', 420)" onmouseover="showTip(event, '420', 420)">
             MSTest setParams assemblies
           </code>
-          <div class="tip" id="369">
+          <div class="tip" id="420">
             <strong>Signature:</strong> setParams:(MSTestParams -&gt; MSTestParams) -&gt; assemblies:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSTest.fs#L86-86" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSTest.fs#L87-87" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -100,30 +106,41 @@
 
 <h2>Sample usage</h2>
 
-<pre><code>Target "Test" (fun _ -&gt;
-    !! (testDir + @"\*.Tests.dll") 
-      |&gt; MSTest (fun p -&gt; { p with Category = "group1" })
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">Target</span> <span class="s">&quot;Test&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
+    <span class="o">!!</span> (<span class="i">testDir</span> <span class="o">+</span> <span class="s">@&quot;\*.Tests.dll&quot;</span>) 
+      <span class="o">|&gt;</span> <span class="i">MSTest</span> (<span class="k">fun</span> <span class="i">p</span> <span class="k">-&gt;</span> { <span class="i">p</span> <span class="k">with</span> <span class="i">Category</span> <span class="o">=</span> <span class="s">&quot;group1&quot;</span> })
 )
-</code></pre>
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '370', 370)" onmouseover="showTip(event, '370', 370)">
+          <code onmouseout="hideTip(event, '421', 421)" onmouseover="showTip(event, '421', 421)">
             MSTestDefaults 
           </code>
-          <div class="tip" id="370">
+          <div class="tip" id="421">
             <strong>Signature:</strong> MSTestParams<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSTest.fs#L44-44" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/MSTest.fs#L45-45" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>MSTest default parameters.</p>
+
+
 
         </td>
       </tr>
@@ -153,6 +170,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -163,16 +181,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

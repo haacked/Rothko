@@ -39,6 +39,8 @@
 <h1>AssemblyInfoHelper</h1>
 <div class="xmldoc">
 <p>Generates an AssemblyInfo file</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -81,10 +83,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '98', 98)" onmouseover="showTip(event, '98', 98)">
+          <code onmouseout="hideTip(event, '104', 104)" onmouseover="showTip(event, '104', 104)">
             AssemblyInfo setParams
           </code>
-          <div class="tip" id="98">
+          <div class="tip" id="104">
             <strong>Signature:</strong> setParams:(AssemblyInfoParams -&gt; AssemblyInfoParams) -&gt; unit<br />
                       </div>
         </td>
@@ -96,15 +98,17 @@
           <p>Generates an AssemblyInfo file for projects
 <strong>Obsolete - Please use the new AssemblyInfoFile tasks</strong></p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '99', 99)" onmouseover="showTip(event, '99', 99)">
+          <code onmouseout="hideTip(event, '105', 105)" onmouseover="showTip(event, '105', 105)">
             AssemblyInfoDefaults 
           </code>
-          <div class="tip" id="99">
+          <div class="tip" id="105">
             <strong>Signature:</strong> AssemblyInfoParams<br />
                       </div>
         </td>
@@ -115,39 +119,43 @@
             </a>
           <p>AssemblyInfo default params</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '100', 100)" onmouseover="showTip(event, '100', 100)">
+          <code onmouseout="hideTip(event, '106', 106)" onmouseover="showTip(event, '106', 106)">
             AssemblyInfoReplacementDefaults 
           </code>
-          <div class="tip" id="100">
+          <div class="tip" id="106">
             <strong>Signature:</strong> AssemblyInfoReplacementParams<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L213-213" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L215-215" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>AssemblyInfoReplacement default params</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '101', 101)" onmouseover="showTip(event, '101', 101)">
+          <code onmouseout="hideTip(event, '107', 107)" onmouseover="showTip(event, '107', 107)">
             BulkReplaceAssemblyInfoVersions (...)
           </code>
-          <div class="tip" id="101">
+          <div class="tip" id="107">
             <strong>Signature:</strong> dir:string -&gt; replacementParameters:(AssemblyInfoReplacementParams -&gt; AssemblyInfoReplacementParams) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L268-268" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L274-274" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -162,21 +170,30 @@
 
 <h2>Sample</h2>
 
-<pre><code>   BulkReplaceAssemblyInfoVersions "test/" (fun f -&gt; 
-                                              {f with
-                                                  AssemblyVersion = "1.1.1.1"
-                                                  AssemblyInformationalVersion = "1.1.1.1"})
-</code></pre>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp">   <span class="i">BulkReplaceAssemblyInfoVersions</span> <span class="s">&quot;test/&quot;</span> (<span class="k">fun</span> <span class="i">f</span> <span class="k">-&gt;</span> 
+                                              {<span class="i">f</span> <span class="k">with</span>
+                                                  <span class="i">AssemblyVersion</span> <span class="o">=</span> <span class="s">&quot;1.1.1.1&quot;</span>
+                                                  <span class="i">AssemblyInformationalVersion</span> <span class="o">=</span> <span class="s">&quot;1.1.1.1&quot;</span>})
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '102', 102)" onmouseover="showTip(event, '102', 102)">
+          <code onmouseout="hideTip(event, '108', 108)" onmouseover="showTip(event, '108', 108)">
             generateFile (...)
           </code>
-          <div class="tip" id="102">
+          <div class="tip" id="108">
             <strong>Signature:</strong> param:AssemblyInfoParams -&gt; attributes:Dictionary&lt;string,string&gt; -&gt; imports:seq&lt;string&gt; -&gt; writer:TextWriter -&gt; unit<br />
                       </div>
         </td>
@@ -187,20 +204,22 @@
             </a>
           <p>generates the assembly info file</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '103', 103)" onmouseover="showTip(event, '103', 103)">
+          <code onmouseout="hideTip(event, '109', 109)" onmouseover="showTip(event, '109', 109)">
             ReplaceAssemblyInfoVersions param
           </code>
-          <div class="tip" id="103">
+          <div class="tip" id="109">
             <strong>Signature:</strong> param:(AssemblyInfoReplacementParams -&gt; AssemblyInfoReplacementParams) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L221-221" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/AssemblyInfoHelper.fs#L225-225" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
@@ -233,6 +252,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -243,16 +263,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

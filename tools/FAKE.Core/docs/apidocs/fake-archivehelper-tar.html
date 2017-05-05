@@ -39,6 +39,8 @@
 <h1>Tar</h1>
 <div class="xmldoc">
 <p>Operations and tasks for working with tar archives.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -54,6 +56,8 @@
             <a href="fake-archivehelper-tar-bzip2.html">BZip2</a>
           </td>
           <td class="xmldoc"><p>Operations and tasks for working with tar archives compressed with BZip2.</p>
+
+
 </td>
         </tr>
         <tr>
@@ -61,6 +65,8 @@
             <a href="fake-archivehelper-tar-gzip.html">GZip</a>
           </td>
           <td class="xmldoc"><p>Operations and tasks for working with tar archives compressed with GZip.</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -77,11 +83,11 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '49', 49)" onmouseover="showTip(event, '49', 49)">
+          <code onmouseout="hideTip(event, '53', 53)" onmouseover="showTip(event, '53', 53)">
             addEntry outStream
           </code>
-          <div class="tip" id="49">
-            <strong>Signature:</strong> outStream:(type) -&gt; ArchiveFileSpec -&gt; unit<br />
+          <div class="tip" id="53">
+            <strong>Signature:</strong> outStream:TarOutputStream -&gt; ArchiveFileSpec -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -91,15 +97,17 @@
             </a>
           <p>Adds a file, specified by an <code>ArchiveFileSpec</code>, to a <code>TarOutputStream</code>.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '50', 50)" onmouseover="showTip(event, '50', 50)">
+          <code onmouseout="hideTip(event, '54', 54)" onmouseover="showTip(event, '54', 54)">
             CompressDir flatten baseDir archiveFile
           </code>
-          <div class="tip" id="50">
+          <div class="tip" id="54">
             <strong>Signature:</strong> flatten:bool -&gt; baseDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; unit<br />
                       </div>
         </td>
@@ -118,15 +126,17 @@
 <li><code>archiveFile</code> - The output archive file. If existing, will be overwritten.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '51', 51)" onmouseover="showTip(event, '51', 51)">
+          <code onmouseout="hideTip(event, '55', 55)" onmouseover="showTip(event, '55', 55)">
             CompressDirWithDefaults (...)
           </code>
-          <div class="tip" id="51">
+          <div class="tip" id="55">
             <strong>Signature:</strong> baseDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; unit<br />
                       </div>
         </td>
@@ -144,16 +154,18 @@
 <li><code>archiveFile</code> - The output archive file. If existing, will be overwritten.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '52', 52)" onmouseover="showTip(event, '52', 52)">
+          <code onmouseout="hideTip(event, '56', 56)" onmouseover="showTip(event, '56', 56)">
             createFile file
           </code>
-          <div class="tip" id="52">
-            <strong>Signature:</strong> file:FileInfo -&gt; (type)<br />
+          <div class="tip" id="56">
+            <strong>Signature:</strong> file:FileInfo -&gt; TarOutputStream<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -169,15 +181,17 @@
 <li><code>file</code> - The <code>FileInfo</code> describing the location to which the archive should be written. Will be overwritten if it exists.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '53', 53)" onmouseover="showTip(event, '53', 53)">
+          <code onmouseout="hideTip(event, '57', 57)" onmouseover="showTip(event, '57', 57)">
             Extract extractDir archiveFile
           </code>
-          <div class="tip" id="53">
+          <div class="tip" id="57">
             <strong>Signature:</strong> extractDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; unit<br />
                       </div>
         </td>
@@ -195,16 +209,18 @@
 <li><code>archiveFile</code> - The archive to be extracted.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '54', 54)" onmouseover="showTip(event, '54', 54)">
+          <code onmouseout="hideTip(event, '58', 58)" onmouseover="showTip(event, '58', 58)">
             extractStream inner
           </code>
-          <div class="tip" id="54">
-            <strong>Signature:</strong> inner:Stream -&gt; (type)<br />
+          <div class="tip" id="58">
+            <strong>Signature:</strong> inner:Stream -&gt; TarInputStream<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -214,15 +230,17 @@
             </a>
           <p>Wraps an input stream with a tar container extractor.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '55', 55)" onmouseover="showTip(event, '55', 55)">
+          <code onmouseout="hideTip(event, '59', 59)" onmouseover="showTip(event, '59', 59)">
             store file items
           </code>
-          <div class="tip" id="55">
+          <div class="tip" id="59">
             <strong>Signature:</strong> file:FileInfo -&gt; items:seq&lt;ArchiveFileSpec&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -233,15 +251,17 @@
             </a>
           <p>Constructs a function that will create a tar archive from a set of files.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '56', 56)" onmouseover="showTip(event, '56', 56)">
+          <code onmouseout="hideTip(event, '60', 60)" onmouseover="showTip(event, '60', 60)">
             Store flatten baseDir archiveFile files
           </code>
-          <div class="tip" id="56">
+          <div class="tip" id="60">
             <strong>Signature:</strong> flatten:bool -&gt; baseDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; files:seq&lt;FileInfo&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -261,15 +281,17 @@
 <li><code>files</code> - A sequence of files to store.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '57', 57)" onmouseover="showTip(event, '57', 57)">
+          <code onmouseout="hideTip(event, '61', 61)" onmouseover="showTip(event, '61', 61)">
             StoreSpecs archiveFile fileSpecs
           </code>
-          <div class="tip" id="57">
+          <div class="tip" id="61">
             <strong>Signature:</strong> archiveFile:FileInfo -&gt; fileSpecs:seq&lt;ArchiveFileSpec&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -287,16 +309,18 @@
 <li><code>fileSpecs</code> - A sequence of archive file specifications.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '58', 58)" onmouseover="showTip(event, '58', 58)">
+          <code onmouseout="hideTip(event, '62', 62)" onmouseover="showTip(event, '62', 62)">
             storeStream inner
           </code>
-          <div class="tip" id="58">
-            <strong>Signature:</strong> inner:Stream -&gt; (type)<br />
+          <div class="tip" id="62">
+            <strong>Signature:</strong> inner:Stream -&gt; TarOutputStream<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -306,15 +330,17 @@
             </a>
           <p>Wraps an output stream with a tar container store.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '59', 59)" onmouseover="showTip(event, '59', 59)">
+          <code onmouseout="hideTip(event, '63', 63)" onmouseover="showTip(event, '63', 63)">
             StoreWithDefaults (...)
           </code>
-          <div class="tip" id="59">
+          <div class="tip" id="63">
             <strong>Signature:</strong> baseDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; files:seq&lt;FileInfo&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -332,6 +358,8 @@
 <li><code>archiveFile</code> - The output archive file. If existing, will be overwritten.</li>
 <li><code>files</code> - A sequence of files to store.</li>
 </ul>
+
+
 
         </td>
       </tr>
@@ -361,6 +389,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -371,16 +400,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

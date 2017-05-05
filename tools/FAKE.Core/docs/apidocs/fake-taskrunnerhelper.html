@@ -39,6 +39,8 @@
 <h1>TaskRunnerHelper</h1>
 <div class="xmldoc">
 <p>Contains a helper which can be used to implement timeouts and retries.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -52,12 +54,12 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '611', 611)" onmouseover="showTip(event, '611', 611)">
+          <code onmouseout="hideTip(event, '679', 679)" onmouseover="showTip(event, '679', 679)">
             runWithRetries f retries
           </code>
-          <div class="tip" id="611">
-            <strong>Signature:</strong> f:(unit -&gt; &#39;?6718) -&gt; retries:int -&gt; &#39;?6718<br />
-                          <strong>Type parameters:</strong> '?6718          </div>
+          <div class="tip" id="679">
+            <strong>Signature:</strong> f:(unit -&gt; &#39;?8132) -&gt; retries:int -&gt; &#39;?8132<br />
+                          <strong>Type parameters:</strong> '?8132          </div>
         </td>
         <td class="xmldoc">
             <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/TaskRunnerHelper.fs#L24-24" class="github-link">
@@ -73,15 +75,17 @@
 <li><code>retries</code> - A retry limit.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '612', 612)" onmouseover="showTip(event, '612', 612)">
+          <code onmouseout="hideTip(event, '680', 680)" onmouseover="showTip(event, '680', 680)">
             waitFor f timeout testMS timeoutF
           </code>
-          <div class="tip" id="612">
+          <div class="tip" id="680">
             <strong>Signature:</strong> f:(unit -&gt; bool) -&gt; timeout:TimeSpan -&gt; testMS:int -&gt; timeoutF:(unit -&gt; unit) -&gt; TimeSpan<br />
                       </div>
         </td>
@@ -100,6 +104,8 @@
 <li><code>testMS</code> - An interval at which FAKE checks if the function has succeeded.</li>
 <li><code>timeoutF</code> - This function will be run if the timeout has been reached.</li>
 </ul>
+
+
 
         </td>
       </tr>
@@ -129,6 +135,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -139,16 +146,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

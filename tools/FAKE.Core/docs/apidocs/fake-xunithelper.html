@@ -38,7 +38,11 @@
 
 <h1>XUnitHelper</h1>
 <div class="xmldoc">
+<p>DEPRECATED. See <a href="fake-testing-xunit.html"><code>Fake.Testing.XUnit</code></a>.</p>
+
 <p>Contains tasks to run <a href="https://github.com/xunit/xunit">xUnit</a> unit tests.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -53,14 +57,20 @@
           <td class="type-name">
             <a href="fake-xunithelper-xuniterrorlevel.html">XUnitErrorLevel</a>
           </td>
-          <td class="xmldoc"><p>Option which allows to specify if an xUnit error should break the build.</p>
+          <td class="xmldoc"><p>DEPRECATED.
+Option which allows to specify if an xUnit error should break the build.</p>
+
+
 </td>
         </tr>
         <tr>
           <td class="type-name">
             <a href="fake-xunithelper-xunitparams.html">XUnitParams</a>
           </td>
-          <td class="xmldoc"><p>The xUnit parameter type</p>
+          <td class="xmldoc"><p>DEPRECATED.
+The xUnit parameter type</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -77,38 +87,43 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '760', 760)" onmouseover="showTip(event, '760', 760)">
+          <code onmouseout="hideTip(event, '856', 856)" onmouseover="showTip(event, '856', 856)">
             emptyTrait 
           </code>
-          <div class="tip" id="760">
+          <div class="tip" id="856">
             <strong>Signature:</strong> (string * string) option<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/XUnitHelper.fs#L42-42" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/XUnit/XUnitHelper.fs#L53-53" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>The xUnit default parameters</p>
+          <p>DEPRECATED.
+The xUnit default parameters</p>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '761', 761)" onmouseover="showTip(event, '761', 761)">
+          <code onmouseout="hideTip(event, '857', 857)" onmouseover="showTip(event, '857', 857)">
             xUnit setParams assemblies
           </code>
-          <div class="tip" id="761">
+          <div class="tip" id="857">
             <strong>Signature:</strong> setParams:(XUnitParams -&gt; XUnitParams) -&gt; assemblies:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/XUnitHelper.fs#L105-105" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/XUnit/XUnitHelper.fs#L123-123" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          <p>Runs xUnit unit tests in the given assemblies via the given xUnit runner.
+          <p>DEPRECATED. See <a href="fake-testing-xunit.html"><code>Fake.Testing.XUnit.xUnit</code></a>.</p>
+
+<p>Runs xUnit unit tests in the given assemblies via the given xUnit runner.
 Will fail if the runner terminates with non-zero exit code for any of the assemblies.
 Offending assemblies will be listed in the error message.</p>
 
@@ -124,30 +139,42 @@ in the given assembly fail.</p>
 
 <h2>Sample usage</h2>
 
-<pre><code>Target "Test" (fun _ -&gt;
-    !! (testDir + @"\xUnit.Test.*.dll") 
-      |&gt; xUnit (fun p -&gt; {p with OutputDir = testDir })
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">Target</span> <span class="s">&quot;Test&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span>
+    <span class="o">!!</span> (<span class="i">testDir</span> <span class="o">+</span> <span class="s">@&quot;\xUnit.Test.*.dll&quot;</span>)
+      <span class="o">|&gt;</span> <span class="i">xUnit</span> (<span class="k">fun</span> <span class="i">p</span> <span class="k">-&gt;</span> {<span class="i">p</span> <span class="k">with</span> <span class="i">OutputDir</span> <span class="o">=</span> <span class="i">testDir</span> })
 )
-</code></pre>
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '762', 762)" onmouseover="showTip(event, '762', 762)">
+          <code onmouseout="hideTip(event, '858', 858)" onmouseover="showTip(event, '858', 858)">
             XUnitDefaults 
           </code>
-          <div class="tip" id="762">
+          <div class="tip" id="858">
             <strong>Signature:</strong> XUnitParams<br />
                       </div>
         </td>
         <td class="xmldoc">
-            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/XUnitHelper.fs#L44-44" class="github-link">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/UnitTest/XUnit/XUnitHelper.fs#L57-57" class="github-link">
               <img src="../content/img/github.png" class="normal" />
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
-          
+          <p>DEPRECATED.</p>
+
+
+
         </td>
       </tr>
     </tbody>
@@ -176,6 +203,7 @@ in the given assembly fail.</p>
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -186,16 +214,19 @@ in the given assembly fail.</p>
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

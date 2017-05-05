@@ -39,6 +39,8 @@
 <h1>BZip2</h1>
 <div class="xmldoc">
 <p>Operations and tasks for working with gzip compressed files.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -52,10 +54,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '34', 34)" onmouseover="showTip(event, '34', 34)">
+          <code onmouseout="hideTip(event, '38', 38)" onmouseover="showTip(event, '38', 38)">
             CompressFile outFile file
           </code>
-          <div class="tip" id="34">
+          <div class="tip" id="38">
             <strong>Signature:</strong> outFile:FileInfo -&gt; file:FileInfo -&gt; unit<br />
                       </div>
         </td>
@@ -73,16 +75,18 @@
 <li><code>file</code> - The file to be compressed.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '35', 35)" onmouseover="showTip(event, '35', 35)">
+          <code onmouseout="hideTip(event, '39', 39)" onmouseover="showTip(event, '39', 39)">
             compressStream inner
           </code>
-          <div class="tip" id="35">
-            <strong>Signature:</strong> inner:Stream -&gt; (type)<br />
+          <div class="tip" id="39">
+            <strong>Signature:</strong> inner:Stream -&gt; BZip2OutputStream<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -92,16 +96,18 @@
             </a>
           <p>Wraps an output stream with a bzip2 compressor.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '36', 36)" onmouseover="showTip(event, '36', 36)">
+          <code onmouseout="hideTip(event, '40', 40)" onmouseover="showTip(event, '40', 40)">
             createFile file
           </code>
-          <div class="tip" id="36">
-            <strong>Signature:</strong> file:FileInfo -&gt; (type)<br />
+          <div class="tip" id="40">
+            <strong>Signature:</strong> file:FileInfo -&gt; BZip2OutputStream<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -117,15 +123,17 @@
 <li><code>file</code> - The <code>FileInfo</code> describing the location to which the compressed file should be written. Will be overwritten if it exists.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '37', 37)" onmouseover="showTip(event, '37', 37)">
+          <code onmouseout="hideTip(event, '41', 41)" onmouseover="showTip(event, '41', 41)">
             ExtractFile outFile file
           </code>
-          <div class="tip" id="37">
+          <div class="tip" id="41">
             <strong>Signature:</strong> outFile:FileInfo -&gt; file:FileInfo -&gt; unit<br />
                       </div>
         </td>
@@ -143,16 +151,18 @@
 <li><code>file</code> - The compressed file.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '38', 38)" onmouseover="showTip(event, '38', 38)">
+          <code onmouseout="hideTip(event, '42', 42)" onmouseover="showTip(event, '42', 42)">
             extractStream inner
           </code>
-          <div class="tip" id="38">
-            <strong>Signature:</strong> inner:Stream -&gt; (type)<br />
+          <div class="tip" id="42">
+            <strong>Signature:</strong> inner:Stream -&gt; BZip2InputStream<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -161,6 +171,8 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Wraps an input stream with a bzip2 decompressor.</p>
+
+
 
         </td>
       </tr>
@@ -190,6 +202,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -200,16 +213,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

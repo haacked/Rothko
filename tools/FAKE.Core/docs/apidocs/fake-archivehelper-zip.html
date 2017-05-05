@@ -39,6 +39,8 @@
 <h1>Zip</h1>
 <div class="xmldoc">
 <p>Operations and tasks for working with zip archives.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -54,6 +56,8 @@
             <a href="fake-archivehelper-zip-zipcompressionparams.html">ZipCompressionParams</a>
           </td>
           <td class="xmldoc"><p>The zip archive compression parameters.</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -70,11 +74,11 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '80', 80)" onmouseover="showTip(event, '80', 80)">
+          <code onmouseout="hideTip(event, '84', 84)" onmouseover="showTip(event, '84', 84)">
             addZipEntry outStream
           </code>
-          <div class="tip" id="80">
-            <strong>Signature:</strong> outStream:(type) -&gt; ArchiveFileSpec -&gt; unit<br />
+          <div class="tip" id="84">
+            <strong>Signature:</strong> outStream:ZipOutputStream -&gt; ArchiveFileSpec -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -84,15 +88,17 @@
             </a>
           <p>Adds a file, specified by an <code>ArchiveFileSpec</code>, to a <code>ZipOutputStream</code>.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '81', 81)" onmouseover="showTip(event, '81', 81)">
+          <code onmouseout="hideTip(event, '85', 85)" onmouseover="showTip(event, '85', 85)">
             compress zipParams
           </code>
-          <div class="tip" id="81">
+          <div class="tip" id="85">
             <strong>Signature:</strong> zipParams:ZipCompressionParams -&gt; FileInfo -&gt; seq&lt;ArchiveFileSpec&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -103,15 +109,17 @@
             </a>
           <p>Constructs a function that will create a zip archive from a set of files.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '82', 82)" onmouseover="showTip(event, '82', 82)">
+          <code onmouseout="hideTip(event, '86', 86)" onmouseover="showTip(event, '86', 86)">
             Compress (...)
           </code>
-          <div class="tip" id="82">
+          <div class="tip" id="86">
             <strong>Signature:</strong> setParams:(ZipCompressionParams -&gt; ZipCompressionParams) -&gt; flatten:bool -&gt; baseDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; files:seq&lt;FileInfo&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -132,15 +140,17 @@
 <li><code>files</code> - A sequence of files to compress.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '83', 83)" onmouseover="showTip(event, '83', 83)">
+          <code onmouseout="hideTip(event, '87', 87)" onmouseover="showTip(event, '87', 87)">
             CompressDir (...)
           </code>
-          <div class="tip" id="83">
+          <div class="tip" id="87">
             <strong>Signature:</strong> setParams:(ZipCompressionParams -&gt; ZipCompressionParams) -&gt; flatten:bool -&gt; baseDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; unit<br />
                       </div>
         </td>
@@ -160,15 +170,17 @@
 <li><code>archiveFile</code> - The output archive file. If existing, will be overwritten.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '84', 84)" onmouseover="showTip(event, '84', 84)">
+          <code onmouseout="hideTip(event, '88', 88)" onmouseover="showTip(event, '88', 88)">
             CompressDirWithDefaults (...)
           </code>
-          <div class="tip" id="84">
+          <div class="tip" id="88">
             <strong>Signature:</strong> baseDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; unit<br />
                       </div>
         </td>
@@ -186,15 +198,17 @@
 <li><code>archiveFile</code> - The output archive file. If existing, will be overwritten.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '85', 85)" onmouseover="showTip(event, '85', 85)">
+          <code onmouseout="hideTip(event, '89', 89)" onmouseover="showTip(event, '89', 89)">
             CompressSpecs (...)
           </code>
-          <div class="tip" id="85">
+          <div class="tip" id="89">
             <strong>Signature:</strong> setParams:(ZipCompressionParams -&gt; ZipCompressionParams) -&gt; archiveFile:FileInfo -&gt; fileSpecs:seq&lt;ArchiveFileSpec&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -213,16 +227,18 @@
 <li><code>fileSpecs</code> - A sequence of archive file specifications.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '86', 86)" onmouseover="showTip(event, '86', 86)">
+          <code onmouseout="hideTip(event, '90', 90)" onmouseover="showTip(event, '90', 90)">
             compressStream arg1 inner
           </code>
-          <div class="tip" id="86">
-            <strong>Signature:</strong> ZipCompressionParams -&gt; inner:Stream -&gt; (type)<br />
+          <div class="tip" id="90">
+            <strong>Signature:</strong> ZipCompressionParams -&gt; inner:Stream -&gt; ZipOutputStream<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -232,15 +248,17 @@
             </a>
           <p>Wraps an output stream with a zip compressor.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '87', 87)" onmouseover="showTip(event, '87', 87)">
+          <code onmouseout="hideTip(event, '91', 91)" onmouseover="showTip(event, '91', 91)">
             CompressWithDefaults (...)
           </code>
-          <div class="tip" id="87">
+          <div class="tip" id="91">
             <strong>Signature:</strong> baseDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; files:seq&lt;FileInfo&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -259,16 +277,18 @@
 <li><code>files</code> - A sequence of files to compress.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '88', 88)" onmouseover="showTip(event, '88', 88)">
+          <code onmouseout="hideTip(event, '92', 92)" onmouseover="showTip(event, '92', 92)">
             createFile zipParams file
           </code>
-          <div class="tip" id="88">
-            <strong>Signature:</strong> zipParams:ZipCompressionParams -&gt; file:FileInfo -&gt; (type)<br />
+          <div class="tip" id="92">
+            <strong>Signature:</strong> zipParams:ZipCompressionParams -&gt; file:FileInfo -&gt; ZipOutputStream<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -285,15 +305,17 @@
 <li><code>file</code> - The <code>FileInfo</code> describing the location to which the archive should be written. Will be overwritten if it exists.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '89', 89)" onmouseover="showTip(event, '89', 89)">
+          <code onmouseout="hideTip(event, '93', 93)" onmouseover="showTip(event, '93', 93)">
             Extract extractDir archiveFile
           </code>
-          <div class="tip" id="89">
+          <div class="tip" id="93">
             <strong>Signature:</strong> extractDir:DirectoryInfo -&gt; archiveFile:FileInfo -&gt; unit<br />
                       </div>
         </td>
@@ -311,16 +333,18 @@
 <li><code>archiveFile</code> - The archive to be extracted.</li>
 </ul>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '90', 90)" onmouseover="showTip(event, '90', 90)">
+          <code onmouseout="hideTip(event, '94', 94)" onmouseover="showTip(event, '94', 94)">
             extractStream inner
           </code>
-          <div class="tip" id="90">
-            <strong>Signature:</strong> inner:Stream -&gt; (type)<br />
+          <div class="tip" id="94">
+            <strong>Signature:</strong> inner:Stream -&gt; ZipInputStream<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -330,15 +354,17 @@
             </a>
           <p>Wraps an input stream with a zip decompressor.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '91', 91)" onmouseover="showTip(event, '91', 91)">
+          <code onmouseout="hideTip(event, '95', 95)" onmouseover="showTip(event, '95', 95)">
             ZipCompressionDefaults 
           </code>
-          <div class="tip" id="91">
+          <div class="tip" id="95">
             <strong>Signature:</strong> ZipCompressionParams<br />
                       </div>
         </td>
@@ -355,6 +381,8 @@
 <li><code>Level</code> - <code>CompressionLevel.Default</code></li>
 <li><code>Comment</code> - <code>None</code></li>
 </ul>
+
+
 
         </td>
       </tr>
@@ -384,6 +412,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -394,16 +423,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

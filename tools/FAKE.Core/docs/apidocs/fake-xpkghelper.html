@@ -39,6 +39,8 @@
 <h1>XpkgHelper</h1>
 <div class="xmldoc">
 <p>Contains tasks to create packages in <a href="http://components.xamarin.com/">Xamarin's xpkg format</a></p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -54,6 +56,8 @@
             <a href="fake-xpkghelper-xpkgparams.html">xpkgParams</a>
           </td>
           <td class="xmldoc"><p>Parameter type for xpkg tasks</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -70,10 +74,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '773', 773)" onmouseover="showTip(event, '773', 773)">
+          <code onmouseout="hideTip(event, '872', 872)" onmouseover="showTip(event, '872', 872)">
             XpkgDefaults ()
           </code>
-          <div class="tip" id="773">
+          <div class="tip" id="872">
             <strong>Signature:</strong> unit -&gt; xpkgParams<br />
                       </div>
         </td>
@@ -84,15 +88,17 @@
             </a>
           <p>Creates xpkg default parameters</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '774', 774)" onmouseover="showTip(event, '774', 774)">
+          <code onmouseout="hideTip(event, '873', 873)" onmouseover="showTip(event, '873', 873)">
             xpkgPack setParams
           </code>
-          <div class="tip" id="774">
+          <div class="tip" id="873">
             <strong>Signature:</strong> setParams:(xpkgParams -&gt; xpkgParams) -&gt; unit<br />
                       </div>
         </td>
@@ -105,39 +111,66 @@
 
 <h2>Sample</h2>
 
-<pre><code>Target "PackageXamarinDistribution" (fun _ -&gt; 
-     xpkgPack (fun p -&gt;
-         {p with
-             ToolPath = xpkgExecutable;
-             Package = "Portable.Licensing";
-             Version = assemblyFileVersion;
-             OutputPath = publishDir
-             Project = "Portable.Licensing"
-             Summary = "Portable.Licensing is a cross platform licensing tool"
-             Publisher = "Nauck IT KG"
-             Website = "http://dev.nauck-it.de"
-             Details = "./Xamarin/Details.md"
-             License = "License.md"
-             GettingStarted = "./Xamarin/GettingStarted.md"
-             Icons = ["./Xamarin/Portable.Licensing_512x512.png"
-                      "./Xamarin/Portable.Licensing_128x128.png"]
-             Libraries = ["mobile", "./Distribution/lib/Portable.Licensing.dll"]
-             Samples = ["Android Sample.", "./Samples/Android/Android.Sample.sln"
-                        "iOS Sample.", "./Samples/iOS/iOS.Sample.sln"]
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+<span class="l">17: </span>
+<span class="l">18: </span>
+<span class="l">19: </span>
+<span class="l">20: </span>
+<span class="l">21: </span>
+<span class="l">22: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="i">Target</span> <span class="s">&quot;PackageXamarinDistribution&quot;</span> (<span class="k">fun</span> _ <span class="k">-&gt;</span> 
+     <span class="i">xpkgPack</span> (<span class="k">fun</span> <span class="i">p</span> <span class="k">-&gt;</span>
+         {<span class="i">p</span> <span class="k">with</span>
+             <span class="i">ToolPath</span> <span class="o">=</span> <span class="i">xpkgExecutable</span>;
+             <span class="i">Package</span> <span class="o">=</span> <span class="s">&quot;Portable.Licensing&quot;</span>;
+             <span class="i">Version</span> <span class="o">=</span> <span class="i">assemblyFileVersion</span>;
+             <span class="i">OutputPath</span> <span class="o">=</span> <span class="i">publishDir</span>
+             <span class="i">Project</span> <span class="o">=</span> <span class="s">&quot;Portable.Licensing&quot;</span>
+             <span class="i">Summary</span> <span class="o">=</span> <span class="s">&quot;Portable.Licensing is a cross platform licensing tool&quot;</span>
+             <span class="i">Publisher</span> <span class="o">=</span> <span class="s">&quot;Nauck IT KG&quot;</span>
+             <span class="i">Website</span> <span class="o">=</span> <span class="s">&quot;http://dev.nauck-it.de&quot;</span>
+             <span class="i">Details</span> <span class="o">=</span> <span class="s">&quot;./Xamarin/Details.md&quot;</span>
+             <span class="i">License</span> <span class="o">=</span> <span class="s">&quot;License.md&quot;</span>
+             <span class="i">GettingStarted</span> <span class="o">=</span> <span class="s">&quot;./Xamarin/GettingStarted.md&quot;</span>
+             <span class="i">Icons</span> <span class="o">=</span> [<span class="s">&quot;./Xamarin/Portable.Licensing_512x512.png&quot;</span>
+                      <span class="s">&quot;./Xamarin/Portable.Licensing_128x128.png&quot;</span>]
+             <span class="i">Libraries</span> <span class="o">=</span> [<span class="s">&quot;mobile&quot;</span>, <span class="s">&quot;./Distribution/lib/Portable.Licensing.dll&quot;</span>]
+             <span class="i">Samples</span> <span class="o">=</span> [<span class="s">&quot;Android Sample.&quot;</span>, <span class="s">&quot;./Samples/Android/Android.Sample.sln&quot;</span>
+                        <span class="s">&quot;iOS Sample.&quot;</span>, <span class="s">&quot;./Samples/iOS/iOS.Sample.sln&quot;</span>]
          }
      )
  )
-</code></pre>
+</code></pre></td>
+</tr>
+</table>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '775', 775)" onmouseover="showTip(event, '775', 775)">
+          <code onmouseout="hideTip(event, '874', 874)" onmouseover="showTip(event, '874', 874)">
             xpkgValidate setParams
           </code>
-          <div class="tip" id="775">
+          <div class="tip" id="874">
             <strong>Signature:</strong> setParams:(xpkgParams -&gt; xpkgParams) -&gt; unit<br />
                       </div>
         </td>
@@ -147,6 +180,8 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Validates a xpkg package based on the package file name</p>
+
+
 
         </td>
       </tr>
@@ -176,6 +211,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -186,16 +222,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

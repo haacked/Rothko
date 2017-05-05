@@ -39,6 +39,8 @@
 <h1>ProjectSystem</h1>
 <div class="xmldoc">
 <p>Contains project file comparion tools for MSBuild project files.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -54,6 +56,8 @@
             <a href="fake-msbuild-projectsystem-projectcomparison.html">ProjectComparison</a>
           </td>
           <td class="xmldoc"><p>Result type for project comparisons.</p>
+
+
 </td>
         </tr>
         <tr>
@@ -61,6 +65,8 @@
             <a href="fake-msbuild-projectsystem-projectfile.html">ProjectFile</a>
           </td>
           <td class="xmldoc"><p>A small abstraction over MSBuild project files.</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -77,10 +83,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '888', 888)" onmouseover="showTip(event, '888', 888)">
+          <code onmouseout="hideTip(event, '992', 992)" onmouseover="showTip(event, '992', 992)">
             CompareProjectsTo (...)
           </code>
-          <div class="tip" id="888">
+          <div class="tip" id="992">
             <strong>Signature:</strong> templateProject:string -&gt; projects:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -92,15 +98,17 @@
           <p>Compares the given project files againts the template project and fails if any files are missing.
 For F# projects it is also reporting unordered files.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '889', 889)" onmouseover="showTip(event, '889', 889)">
+          <code onmouseout="hideTip(event, '993', 993)" onmouseover="showTip(event, '993', 993)">
             findMissingFiles (...)
           </code>
-          <div class="tip" id="889">
+          <div class="tip" id="993">
             <strong>Signature:</strong> templateProject:string -&gt; projects:seq&lt;string&gt; -&gt; seq&lt;ProjectComparison&gt;<br />
                       </div>
         </td>
@@ -112,15 +120,17 @@ For F# projects it is also reporting unordered files.</p>
           <p>Compares the given project files againts the template project and returns which files are missing.
 For F# projects it is also reporting unordered files.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '890', 890)" onmouseover="showTip(event, '890', 890)">
+          <code onmouseout="hideTip(event, '994', 994)" onmouseover="showTip(event, '994', 994)">
             FixMissingFiles templateProject projects
           </code>
-          <div class="tip" id="890">
+          <div class="tip" id="994">
             <strong>Signature:</strong> templateProject:string -&gt; projects:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -131,15 +141,17 @@ For F# projects it is also reporting unordered files.</p>
             </a>
           <p>Compares the given projects to the template project and adds all missing files to the projects if needed.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '891', 891)" onmouseover="showTip(event, '891', 891)">
+          <code onmouseout="hideTip(event, '995', 995)" onmouseover="showTip(event, '995', 995)">
             FixProjectFiles templateProject projects
           </code>
-          <div class="tip" id="891">
+          <div class="tip" id="995">
             <strong>Signature:</strong> templateProject:string -&gt; projects:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -151,15 +163,17 @@ For F# projects it is also reporting unordered files.</p>
           <p>Compares the given projects to the template project and adds all missing files to the projects if needed.
 It also removes duplicate files from the project files.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '892', 892)" onmouseover="showTip(event, '892', 892)">
+          <code onmouseout="hideTip(event, '996', 996)" onmouseover="showTip(event, '996', 996)">
             RemoveDuplicateFiles projects
           </code>
-          <div class="tip" id="892">
+          <div class="tip" id="996">
             <strong>Signature:</strong> projects:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -169,6 +183,8 @@ It also removes duplicate files from the project files.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>It removes duplicate files from the project files.</p>
+
+
 
         </td>
       </tr>
@@ -198,6 +214,7 @@ It also removes duplicate files from the project files.</p>
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -208,16 +225,19 @@ It also removes duplicate files from the project files.</p>
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

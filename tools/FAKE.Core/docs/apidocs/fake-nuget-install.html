@@ -39,6 +39,8 @@
 <h1>Install</h1>
 <div class="xmldoc">
 <p>Contains tasks for installing NuGet packages using the <a href="http://docs.nuget.org/docs/reference/command-line-reference#Install_Command">nuget.exe install command</a>.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -54,6 +56,8 @@
             <a href="fake-nuget-install-nugetinstallparams.html">NugetInstallParams</a>
           </td>
           <td class="xmldoc"><p>Nuget install parameters.</p>
+
+
 </td>
         </tr>
         <tr>
@@ -61,6 +65,8 @@
             <a href="fake-nuget-install-nugetinstallverbosity.html">NugetInstallVerbosity</a>
           </td>
           <td class="xmldoc"><p>Nuget install verbosity mode.</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -77,10 +83,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '900', 900)" onmouseover="showTip(event, '900', 900)">
+          <code onmouseout="hideTip(event, '1004', 1004)" onmouseover="showTip(event, '1004', 1004)">
             NugetInstall setParams packageName
           </code>
-          <div class="tip" id="900">
+          <div class="tip" id="1004">
             <strong>Signature:</strong> setParams:(NugetInstallParams -&gt; NugetInstallParams) -&gt; packageName:string -&gt; unit<br />
                       </div>
         </td>
@@ -95,18 +101,20 @@
 
 <ul>
 <li><code>setParams</code> - Function used to manipulate the default parameters.</li>
-<li><code>packagesFile</code> - Path to the <code>*.sln</code>, <code>*.*proj</code> or <code>packages.config</code> file.</li>
+<li><code>packagesFile</code> - Path to the <code>*.sln</code>, <code>*.*proj</code> or <code>packages.config</code> file, or simply a NuGet package name</li>
 </ul>
+
+
 
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '901', 901)" onmouseover="showTip(event, '901', 901)">
+          <code onmouseout="hideTip(event, '1005', 1005)" onmouseover="showTip(event, '1005', 1005)">
             NugetInstallDefaults 
           </code>
-          <div class="tip" id="901">
+          <div class="tip" id="1005">
             <strong>Signature:</strong> NugetInstallParams<br />
                       </div>
         </td>
@@ -116,6 +124,8 @@
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>Parameter default values.</p>
+
+
 
         </td>
       </tr>
@@ -145,6 +155,7 @@
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -155,16 +166,19 @@
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>

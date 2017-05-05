@@ -39,6 +39,8 @@
 <h1>DynamicsNavFile</h1>
 <div class="xmldoc">
 <p>Provides an abstraction over Dynamics NAV object files.</p>
+
+
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -54,6 +56,8 @@
             <a href="fake-dynamicsnavfile-navobject.html">NavObject</a>
           </td>
           <td class="xmldoc"><p>A type definition of a Dynamics NAV object.</p>
+
+
 </td>
         </tr>
     </tbody>
@@ -70,10 +74,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '163', 163)" onmouseover="showTip(event, '163', 163)">
+          <code onmouseout="hideTip(event, '188', 188)" onmouseover="showTip(event, '188', 188)">
             checkTagsInFile (...)
           </code>
-          <div class="tip" id="163">
+          <div class="tip" id="188">
             <strong>Signature:</strong> requiredTags:seq&lt;string&gt; -&gt; acceptPreTagged:bool -&gt; invalidTags:seq&lt;string&gt; -&gt; fileName:string -&gt; string * string<br />
                       </div>
         </td>
@@ -84,15 +88,17 @@
             </a>
           <p>Checks a Dynamics NAV file for missing required and invalid tags and raises this as errors</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '164', 164)" onmouseover="showTip(event, '164', 164)">
+          <code onmouseout="hideTip(event, '189', 189)" onmouseover="showTip(event, '189', 189)">
             checkTagsInObjectString (...)
           </code>
-          <div class="tip" id="164">
+          <div class="tip" id="189">
             <strong>Signature:</strong> requiredTags:seq&lt;string&gt; -&gt; acceptPreTagged:bool -&gt; invalidTags:seq&lt;string&gt; -&gt; objectString:string -&gt; name:string -&gt; string * string<br />
                       </div>
         </td>
@@ -103,15 +109,17 @@
             </a>
           <p>Checks a Dynamics NAV object for missing required and invalid tags and raises this as errors</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '165', 165)" onmouseover="showTip(event, '165', 165)">
+          <code onmouseout="hideTip(event, '190', 190)" onmouseover="showTip(event, '190', 190)">
             DateRegex 
           </code>
-          <div class="tip" id="165">
+          <div class="tip" id="190">
             <strong>Signature:</strong> Regex<br />
                       </div>
         </td>
@@ -122,15 +130,17 @@
             </a>
           <p>A Regex which allows to retrieve modified date.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '166', 166)" onmouseover="showTip(event, '166', 166)">
+          <code onmouseout="hideTip(event, '191', 191)" onmouseover="showTip(event, '191', 191)">
             fileNameFromObject (...)
           </code>
-          <div class="tip" id="166">
+          <div class="tip" id="191">
             <strong>Signature:</strong> (navObject:NavObject * fileEnding:string) -&gt; string<br />
                       </div>
         </td>
@@ -141,15 +151,59 @@
             </a>
           <p>Returns a standardized filename based on the given NavObject.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '167', 167)" onmouseover="showTip(event, '167', 167)">
+          <code onmouseout="hideTip(event, '192', 192)" onmouseover="showTip(event, '192', 192)">
+            getHighestTagVersionInFiles (...)
+          </code>
+          <div class="tip" id="192">
+            <strong>Signature:</strong> versionTag:string -&gt; fileNames:seq&lt;string&gt; -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/DynamicsNavFile.fs#L216-216" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets the highest version number for a specified version tag in a number of Dynamics NAV objects in a set of object files</p>
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '193', 193)" onmouseover="showTip(event, '193', 193)">
+            getHighestTagVersionInObjects (...)
+          </code>
+          <div class="tip" id="193">
+            <strong>Signature:</strong> versionTag:string -&gt; sourceCode:string -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/DynamicsNavFile.fs#L209-209" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets the highest version number for a specified version tag in a number of Dynamics NAV objects</p>
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '194', 194)" onmouseover="showTip(event, '194', 194)">
             getInvalidTags invalidTags versionTags
           </code>
-          <div class="tip" id="167">
+          <div class="tip" id="194">
             <strong>Signature:</strong> invalidTags:seq&lt;string&gt; -&gt; versionTags:seq&lt;string&gt; -&gt; seq&lt;string&gt;<br />
                       </div>
         </td>
@@ -160,15 +214,17 @@
             </a>
           <p>Get all invalid tags from a Dynamics NAV version tag list</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '168', 168)" onmouseover="showTip(event, '168', 168)">
+          <code onmouseout="hideTip(event, '195', 195)" onmouseover="showTip(event, '195', 195)">
             getMissingRequiredTags (...)
           </code>
-          <div class="tip" id="168">
+          <div class="tip" id="195">
             <strong>Signature:</strong> requiredTags:seq&lt;string&gt; -&gt; versionTags:seq&lt;string&gt; -&gt; seq&lt;string&gt;<br />
                       </div>
         </td>
@@ -179,15 +235,59 @@
             </a>
           <p>Get all missing required tags from a Dynamics NAV version tag list</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '169', 169)" onmouseover="showTip(event, '169', 169)">
+          <code onmouseout="hideTip(event, '196', 196)" onmouseover="showTip(event, '196', 196)">
+            getTagVersionInObject (...)
+          </code>
+          <div class="tip" id="196">
+            <strong>Signature:</strong> versionTag:string -&gt; sourceCode:string -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/DynamicsNavFile.fs#L204-204" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets the version number for the specified version tag in a Dynamics NAV object</p>
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '197', 197)" onmouseover="showTip(event, '197', 197)">
+            getTagVersionInVersionTagList (...)
+          </code>
+          <div class="tip" id="197">
+            <strong>Signature:</strong> versionTag:string -&gt; tagList:string -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="https://github.com/fsharp/FAKE/blob/master/src/app/FakeLib/DynamicsNavFile.fs#L194-194" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          <p>Gets the version number for the specified version tag in a Dynamics NAV version tag list</p>
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '198', 198)" onmouseover="showTip(event, '198', 198)">
             getVersionTagList text
           </code>
-          <div class="tip" id="169">
+          <div class="tip" id="198">
             <strong>Signature:</strong> text:string -&gt; string<br />
                       </div>
         </td>
@@ -198,15 +298,17 @@
             </a>
           <p>Returns the version tag list from Dynamics NAV object.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '170', 170)" onmouseover="showTip(event, '170', 170)">
+          <code onmouseout="hideTip(event, '199', 199)" onmouseover="showTip(event, '199', 199)">
             ModifiedRegex 
           </code>
-          <div class="tip" id="170">
+          <div class="tip" id="199">
             <strong>Signature:</strong> Regex<br />
                       </div>
         </td>
@@ -217,15 +319,17 @@
             </a>
           <p>A Regex which allows to retrieve the modified flag.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '171', 171)" onmouseover="showTip(event, '171', 171)">
+          <code onmouseout="hideTip(event, '200', 200)" onmouseover="showTip(event, '200', 200)">
             modifyNavisionFiles (...)
           </code>
-          <div class="tip" id="171">
+          <div class="tip" id="200">
             <strong>Signature:</strong> requiredTags:seq&lt;string&gt; -&gt; acceptPreTagged:bool -&gt; invalidTags:seq&lt;string&gt; -&gt; versionTag:string -&gt; newVersion:string -&gt; removeModified:bool -&gt; newDateTime:DateTime -&gt; fileNames:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -237,15 +341,17 @@
           <p>Checks a Dynamics NAV object for missing required and invalid tags and raises this as errors.
 It also changes the given tag, resets the modified flag and time stamp.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '172', 172)" onmouseover="showTip(event, '172', 172)">
+          <code onmouseout="hideTip(event, '201', 201)" onmouseover="showTip(event, '201', 201)">
             NavObjectDateFormat 
           </code>
-          <div class="tip" id="172">
+          <div class="tip" id="201">
             <strong>Signature:</strong> string<br />
                       </div>
         </td>
@@ -256,15 +362,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             </a>
           <p>A NAV culture-specific date format.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '173', 173)" onmouseover="showTip(event, '173', 173)">
+          <code onmouseout="hideTip(event, '202', 202)" onmouseover="showTip(event, '202', 202)">
             ObjectRegex 
           </code>
-          <div class="tip" id="173">
+          <div class="tip" id="202">
             <strong>Signature:</strong> Regex<br />
                       </div>
         </td>
@@ -275,15 +383,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             </a>
           <p>A Regex which allows to parse objects in a Dynamics NAV file.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '174', 174)" onmouseover="showTip(event, '174', 174)">
+          <code onmouseout="hideTip(event, '203', 203)" onmouseover="showTip(event, '203', 203)">
             objectsInObjectString text
           </code>
-          <div class="tip" id="174">
+          <div class="tip" id="203">
             <strong>Signature:</strong> text:string -&gt; NavObject list<br />
                       </div>
         </td>
@@ -294,15 +404,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             </a>
           <p>Splits an object string into multiple Dynamics NAV objects of type NavObject.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '175', 175)" onmouseover="showTip(event, '175', 175)">
+          <code onmouseout="hideTip(event, '204', 204)" onmouseover="showTip(event, '204', 204)">
             ObjectSplitRegex 
           </code>
-          <div class="tip" id="175">
+          <div class="tip" id="204">
             <strong>Signature:</strong> Regex<br />
                       </div>
         </td>
@@ -313,15 +425,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             </a>
           <p>A Regex which allows to find objects in a Dynamics NAV file.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '176', 176)" onmouseover="showTip(event, '176', 176)">
+          <code onmouseout="hideTip(event, '205', 205)" onmouseover="showTip(event, '205', 205)">
             removeModifiedFlag text
           </code>
-          <div class="tip" id="176">
+          <div class="tip" id="205">
             <strong>Signature:</strong> text:string -&gt; string<br />
                       </div>
         </td>
@@ -332,15 +446,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             </a>
           <p>Removes the modified flag from a Dynamics NAV object.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '177', 177)" onmouseover="showTip(event, '177', 177)">
+          <code onmouseout="hideTip(event, '206', 206)" onmouseover="showTip(event, '206', 206)">
             replaceDateTimeInString dateTime text
           </code>
-          <div class="tip" id="177">
+          <div class="tip" id="206">
             <strong>Signature:</strong> dateTime:DateTime -&gt; text:string -&gt; string<br />
                       </div>
         </td>
@@ -351,15 +467,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             </a>
           <p>Replaces the timestamp in a Dynamics NAV object.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '178', 178)" onmouseover="showTip(event, '178', 178)">
+          <code onmouseout="hideTip(event, '207', 207)" onmouseover="showTip(event, '207', 207)">
             replaceDateTimeInStringWithFormat (...)
           </code>
-          <div class="tip" id="178">
+          <div class="tip" id="207">
             <strong>Signature:</strong> dateTime:DateTime -&gt; dateFormat:string -&gt; text:string -&gt; string<br />
                       </div>
         </td>
@@ -374,10 +492,10 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '179', 179)" onmouseover="showTip(event, '179', 179)">
+          <code onmouseout="hideTip(event, '208', 208)" onmouseover="showTip(event, '208', 208)">
             replaceInVersionTag (...)
           </code>
-          <div class="tip" id="179">
+          <div class="tip" id="208">
             <strong>Signature:</strong> versionTag:string -&gt; newVersion:string -&gt; tagList:string -&gt; string<br />
                       </div>
         </td>
@@ -388,15 +506,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             </a>
           <p>Replaces a version tag in a version tag list from Dynamics NAV object</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '180', 180)" onmouseover="showTip(event, '180', 180)">
+          <code onmouseout="hideTip(event, '209', 209)" onmouseover="showTip(event, '209', 209)">
             replaceVersionTag (...)
           </code>
-          <div class="tip" id="180">
+          <div class="tip" id="209">
             <strong>Signature:</strong> versionTag:string -&gt; newVersion:string -&gt; sourceCode:string -&gt; string<br />
                       </div>
         </td>
@@ -407,15 +527,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             </a>
           <p>Replaces a version tag in a Dynamics NAV</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '181', 181)" onmouseover="showTip(event, '181', 181)">
+          <code onmouseout="hideTip(event, '210', 210)" onmouseover="showTip(event, '210', 210)">
             replaceVersionTagList text newTags
           </code>
-          <div class="tip" id="181">
+          <div class="tip" id="210">
             <strong>Signature:</strong> text:string -&gt; newTags:string -&gt; string<br />
                       </div>
         </td>
@@ -426,15 +548,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             </a>
           <p>Replaces a version tag list from a complete Dynamics NAV object with a new version tag list</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '182', 182)" onmouseover="showTip(event, '182', 182)">
+          <code onmouseout="hideTip(event, '211', 211)" onmouseover="showTip(event, '211', 211)">
             setVersionTags (...)
           </code>
-          <div class="tip" id="182">
+          <div class="tip" id="211">
             <strong>Signature:</strong> requiredTags:seq&lt;string&gt; -&gt; acceptPreTagged:bool -&gt; invalidTags:seq&lt;string&gt; -&gt; versionTag:string -&gt; newVersion:string -&gt; removeModifiedFlag:bool -&gt; newDateTime:DateTime -&gt; fileNames:seq&lt;string&gt; -&gt; unit<br />
                       </div>
         </td>
@@ -446,15 +570,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
           <p>Checks a Dynamics NAV object for missing required and invalid tags and raises this as errors.
 It also changes the given tag, resets the modified flag and time stamp.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '183', 183)" onmouseover="showTip(event, '183', 183)">
+          <code onmouseout="hideTip(event, '212', 212)" onmouseover="showTip(event, '212', 212)">
             splitNavisionFiles fileNames destDir
           </code>
-          <div class="tip" id="183">
+          <div class="tip" id="212">
             <strong>Signature:</strong> fileNames:seq&lt;string&gt; -&gt; destDir:string -&gt; unit<br />
                       </div>
         </td>
@@ -465,15 +591,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             </a>
           <p>Splits the given files into individual object files in the specified destination directory.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '184', 184)" onmouseover="showTip(event, '184', 184)">
+          <code onmouseout="hideTip(event, '213', 213)" onmouseover="showTip(event, '213', 213)">
             splitVersionTags tagList
           </code>
-          <div class="tip" id="184">
+          <div class="tip" id="213">
             <strong>Signature:</strong> tagList:string -&gt; string []<br />
                       </div>
         </td>
@@ -484,15 +612,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             </a>
           <p>Splits a version tag list from Dynamics NAV object into single tags</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '185', 185)" onmouseover="showTip(event, '185', 185)">
+          <code onmouseout="hideTip(event, '214', 214)" onmouseover="showTip(event, '214', 214)">
             TimeRegex 
           </code>
-          <div class="tip" id="185">
+          <div class="tip" id="214">
             <strong>Signature:</strong> Regex<br />
                       </div>
         </td>
@@ -503,15 +633,17 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             </a>
           <p>A Regex which allows to retrieve the modified time.</p>
 
+
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '186', 186)" onmouseover="showTip(event, '186', 186)">
+          <code onmouseout="hideTip(event, '215', 215)" onmouseover="showTip(event, '215', 215)">
             VersionRegex 
           </code>
-          <div class="tip" id="186">
+          <div class="tip" id="215">
             <strong>Signature:</strong> Regex<br />
                       </div>
         </td>
@@ -521,6 +653,8 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
               <img src="../content/img/github-blue.png" class="hover" />
             </a>
           <p>A Regex which allows to retrieve the version list.</p>
+
+
 
         </td>
       </tr>
@@ -550,6 +684,7 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             <li><a href="http://stackoverflow.com/questions/tagged/f%23-fake">Ask a question</a></li>
             <li class="nav-header">Tutorials</li>
             <li><a href="http://fsharp.github.io/FAKE/gettingstarted.html">Getting started</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/cache.html">Build script caching</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/nuget.html">NuGet package restore</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fxcop.html">Using FxCop in a build</a></li>
@@ -560,16 +695,19 @@ It also changes the given tag, resets the modified flag and time stamp.</p>
             <li><a href="http://fsharp.github.io/FAKE/parallel-build.html">Running targets in parallel</a></li>
             <li><a href="http://fsharp.github.io/FAKE/fsc.html">Using the F# compiler from FAKE</a></li>
             <li><a href="http://fsharp.github.io/FAKE/customtasks.html">Creating custom tasks</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/soft-dependencies.html">Soft dependencies</a></li>
             <li><a href="http://fsharp.github.io/FAKE/teamcity.html">TeamCity integration</a></li>
             <li><a href="http://fsharp.github.io/FAKE/canopy.html">Running canopy tests</a></li>
             <li><a href="http://fsharp.github.io/FAKE/octopusdeploy.html">Octopus Deploy</a></li>
             <li><a href="http://fsharp.github.io/FAKE/typescript.html">TypeScript support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurewebjobs.html">Azure WebJobs support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/azurecloudservices.html">Azure Cloud Services support</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/fluentmigrator.html">FluentMigrator support</a></li>
             <li><a href="http://fsharp.github.io/FAKE/androidpublisher.html">Android publisher</a></li>
+            <li><a href="http://fsharp.github.io/FAKE/watch.html">File Watcher</a></li>
             <li class="divider"></li>
             <li><a href="http://fsharp.github.io/FAKE/deploy.html">Fake.Deploy</a></li>
-
+            <li><a href="http://fsharp.github.io/FAKE/iis.html">Fake.IIS</a></li>
             <li class="nav-header">Reference</li>
 
             <li><a href="http://fsharp.github.io/FAKE/apidocs/index.html">API Reference</a></li>
