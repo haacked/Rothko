@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-namespace Rothko.Net
+namespace Rothko
 {
     public class HttpListenerResponseWrapper : IHttpListenerResponse
     {

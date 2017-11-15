@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Net;
 using System.Security.Authentication.ExtendedProtection;
+using System.Collections.Generic;
 
 namespace Rothko
 {
@@ -141,7 +142,7 @@ namespace Rothko
         /// <exception cref="ObjectDisposedException">
         /// This object has been closed.
         /// </exception>
-        HttpListenerPrefixCollection Prefixes { get; }
+        ICollection<string> Prefixes { get; }
 
         /// <summary>
         /// Gets or sets the realm, or resource partition, associated with this System.Net.HttpListener
@@ -242,7 +243,7 @@ namespace Rothko
         /// <exception cref="ObjectDisposedException">
         /// This object has been closed.
         /// </exception>
-        HttpListenerContext EndGetContext(IAsyncResult asyncResult);
+        IHttpListenerContext EndGetContext(IAsyncResult asyncResult);
 
         /// <summary>
         /// Waits for an incoming request and returns when one is received.
@@ -261,7 +262,7 @@ namespace Rothko
         /// <exception cref="ObjectDisposedException">
         /// This object has been closed.
         /// </exception>
-        HttpListenerContext GetContext();
+        IHttpListenerContext GetContext();
 
         /// <summary>
         /// Waits for an incoming request as an asynchronous operation.
@@ -271,7 +272,7 @@ namespace Rothko
         /// operation. The System.Threading.Tasks.Task`1.Result property on the task object
         /// returns an System.Net.HttpListenerContext object that represents a client request.
         /// </returns>
-        Task<HttpListenerContext> GetContextAsync();
+        Task<IHttpListenerContext> GetContextAsync();
 
         /// <summary>
         /// Allows this instance to receive incoming requests.

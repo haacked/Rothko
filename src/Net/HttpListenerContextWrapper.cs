@@ -4,7 +4,7 @@ using System.Net.WebSockets;
 using System.Security.Principal;
 using System.Threading.Tasks;
 
-namespace Rothko.Net
+namespace Rothko
 {
     public class HttpListenerContextWrapper : IHttpListenerContext
     {
