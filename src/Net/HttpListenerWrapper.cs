@@ -2,6 +2,7 @@
 using System.Net;
 using System.Security.Authentication.ExtendedProtection;
 using System.Threading.Tasks;
+using Rothko.Net;
 
 namespace Rothko
 {
@@ -67,9 +68,22 @@ namespace Rothko
         public void Abort() => inner.Abort();
         public IAsyncResult BeginGetContext(AsyncCallback callback, object state) => inner.BeginGetContext(callback, state);
         public void Close() => inner.Close();
-        public HttpListenerContext EndGetContext(IAsyncResult asyncResult) => inner.EndGetContext(asyncResult);
-        public HttpListenerContext GetContext() => inner.GetContext();
-        public Task<HttpListenerContext> GetContextAsync() => inner.GetContextAsync();
+
+        public IHttpListenerContext EndGetContext(IAsyncResult asyncResult)
+        {
+            return new HttpListenerContextWrapper(inner.EndGetContext(asyncResult));
+        }
+
+        public IHttpListenerContext GetContext()
+        {
+            return new HttpListenerContextWrapper(inner.GetContext());
+        }
+
+        public async Task<IHttpListenerContext> GetContextAsync()
+        {
+            return new HttpListenerContextWrapper(await inner.GetContextAsync());
+        }
+        
         public void Start() => inner.Start();
         public void Stop() => inner.Stop();
     }
