@@ -106,6 +106,16 @@
     <Compile Include="Networking\IWebClient.cs" />
     <Compile Include="Networking\WebClient.cs" />
     <Compile Include="Infrastructure\SaveDialogResult.cs" />
+    <Compile Include="Net\HttpListenerContextWrapper.cs" />
+    <Compile Include="Net\HttpListenerRequestWrapper.cs" />
+    <Compile Include="Net\HttpListenerResponseWrapper.cs" />
+    <Compile Include="Net\HttpListenerWrapper.cs" />
+    <Compile Include="Net\IHttpListener.cs" />
+    <Compile Include="Net\IHttpListenerContext.cs" />
+    <Compile Include="Net\IHttpListenerRequest.cs" />
+    <Compile Include="Net\IHttpListenerResponse.cs" />
+    <Compile Include="Net\INetFactory.cs" />
+    <Compile Include="Net\NetFactory.cs" />
     <Compile Include="OperatingSystemInfo.cs" />
     <Compile Include="OperatingSystemFacade.cs" />
     <Compile Include="Processes\IProcess.cs" />

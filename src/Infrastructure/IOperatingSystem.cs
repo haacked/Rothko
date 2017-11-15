@@ -8,6 +8,7 @@
         IEnvironment Environment { get; }
         IFileFacade File { get; }
         IMemoryMappedFileFactory MemoryMappedFiles { get; }
+        INetFactory Net { get; }
         IProcessLocator ProcessLocator { get; }
         IProcessStarter ProcessStarter { get; }
         IRegistry Registry { get; }

@@ -12,6 +12,7 @@ namespace Rothko
             Environment = new Environment();
             File = new FileFacade();
             MemoryMappedFiles = new MemoryMappedFileFactory();
+            Net = new NetFactory();
             ProcessLocator = new ProcessLocator();
             ProcessStarter = new ProcessStarter();
             Registry = new Registry();
@@ -24,6 +25,7 @@ namespace Rothko
         public IEnvironment Environment { get; private set; }
         public IFileFacade File { get; private set; }
         public IMemoryMappedFileFactory MemoryMappedFiles { get; private set; }
+        public INetFactory Net { get; private set; }
         public IProcessLocator ProcessLocator { get; private set; }
         public IProcessStarter ProcessStarter { get; private set; }
         public IRegistry Registry { get; private set; }
