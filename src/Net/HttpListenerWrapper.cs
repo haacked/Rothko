@@ -68,6 +68,7 @@ namespace Rothko
         public void Abort() => inner.Abort();
         public IAsyncResult BeginGetContext(AsyncCallback callback, object state) => inner.BeginGetContext(callback, state);
         public void Close() => inner.Close();
+
         public IHttpListenerContext EndGetContext(IAsyncResult asyncResult)
         {
             return new HttpListenerContextWrapper(inner.EndGetContext(asyncResult));
