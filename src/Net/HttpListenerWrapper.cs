@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rothko
 {
-    public sealed class HttpListenerWrapper : IHttpListener
+    public class HttpListenerWrapper : IHttpListener
     {
         readonly HttpListener inner;
 

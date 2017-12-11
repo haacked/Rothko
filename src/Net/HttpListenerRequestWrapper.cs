@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
 using System.Net;
@@ -17,7 +18,7 @@ namespace Rothko
             this.inner = inner;
         }
 
-        public string[] AcceptTypes => inner.AcceptTypes;
+        public IEnumerable<string> AcceptTypes => inner.AcceptTypes;
 
         public int ClientCertificateError => inner.ClientCertificateError;
 
@@ -73,7 +74,7 @@ namespace Rothko
 
         public string UserHostName => inner.UserHostName;
 
-        public string[] UserLanguages => inner.UserLanguages;
+        public IEnumerable<string> UserLanguages => inner.UserLanguages;
 
         public IAsyncResult BeginGetClientCertificate(AsyncCallback requestCallback, object state)
         {

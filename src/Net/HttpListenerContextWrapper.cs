@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rothko
 {
-    public class HttpListenerContextWrapper : IHttpListenerContext
+    public class HttpListenerContextWrapper : IHttpListenerContext, IDisposable
     {
         readonly HttpListenerContext inner;
 
@@ -42,6 +42,20 @@ namespace Rothko
             ArraySegment<byte> internalBuffer)
         {
             return inner.AcceptWebSocketAsync(subProtocol, receiveBufferSize, keepAliveInterval, internalBuffer);
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                Response.Dispose();
+            }
         }
     }
 }

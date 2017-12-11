@@ -14,12 +14,7 @@ namespace Rothko
             this.inner = inner;
         }
 
-        ~HttpListenerResponseWrapper()
-        {
-            Dispose(false);
-        }
-
-        void IDisposable.Dispose()
+        public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
@@ -108,6 +103,8 @@ namespace Rothko
         public void CopyFrom(HttpListenerResponse templateResponse) => inner.CopyFrom(templateResponse);
 
         public void Redirect(string url) => inner.Redirect(url);
+
+        public void Redirect(Uri url) => inner.Redirect(url.ToString());
 
         public void SetCookie(Cookie cookie) => inner.SetCookie(cookie);
 
