@@ -275,6 +275,14 @@ namespace Rothko
         void Redirect(string url);
 
         /// <summary>
+        /// Configures the response to redirect the client to the specified URL.
+        /// </summary>
+        /// <param name="url">
+        /// The URL that the client should use to locate the requested resource.
+        /// </param>
+        void Redirect(Uri url);
+
+        /// <summary>
         /// Adds or updates a System.Net.Cookie in the collection of cookies sent with this
         /// response.
         /// </summary>

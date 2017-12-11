@@ -6,7 +6,7 @@ using Rothko.Net;
 
 namespace Rothko
 {
-    public sealed class HttpListenerWrapper : IHttpListener
+    public class HttpListenerWrapper : IHttpListener
     {
         readonly HttpListener inner;
 

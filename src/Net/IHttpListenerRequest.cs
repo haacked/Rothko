@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
 using System.Net;
@@ -20,7 +21,7 @@ namespace Rothko
         /// A <see cref="string"/> array that contains the type names specified in the request's
         /// Accept header or null if the client request did not include an Accept header.
         /// </returns>
-        string[] AcceptTypes { get; }
+        IEnumerable<string> AcceptTypes { get; }
 
         /// <summary>
         /// Gets an error code that identifies a problem with the <see cref="X509Certificate"/>
@@ -270,7 +271,7 @@ namespace Rothko
         /// <see cref="HttpRequestHeader.AcceptLanguage"/> header or null if the client request
         /// did not include an <see cref="HttpRequestHeader.AcceptLanguage"/> header.
         /// </returns>
-        string[] UserLanguages { get; }
+        IEnumerable<string> UserLanguages { get; }
 
         /// <summary>
         /// Begins an asynchronous request for the client's X.509 v.3 certificate.
