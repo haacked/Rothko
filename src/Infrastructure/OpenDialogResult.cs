@@ -13,13 +13,13 @@
 
         public OpenDialogResult(IEnumerable<string> chosenFileNames)
         {
-            this._success = true;
-            this._fileNames = chosenFileNames;
+            _success = true;
+            _fileNames = chosenFileNames;
         }
 
         public bool Success
         {
-            get { return this._success; }
+            get { return _success; }
         }
 
         public IEnumerable<string> FileNames
@@ -47,7 +47,7 @@
         {
             unchecked
             {
-                return (17327 * 67 + this._success.GetHashCode()) * 67 + (this._fileNames ?? Enumerable.Empty<string>()).GetHashCode();
+                return (17327 * 67 + _success.GetHashCode()) * 67 + (_fileNames ?? Enumerable.Empty<string>()).GetHashCode();
             }
         }
     }
