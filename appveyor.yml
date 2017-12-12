@@ -8,6 +8,7 @@ nuget:
 before_build:
 - cmd: >-
     nuget update -self
+
     nuget restore
 
 build:
