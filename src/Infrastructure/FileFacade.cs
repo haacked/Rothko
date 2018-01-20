@@ -37,7 +37,12 @@ namespace Rothko
             return FileInfo.Wrap(new System.IO.FileInfo(path));
         }
 
-        public void WriteAllText(string path, string contents,Encoding encoding)
+        public void WriteAllText(string path, string contents)
+        {
+            File.WriteAllText(path, contents);
+        }
+
+        public void WriteAllText(string path, string contents, Encoding encoding)
         {
             File.WriteAllText(path, contents,encoding);
         }
