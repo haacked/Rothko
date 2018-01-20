@@ -191,6 +191,7 @@ namespace Rothko
         /// </summary>
         /// <param name="path">The path of the file to get.</param>
         /// <param name="contents">The string to write to the file.</param>
+        /// <param name="encoding">The encoding that is applied to the contents of the file.</param>
         /// <exception cref="T:System.ArgumentNullException"><paramref name="path"/> is null or <paramref name="contents"/> is null. </exception>
         /// <exception cref="T:System.ArgumentException">
         ///   <paramref name="path"/> contains invalid characters such as ", &gt;, &lt;, or |.
@@ -217,7 +218,7 @@ namespace Rothko
         /// <exception cref="T:System.Security.SecurityException">
         ///   The caller does not have the required permission.
         /// </exception>
-        void WriteAllText(string path, string contents);
+        void WriteAllText(string path, string contents, Encoding encoding);
 
         /// <summary>
         ///     Copies an existing file to a new file. Overwriting a file of the same name
