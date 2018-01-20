@@ -44,7 +44,7 @@ namespace Rothko
 
         public void WriteAllText(string path, string contents, Encoding encoding)
         {
-            File.WriteAllText(path, contents,encoding);
+            File.WriteAllText(path, contents, encoding);
         }
 
         public void Copy(string sourceFileName, string destFileName, bool overwrite)
