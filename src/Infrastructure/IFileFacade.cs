@@ -220,6 +220,40 @@ namespace Rothko
         void WriteAllText(string path, string contents);
 
         /// <summary>
+        ///   Gets a <see cref="T:Rothko.IFileInfo"/> representing the specified path.
+        /// </summary>
+        /// <param name="path">The path of the file to get.</param>
+        /// <param name="contents">The string to write to the file.</param>
+        /// <param name="encoding">The encoding that is applied to the contents of the file.</param>
+        /// <exception cref="T:System.ArgumentNullException"><paramref name="path"/> is null or <paramref name="contents"/> is null. </exception>
+        /// <exception cref="T:System.ArgumentException">
+        ///   <paramref name="path"/> contains invalid characters such as ", &gt;, &lt;, or |.
+        /// </exception>
+        /// <exception cref="T:System.DirectoryNotFoundException">
+        ///   The specified <paramref name="path"/> is invalid (for example, it is on an unmapped drive).
+        /// </exception>
+        /// <exception cref="T:System.IO.PathTooLongException">
+        ///   The specified <paramref name="path"/>, file name, or both exceed the system-defined maximum length. For example, on
+        ///   Windows-based platforms, paths must be less than 248 characters, and file names must be less than
+        ///   260 characters. The specified path, file name, or both are too long.
+        /// </exception>
+        /// <exception cref="T:System.IO.IOException">
+        ///   An I/O error occurred while opening the file.
+        /// </exception>
+        /// <exception cref="T:System.UnauthorizedAccessException">
+        ///   <paramref name="path"/> specified a file that is read-only.-or- This operation is not supported
+        ///   on the current platform.-or- path specified a directory.-or- The caller does
+        ///   not have the required permission.
+        /// </exception>
+        /// <exception cref="T:System.NotSupportedException">
+        ///   The caller does not have the required permission.
+        /// </exception>
+        /// <exception cref="T:System.Security.SecurityException">
+        ///   The caller does not have the required permission.
+        /// </exception>
+        void WriteAllText(string path, string contents, Encoding encoding);
+
+        /// <summary>
         ///     Copies an existing file to a new file. Overwriting a file of the same name
         ///     is allowed.
         /// </summary>
