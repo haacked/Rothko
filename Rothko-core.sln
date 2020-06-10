@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Meta", "Meta", "{1F038D9F-90B8-4FD9-B0F8-869E03A33379}"
+	ProjectSection(SolutionItems) = preProject
+		CodeAnalysisDictionary.xml = CodeAnalysisDictionary.xml
+		LICENSE-MIT.txt = LICENSE-MIT.txt
+		README.md = README.md
+		ReleaseNotes.md = ReleaseNotes.md
+		Rothko.ruleset = Rothko.ruleset
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{2DC1E33B-E4FB-44C0-9DA5-96D11B41267A}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		script\build.cmd = script\build.cmd
+		script\build.fsx = script\build.fsx
+		Rothko.nuspec = Rothko.nuspec
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rothko.Core", "src\Rothko.Core\Rothko.Core.csproj", "{C5AFBFA4-CB19-4AC2-B277-F7D4E320ACFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5AFBFA4-CB19-4AC2-B277-F7D4E320ACFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5AFBFA4-CB19-4AC2-B277-F7D4E320ACFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5AFBFA4-CB19-4AC2-B277-F7D4E320ACFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5AFBFA4-CB19-4AC2-B277-F7D4E320ACFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C5B6B0F-3329-42AF-88DF-C9C63EB69037}
+	EndGlobalSection
+EndGlobal
