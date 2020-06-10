@@ -11,8 +11,8 @@
         <Authors>Phil Haack</Authors>
         <Copyright>Phil Haack</Copyright>
         <PackageProjectUrl>https://github.com/haacked/rothko</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/haacked/Rothko/blob/main/LICENSE-MIT.txt</PackageLicenseUrl>
-        <PackageIconUrl>https://cloud.githubusercontent.com/assets/19977/4635932/4483417a-53de-11e4-8aad-7f06b2d3c46a.png</PackageIconUrl>
+        <PackageLicense>MIT</PackageLicense>
+        <PackageIcon>rothko-icon.png</PackageIcon>
         <RepositoryUrl>https://github.com/haacked/rothko</RepositoryUrl>
         <PackageTags>dotnet abstractions dotnetcore</PackageTags>
         <AssemblyVersion>0.0.1</AssemblyVersion>
@@ -23,6 +23,12 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         <PrivateAssets>all</PrivateAssets>
       </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\..\rothko-icon.png" Pack="true" PackagePath="/">
+        <Link>rothko-icon.png</Link>
+      </None>
     </ItemGroup>
 
 </Project>
