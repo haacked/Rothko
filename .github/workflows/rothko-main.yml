@@ -31,5 +31,5 @@ jobs:
       run: dotnet pack Rothko-core.sln -c Release -o out
       
     - name: Push generated package to NuGet
-      run: dotnet nuget push out/*.nupkg -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true -k ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true -k ${{ secrets.NUGET_API_KEY }}
       if: github.event_name != 'pull_request'
