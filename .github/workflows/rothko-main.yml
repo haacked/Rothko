@@ -1,0 +1,28 @@
+name: Build Rothko
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  ROTHKO_PROJECT_PATH: src/Rothko.Core/Rothko.Core.csproj
+  DOTNET_VERSION: 3.1.201
+
+jobs:
+  build-and-deploy:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout main branch
+      uses: actions/checkout@main
+
+    - name: Setup .NET Core ${{ env.DOTNET_VERSION }}
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Build Solution
+      run: dotnet build Rothko-core.sln --configuration Release
