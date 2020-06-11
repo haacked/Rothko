@@ -5,7 +5,7 @@
         <LangVersion>8</LangVersion>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageId>rothko.core</PackageId>
+        <PackageId>Rothko.Core</PackageId>
         <PackageVersion>0.0.1</PackageVersion>
         <Title>Rothko Core</Title>
         <Authors>Phil Haack</Authors>
